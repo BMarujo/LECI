@@ -1,0 +1,166 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "12/21/2021 17:05:34"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          mux41
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module mux41_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg I0;
+reg I1;
+reg I2;
+reg I3;
+reg I4;
+reg I5;
+reg I6;
+reg I7;
+reg [2:0] S;
+// wires                                               
+wire Y;
+
+// assign statements (if any)                          
+mux41 i1 (
+// port map - connection between master ports and signals/registers   
+	.I0(I0),
+	.I1(I1),
+	.I2(I2),
+	.I3(I3),
+	.I4(I4),
+	.I5(I5),
+	.I6(I6),
+	.I7(I7),
+	.S(S),
+	.Y(Y)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// I0
+always
+begin
+	I0 = 1'b0;
+	I0 = #1000 1'b1;
+	#1000;
+end 
+
+// I1
+always
+begin
+	I1 = 1'b0;
+	I1 = #2000 1'b1;
+	#2000;
+end 
+
+// I2
+always
+begin
+	I2 = 1'b0;
+	I2 = #4000 1'b1;
+	#4000;
+end 
+
+// I3
+initial
+begin
+	repeat(62)
+	begin
+		I3 = 1'b0;
+		I3 = #8000 1'b1;
+		# 8000;
+	end
+	I3 = 1'b0;
+end 
+
+// I4
+initial
+begin
+	repeat(31)
+	begin
+		I4 = 1'b0;
+		I4 = #16000 1'b1;
+		# 16000;
+	end
+	I4 = 1'b0;
+end 
+
+// I5
+initial
+begin
+	repeat(15)
+	begin
+		I5 = 1'b0;
+		I5 = #32000 1'b1;
+		# 32000;
+	end
+	I5 = 1'b0;
+	I5 = #32000 1'b1;
+end 
+
+// I6
+initial
+begin
+	repeat(7)
+	begin
+		I6 = 1'b0;
+		I6 = #64000 1'b1;
+		# 64000;
+	end
+	I6 = 1'b0;
+	I6 = #64000 1'b1;
+end 
+
+// I7
+initial
+begin
+	repeat(3)
+	begin
+		I7 = 1'b0;
+		I7 = #128000 1'b1;
+		# 128000;
+	end
+	I7 = 1'b0;
+	I7 = #128000 1'b1;
+end 
+// S[ 2 ]
+initial
+begin
+	S[2] = 1'b1;
+end 
+// S[ 1 ]
+initial
+begin
+	S[1] = 1'b1;
+end 
+// S[ 0 ]
+initial
+begin
+	S[0] = 1'b1;
+end 
+endmodule
+

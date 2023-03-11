@@ -1,0 +1,6 @@
+|Pratica1
+output1 <= AND_2.DB_MAX_OUTPUT_PORT_TYPE
+input1 => AND_2.IN0
+input2 => AND_2.IN1
+
+

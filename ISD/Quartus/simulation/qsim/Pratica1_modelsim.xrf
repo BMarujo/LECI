@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, C:/LECI/ISD/Quartus/Pratica1.bdf
+source_file = 1, C:/LECI/ISD/Quartus/db/Pratica1.cbx.xml
+design_name = Pratica1
+instance = comp, \output1~output , output1~output, Pratica1, 1
+instance = comp, \input1~input , input1~input, Pratica1, 1
+instance = comp, \input2~input , input2~input, Pratica1, 1

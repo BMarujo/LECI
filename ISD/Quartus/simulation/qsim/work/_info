@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LECI/ISD/Quartus/simulation/qsim
+vPratica1
+Z1 !s110 1667709468
+!i10b 1
+!s100 2N<3olXlST=CRL<<Zo0JC2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I5`C588_PKTb6o:RhLMTXb3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1667709467
+8Pratica1.vo
+FPratica1.vo
+!i122 2
+L0 32 74
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1667709468.000000
+!s107 Pratica1.vo|
+!s90 -work|work|Pratica1.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@pratica1
+vPratica1_vlg_vec_tst
+R1
+!i10b 1
+!s100 IhRjoIBkDEQH21L9>1;8M1
+R2
+I4SeaXhnALNM^PWld:QFnm2
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 3
+L0 30 46
+R5
+r1
+!s85 0
+31
+R6
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R7
+R8
+n@pratica1_vlg_vec_tst

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luisbfsousa/Desktop/disciplinas/sistemas-quartus/teste21/simulation/qsim
+vMux21
+!s110 1640093717
+!i10b 1
+!s100 zWO>VNHd@0EF_gB551X5c2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I9Tm4]4XG6e;b0N4jQBb@@3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1640093716
+8Mux21.vo
+FMux21.vo
+!i122 6
+L0 32 212
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1640093717.000000
+!s107 Mux21.vo|
+!s90 -work|work|Mux21.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@mux21
+vMux21_vlg_vec_tst
+!s110 1640093718
+!i10b 1
+!s100 RB`1_FWkgBjVU[7DO?2nl0
+R1
+ICJZAdm8UE?1U<TUg7ce>?0
+R2
+R0
+w1640093713
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 7
+L0 30 145
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R5
+R6
+n@mux21_vlg_vec_tst
