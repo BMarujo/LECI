@@ -3,7 +3,7 @@ SW[0] => flipflopd:ff_d.d
 SW[1] => flipflopd:ff_d.set
 SW[2] => flipflopd:ff_d.reset
 KEY[0] => flipflopd:ff_d.clk
-LEDR[0] <= flipflopd:ff_d.q
+LEDR[0] << flipflopd:ff_d.q
 
 
 |FlipFlopD_Demo|FlipFlopD:ff_d

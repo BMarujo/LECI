@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Encoder4_2 is
+	port( dataIn0 : in  std_logic;
+			dataIn1 : in  std_logic;
+			dataIn2 : in  std_logic;
+			dataIn3 : in  std_logic; 
+			dataOut : out std_logic_vector(1 downto 0);
+			validOut: out std_logic);
+end Encoder4_2;
+
+architecture Structure of Encoder4_2 is
+begin
+	process(dataIn0,dataIn1,dataIn2,dataIn3)
+	begin
+		validOut <= '1'
+		if( dataIn3 = '1') then
+			dataOut <= "11";
+		elsif( dataIn2 = '1') then
+			dataOut <= "10";
+		elsif( dataIn1 = '1') then
+			dataOut <= "01";
+		elsif( dataIn0 = '1') then
+			dataOut <= "00";
+		else
+			dataOut  <= "00";
+			validOUt <= '0';
+		end if;
+	end process;
+end Structure;

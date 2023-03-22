@@ -1,0 +1,20 @@
+library IEEE
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity ShiftReg4 is
+	port(clk : in std_logic;
+	     Sin : in std_logic;
+	 dataOut : out std_logic_vector(3 downto 0));
+end ShiftReg4;
+
+architecture Behavior of ShiftReg4 is
+	signal s_shift: std_logic_vector(3 downto 0);
+begin 
+	process(clk)
+		if (rising_edge(clk)) then
+			s_shift <= s_shift(2 downto 0) & Sin;
+		end if;
+	end process;
+	dataOut <= s_shift;
+end Behavior;

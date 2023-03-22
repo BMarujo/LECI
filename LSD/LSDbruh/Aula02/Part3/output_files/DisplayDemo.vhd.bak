@@ -1,0 +1,13 @@
+entity DisplayDemo is
+	port(SW      : in  std_logic_vector(3 downto 0);
+		  KEY     : in  std_logic_vector(0 downto 0);
+		  HEX0    : out std_logic_vector(6 downto 0));
+end ;
+
+architecture Shell of DisplayDemo is 
+begin
+	system_core : entity work.Bin7SegDecoder(Behavioral)
+					  port map ( binInput => SW,
+									 enable   => KEY,
+									 decOut_n => HEX0);
+end Shell;

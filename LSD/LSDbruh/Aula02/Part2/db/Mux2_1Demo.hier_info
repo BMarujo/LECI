@@ -1,0 +1,24 @@
+|Mux2_1Demo
+LEDR[0] <= Mux2_1:mux.dataOut
+SW[0] => Mux2_1:mux.dataIn0
+SW[1] => Mux2_1:mux.dataIn1
+SW[2] => Mux2_1:mux.dataIn2
+SW[3] => Mux2_1:mux.dataIn3
+KEY[0] => Mux2_1:mux.sel[0]
+KEY[1] => Mux2_1:mux.sel[1]
+
+
+|Mux2_1Demo|Mux2_1:mux
+dataIn0 => dataOut.DATAB
+dataIn1 => dataOut.DATAB
+dataIn2 => dataOut.DATAB
+dataIn3 => dataOut.DATAA
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+dataOut <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

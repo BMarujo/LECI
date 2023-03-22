@@ -1,0 +1,94 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/danie/Disciplinas/2semestre/LSD/Aula07/simulation/modelsim
+Edec2_4en
+Z1 w1651826432
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z4 8C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En.vhd
+Z5 FC:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En.vhd
+l0
+L3 1
+VfGZ9nk6^M9@zho@<5lDD>0
+!s100 F8Fll1KA3aObQ^4N?2af:1
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1651827437
+!i10b 1
+Z8 !s108 1651827437.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En.vhd|
+Z10 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En.vhd|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+Z13 DEx4 work 8 dec2_4en 0 22 fGZ9nk6^M9@zho@<5lDD>0
+!i122 4
+l9
+L8 19
+VQBQJ0^T1:H6:`4BzbIE5z2
+!s100 >XfUla9BfchodY^LDjaYd2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edec2_4en_tb
+Z14 w1651826610
+R2
+R3
+!i122 5
+R0
+Z15 8C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En_Tb.vhd
+Z16 FC:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En_Tb.vhd
+l0
+L5 1
+Vbaj>fTU^XRNMXP;Ym[dL21
+!s100 IDN1]`AbW[i;O:zBiP>TD0
+R6
+32
+Z17 !s110 1651827439
+!i10b 1
+Z18 !s108 1651827439.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En_Tb.vhd|
+Z20 !s107 C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Dec2_4En_Tb.vhd|
+!i113 1
+R11
+R12
+Astimulus
+R13
+R2
+R3
+Z21 DEx4 work 11 dec2_4en_tb 0 22 baj>fTU^XRNMXP;Ym[dL21
+!i122 5
+l15
+Z22 L7 33
+Z23 Vc`Zg^Vd7i8H2XfAFG:_2k2
+Z24 !s100 [`@I>Af4M2TS?Q;8nF:DC2
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
