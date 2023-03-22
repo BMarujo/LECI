@@ -1,0 +1,10 @@
+from socket import *
+tcp_s = socket(AF_INET, SOCK_STREAM)
+tcp_s.bind(("0.0.0.0", 1234))
+tcp_s.listen(1)
+client_s, addr = tcp_s.accept()
+data = client_s.recv(4096)
+print(data)
+client_s.send(data.upper())
+client_s.close()
+tcp_s.close()
