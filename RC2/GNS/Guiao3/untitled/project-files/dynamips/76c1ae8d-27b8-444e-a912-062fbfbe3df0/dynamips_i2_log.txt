@@ -1,0 +1,53 @@
+Mar 31 11:43:15.292 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Mar 31 11:43:15.292 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 64481.
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: hypervisor working_dir C:\LECI\RC2\GNS\Guiao3\untitled\project-files\dynamips 
+Mar 31 11:43:15.795 GENERAL: working_dir=C:\LECI\RC2\GNS\Guiao3\untitled\project-files\dynamips
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: hypervisor working_dir C:\LECI\RC2\GNS\Guiao3\untitled\project-files\dynamips\5da861ec-2258-4c53-94b1-565597e3db14 
+Mar 31 11:43:15.795 GENERAL: working_dir=C:\LECI\RC2\GNS\Guiao3\untitled\project-files\dynamips\5da861ec-2258-4c53-94b1-565597e3db14
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Mar 31 11:43:15.795 VM: VM R1 created.
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5001 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:15.795 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x60609bc4 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/berna/GNS3/images/IOS/c7200-adventerprisek9-mz.151-4.M2.image 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: c7200 set_mac_addr R1 ca01.3e6c.0000 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:15.810 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Mar 31 11:43:19.676 HYPERVISOR: exec_cmd: nio create_udp udp-ee461f38-a716-41fc-9ffa-12bf7c384e8d 10004 127.0.0.1 10005 
+Mar 31 11:43:20.006 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-ee461f38-a716-41fc-9ffa-12bf7c384e8d 
+Mar 31 11:43:20.006 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:20.807 HYPERVISOR: exec_cmd: nio create_udp udp-49645bd2-cd12-404a-9fa8-f80973cdec17 10024 127.0.0.1 10025 
+Mar 31 11:43:20.807 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-49645bd2-cd12-404a-9fa8-f80973cdec17 
+Mar 31 11:43:20.807 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 11:43:20.948 HYPERVISOR: exec_cmd: nio create_udp udp-c4d787f7-65b3-462a-8292-864ba9d99f17 10036 127.0.0.1 10037 
+Mar 31 11:43:20.948 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 1 0 udp-c4d787f7-65b3-462a-8292-864ba9d99f17 
+Mar 31 11:43:20.948 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 12:07:50.030 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Mar 31 12:07:50.030 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\LECI\RC2\GNS\Guiao3\untitled\project-files\dynamips\c7200-adventerprisek9-mz.151-4.M2.image-512.ghost 
+Mar 31 12:07:50.030 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 12:07:50.030 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg configs\i1_private-config.cfg 
+Mar 31 12:07:50.030 HYPERVISOR: exec_cmd: vm start R1 
+Mar 31 12:08:20.512 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 31 13:00:45.696 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 13:00:45.696 HYPERVISOR: exec_cmd: vm stop R1 
+Mar 31 13:00:45.895 VM: VM R1 shutdown.
+Mar 31 13:00:45.896 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 31 13:00:46.783 HYPERVISOR: exec_cmd: vm get_status R1 
+Mar 31 13:00:46.784 HYPERVISOR: exec_cmd: vm extract_config R1 
+Mar 31 13:00:46.786 HYPERVISOR: exec_cmd: vm delete R1 
+Mar 31 13:00:46.786 VM: VM R1 destroyed.
+Mar 31 13:00:46.787 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 31 13:00:47.287 HYPERVISOR: Stopped.
+Mar 31 13:00:47.288 GENERAL: reset done.

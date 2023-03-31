@@ -1,4 +1,4 @@
-library IEEE;
+library ieee;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.NUMERIC_STD.all;
 entity CounterDown4 is
