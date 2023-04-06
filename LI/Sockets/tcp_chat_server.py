@@ -5,7 +5,7 @@ import select
 
 def main ():
 	tcp_s = socket.socket (socket.AF_INET, socket.SOCK_STREAM)
-	tcp_s.bind (("0.0.0.0", 8080))
+	tcp_s.bind (("0.0.0.0", 1234))
 	tcp_s.listen (10)
 	connections = []
 	
