@@ -1,4 +1,4 @@
-|Counter_Demo
+|Counter_Demo2
 HEX7[0] <= Bin7SegDecoder:inst1.decOut_n[0]
 HEX7[1] <= Bin7SegDecoder:inst1.decOut_n[1]
 HEX7[2] <= Bin7SegDecoder:inst1.decOut_n[2]
@@ -6,15 +6,10 @@ HEX7[3] <= Bin7SegDecoder:inst1.decOut_n[3]
 HEX7[4] <= Bin7SegDecoder:inst1.decOut_n[4]
 HEX7[5] <= Bin7SegDecoder:inst1.decOut_n[5]
 HEX7[6] <= Bin7SegDecoder:inst1.decOut_n[6]
-KEY[0] => CounterUpDown4:inst.clk
-SW[0] => CounterUpDown4:inst.reset
-LEDR[0] <= CounterUpDown4:inst.count[0]
-LEDR[1] <= CounterUpDown4:inst.count[1]
-LEDR[2] <= CounterUpDown4:inst.count[2]
-LEDR[3] <= CounterUpDown4:inst.count[3]
+KEY[0] => CounterDown4:inst.clk
 
 
-|Counter_Demo|Bin7SegDecoder:inst1
+|Counter_Demo2|Bin7SegDecoder:inst1
 binInput[0] => Equal0.IN3
 binInput[0] => Equal1.IN0
 binInput[0] => Equal2.IN3
@@ -84,15 +79,11 @@ decOut_n[5] <= decOut_n.DB_MAX_OUTPUT_PORT_TYPE
 decOut_n[6] <= decOut_n.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Counter_Demo|CounterUpDown4:inst
+|Counter_Demo2|CounterDown4:inst
 clk => s_count[0].CLK
 clk => s_count[1].CLK
 clk => s_count[2].CLK
 clk => s_count[3].CLK
-reset => s_count[0].ACLR
-reset => s_count[1].ACLR
-reset => s_count[2].ACLR
-reset => s_count[3].ACLR
 count[0] <= s_count[0].DB_MAX_OUTPUT_PORT_TYPE
 count[1] <= s_count[1].DB_MAX_OUTPUT_PORT_TYPE
 count[2] <= s_count[2].DB_MAX_OUTPUT_PORT_TYPE

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU16
-Fri May 06 10:31:32 2022
+Wed Apr 12 18:32:23 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 06 10:31:32 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 12 18:32:23 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; ALU16                                       ;
 ; Top-level Entity Name              ; ALU16                                       ;
@@ -157,8 +157,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -168,29 +168,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
-; ALU16.vhd                        ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd                  ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf            ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc           ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc       ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc            ;         ;
-; db/lpm_divide_ocm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/lpm_divide_ocm.tdf      ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/sign_div_unsign_dnh.tdf ;         ;
-; db/alt_u_div_eaf.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/alt_u_div_eaf.tdf       ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/add_sub_7pc.tdf         ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/add_sub_8pc.tdf         ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf              ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc           ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc              ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc              ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc              ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/mult_7dt.tdf            ;         ;
-; db/lpm_divide_lkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/lpm_divide_lkm.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; ALU16.vhd                        ; yes             ; User VHDL File               ; C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd                                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_ocm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/lpm_divide_ocm.tdf                     ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/sign_div_unsign_dnh.tdf                ;         ;
+; db/alt_u_div_eaf.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/alt_u_div_eaf.tdf                      ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/add_sub_7pc.tdf                        ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/add_sub_8pc.tdf                        ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/bypassff.inc        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altshift.inc        ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/mult_7dt.tdf                           ;         ;
+; db/lpm_divide_lkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula07/Part3/db/lpm_divide_lkm.tdf                     ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -417,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -427,39 +427,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri May 06 10:31:19 2022
+    Info: Processing started: Wed Apr 12 18:32:09 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU16 -c ALU16
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file alu16.vhd
-    Info (12022): Found design unit 1: ALU16-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 13
-    Info (12023): Found entity 1: ALU16 File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 5
+    Info (12022): Found design unit 1: ALU16-Behavioral File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 13
+    Info (12023): Found entity 1: ALU16 File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file alu16_tb.vhd
-    Info (12022): Found design unit 1: ALU16_Tb-Stimulus File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16_Tb.vhd Line: 7
-    Info (12023): Found entity 1: ALU16_Tb File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16_Tb.vhd Line: 4
+    Info (12022): Found design unit 1: ALU16_Tb-Stimulus File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16_Tb.vhd Line: 7
+    Info (12023): Found entity 1: ALU16_Tb File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16_Tb.vhd Line: 4
 Info (12127): Elaborating entity "ALU16" for the top level hierarchy
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 29
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 16
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 29
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 29
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 29
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 29
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ocm.tdf
-    Info (12023): Found entity 1: lpm_divide_ocm File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/lpm_divide_ocm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_ocm File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/lpm_divide_ocm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/sign_div_unsign_dnh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_eaf.tdf
-    Info (12023): Found entity 1: alt_u_div_eaf File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/alt_u_div_eaf.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_eaf File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/alt_u_div_eaf.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 16
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 16
+    Info (12023): Found entity 1: add_sub_8pc File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 16
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 16
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -470,15 +470,15 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/mult_7dt.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 27
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd Line: 27
+    Info (12023): Found entity 1: mult_7dt File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/mult_7dt.tdf Line: 29
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 27
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lkm.tdf
-    Info (12023): Found entity 1: lpm_divide_lkm File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/db/lpm_divide_lkm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_lkm File: C:/LECI/LSD/LSDbruh/Aula07/Part3/db/lpm_divide_lkm.tdf Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -488,9 +488,9 @@ Info (21057): Implemented 760 device resources after synthesis - the final resou
     Info (21061): Implemented 691 logic cells
     Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Fri May 06 10:31:32 2022
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Wed Apr 12 18:32:23 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:09
 
 

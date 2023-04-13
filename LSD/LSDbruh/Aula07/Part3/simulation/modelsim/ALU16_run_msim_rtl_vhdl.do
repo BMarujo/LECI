@@ -5,9 +5,9 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16.vhd}
+vcom -93 -work work {C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16.vhd}
 
-vcom -93 -work work {C:/Users/danie/Disciplinas/2semestre/LSD/Aula07/Part3/ALU16_Tb.vhd}
+vcom -93 -work work {C:/LECI/LSD/LSDbruh/Aula07/Part3/ALU16_Tb.vhd}
 
 vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  ALU16_Tb
 

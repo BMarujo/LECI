@@ -1,5 +1,5 @@
 Timing Analyzer report for Counter_Demo
-Sun Mar 19 18:46:11 2023
+Wed Apr 12 21:07:51 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,11 +49,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  41. Report RSKM
  42. Unconstrained Paths Summary
  43. Clock Status Summary
- 44. Unconstrained Input Ports
+ 44. Unconstrained Output Ports
  45. Unconstrained Output Ports
- 46. Unconstrained Input Ports
- 47. Unconstrained Output Ports
- 48. Timing Analyzer Messages
+ 46. Timing Analyzer Messages
 
 
 
@@ -105,8 +103,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.5%      ;
-;     Processor 3            ;   0.4%      ;
-;     Processors 4-12        ;   0.4%      ;
+;     Processor 3            ;   0.5%      ;
+;     Processors 4-12        ;   0.5%      ;
 +----------------------------+-------------+
 
 
@@ -124,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 821.02 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 835.42 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -140,7 +138,7 @@ HTML report is unavailable in plain text report export.
 +--------+--------+-------------------+
 ; Clock  ; Slack  ; End Point TNS     ;
 +--------+--------+-------------------+
-; KEY[0] ; -0.218 ; -0.372            ;
+; KEY[0] ; -0.197 ; -0.370            ;
 +--------+--------+-------------------+
 
 
@@ -174,40 +172,40 @@ No paths to report.
 +--------+--------+---------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup: 'KEY[0]'                                                                                                          ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.218 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.189      ;
-; -0.154 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.125      ;
-; -0.154 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.125      ;
-; 0.122  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.849      ;
-; 0.139  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.832      ;
-; 0.139  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.832      ;
-; 0.210  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
-; 0.210  ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
-; 0.210  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
-; 0.210  ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'KEY[0]'                                                                                                      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.197 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.168      ;
+; -0.173 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.144      ;
+; -0.148 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 1.119      ;
+; 0.128  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.843      ;
+; 0.128  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.843      ;
+; 0.128  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.047     ; 0.843      ;
+; 0.210  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
+; 0.210  ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
+; 0.210  ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
+; 0.210  ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.043     ; 0.765      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'KEY[0]'                                                                                                          ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.440 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
-; 0.445 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.674      ;
-; 0.484 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.717      ;
-; 0.484 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.717      ;
-; 0.492 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.725      ;
-; 0.710 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.943      ;
-; 0.710 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.943      ;
-; 0.747 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.980      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'KEY[0]'                                                                                                      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.440 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.669      ;
+; 0.445 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.043      ; 0.674      ;
+; 0.491 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.724      ;
+; 0.491 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.724      ;
+; 0.491 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.724      ;
+; 0.746 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.979      ;
+; 0.751 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.984      ;
+; 0.762 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.047      ; 0.995      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 -----------------------------------------------
@@ -221,7 +219,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 915.75 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 925.93 MHz ; 250.0 MHz       ; KEY[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -231,7 +229,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; KEY[0] ; -0.092 ; -0.133           ;
+; KEY[0] ; -0.080 ; -0.138           ;
 +--------+--------+------------------+
 
 
@@ -265,40 +263,40 @@ No paths to report.
 +--------+--------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup: 'KEY[0]'                                                                                                           ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.092 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.067      ;
-; -0.041 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.016      ;
-; -0.040 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 1.015      ;
-; 0.202  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 0.773      ;
-; 0.219  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 0.756      ;
-; 0.219  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.044     ; 0.756      ;
-; 0.297  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
-; 0.297  ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
-; 0.297  ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
-; 0.297  ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
-+--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'KEY[0]'                                                                                                       ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.080 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 1.054      ;
+; -0.058 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 1.032      ;
+; -0.036 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 1.010      ;
+; 0.209  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 0.765      ;
+; 0.209  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 0.765      ;
+; 0.209  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.045     ; 0.765      ;
+; 0.297  ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
+; 0.297  ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
+; 0.297  ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
+; 0.297  ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.039     ; 0.683      ;
++--------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'KEY[0]'                                                                                                           ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.387 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.398 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.608      ;
-; 0.436 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.651      ;
-; 0.436 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.651      ;
-; 0.445 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.660      ;
-; 0.646 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.861      ;
-; 0.647 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.862      ;
-; 0.679 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.044      ; 0.894      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'KEY[0]'                                                                                                       ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.387 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.597      ;
+; 0.398 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.039      ; 0.608      ;
+; 0.441 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.657      ;
+; 0.441 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.657      ;
+; 0.441 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.657      ;
+; 0.679 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.895      ;
+; 0.687 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.903      ;
+; 0.698 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.045      ; 0.914      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -312,7 +310,7 @@ No synchronizer chains to report.
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; KEY[0] ; 0.413 ; 0.000             ;
+; KEY[0] ; 0.424 ; 0.000             ;
 +--------+-------+-------------------+
 
 
@@ -342,44 +340,44 @@ No paths to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; KEY[0] ; -3.000 ; -7.640                         ;
+; KEY[0] ; -3.000 ; -7.624                         ;
 +--------+--------+--------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup: 'KEY[0]'                                                                                                          ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.413 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.570      ;
-; 0.443 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.540      ;
-; 0.444 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.539      ;
-; 0.582 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.401      ;
-; 0.592 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.391      ;
-; 0.592 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.024     ; 0.391      ;
-; 0.626 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
-; 0.626 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
-; 0.626 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
-; 0.626 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'KEY[0]'                                                                                                      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.424 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.560      ;
+; 0.439 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.545      ;
+; 0.456 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.528      ;
+; 0.587 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.397      ;
+; 0.588 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.396      ;
+; 0.588 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.023     ; 0.396      ;
+; 0.626 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
+; 0.626 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
+; 0.626 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
+; 0.626 ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.022     ; 0.359      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'KEY[0]'                                                                                                           ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.201 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
-; 0.201 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
-; 0.201 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
-; 0.208 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.314      ;
-; 0.222 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.330      ;
-; 0.222 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.330      ;
-; 0.227 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.335      ;
-; 0.329 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.437      ;
-; 0.329 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.437      ;
-; 0.350 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.024      ; 0.458      ;
-+-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'KEY[0]'                                                                                                       ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.201 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.201 ; CounterDown4:inst|s_count[3] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.307      ;
+; 0.208 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[0] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.022      ; 0.314      ;
+; 0.226 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.333      ;
+; 0.226 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[1] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.333      ;
+; 0.226 ; CounterDown4:inst|s_count[0] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.333      ;
+; 0.346 ; CounterDown4:inst|s_count[2] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.453      ;
+; 0.348 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[2] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.455      ;
+; 0.354 ; CounterDown4:inst|s_count[1] ; CounterDown4:inst|s_count[3] ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.461      ;
++-------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 ----------------------------------------------
@@ -393,10 +391,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.218 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
-;  KEY[0]          ; -0.218 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -0.372 ; 0.0   ; 0.0      ; 0.0     ; -8.14               ;
-;  KEY[0]          ; -0.372 ; 0.000 ; N/A      ; N/A     ; -8.140              ;
+; Worst-case Slack ; -0.197 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+;  KEY[0]          ; -0.197 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -0.37  ; 0.0   ; 0.0      ; 0.0     ; -8.14               ;
+;  KEY[0]          ; -0.370 ; 0.000 ; N/A      ; N/A     ; -8.140              ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -412,10 +410,6 @@ No synchronizer chains to report.
 ; HEX7[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX7[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; HEX7[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; LEDR[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
@@ -427,7 +421,6 @@ No synchronizer chains to report.
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
 ; KEY[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -446,10 +439,6 @@ No synchronizer chains to report.
 ; HEX7[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; HEX7[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; HEX7[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
-; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
-; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
-; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
-; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -467,10 +456,6 @@ No synchronizer chains to report.
 ; HEX7[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX7[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX7[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -488,10 +473,6 @@ No synchronizer chains to report.
 ; HEX7[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX7[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; HEX7[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
-; LEDR[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
 ; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
 +---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
@@ -536,10 +517,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 11    ; 11   ;
-; Unconstrained Output Port Paths ; 32    ; 32   ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
 +---------------------------------+-------+------+
 
 
@@ -552,13 +533,19 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+--------+------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; HEX7[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -573,38 +560,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX7[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX7[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX7[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; HEX7[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; HEX7[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; LEDR[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -614,7 +569,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun Mar 19 18:46:09 2023
+    Info: Processing started: Wed Apr 12 21:07:49 2023
 Info: Command: quartus_sta Counter_Demo -c Counter_Demo
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -631,10 +586,10 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.218
+Info (332146): Worst-case setup slack is -0.197
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.218              -0.372 KEY[0] 
+    Info (332119):    -0.197              -0.370 KEY[0] 
 Info (332146): Worst-case hold slack is 0.440
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -651,10 +606,10 @@ Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.092
+Info (332146): Worst-case setup slack is -0.080
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.092              -0.133 KEY[0] 
+    Info (332119):    -0.080              -0.138 KEY[0] 
 Info (332146): Worst-case hold slack is 0.387
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -667,10 +622,10 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):    -3.000              -8.140 KEY[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332146): Worst-case setup slack is 0.413
+Info (332146): Worst-case setup slack is 0.424
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.413               0.000 KEY[0] 
+    Info (332119):     0.424               0.000 KEY[0] 
 Info (332146): Worst-case hold slack is 0.201
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -682,12 +637,12 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -7.640 KEY[0] 
+    Info (332119):    -3.000              -7.624 KEY[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4915 megabytes
-    Info: Processing ended: Sun Mar 19 18:46:11 2023
+    Info: Peak virtual memory: 4914 megabytes
+    Info: Processing ended: Wed Apr 12 21:07:51 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
