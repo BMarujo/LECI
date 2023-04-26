@@ -3,13 +3,14 @@ HOW TO DELETE COMMITS:
 
 git checkout branch_name 
 
-//if I want to delete from main branch dont need that command
+//if I want to delete from main branch and I am already there don't need that command
 
 
 
 git rebase -i HEAD~5
 
-//show last 5 commits (in my current branch)
+//show last 5 commits (in current branch)
+//replace pick with drop for the commits I wish to delete
 
 
 
@@ -21,5 +22,5 @@ git rebase --continue
 
 git push origin branch_name --force
 
-//delete commits from remote repository too
+//delete commits from remote repository aswell
 //if in branch main -> git push origin main --force
