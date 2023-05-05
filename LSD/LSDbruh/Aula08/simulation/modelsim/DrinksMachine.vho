@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "05/26/2022 18:01:41"
+-- DATE "05/04/2023 11:31:28"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
