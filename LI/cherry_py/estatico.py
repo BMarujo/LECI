@@ -11,7 +11,8 @@ conf = {
         "/static": 
         {
             "tools.staticdir.on": True,
-            "tools.staticdir.dir": os.path.join(PATH, "static")
+            "tools.staticdir.dir": os.path.join(PATH, "static"),
+            "tools.staticdir.index": "index.html"
         },
         "/css": 
         {
