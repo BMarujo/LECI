@@ -1,8 +1,24 @@
 import cherrypy
+import os
+
+
+
+PATH = os.path.abspath(os.path.dirname(__file__))
+conf = {
+"/documento": {
+"tools.staticfile.on": True,
+"tools.staticfile.filename": os.path.join(PATH, "documento.html")
+}
+}
+
+
+
 class Node(object):
     @cherrypy.expose
     def index(self):
-        return "Eu sou o índice do Node (Node.index)"
+        self.num=0
+        print("balanço: ",self.num)
+        return "Eu sou o índice do Node (Node.index) %d" % (self.num)
     @cherrypy.expose
     def page(self):
             return "Eu sou um método do Node (Node.page)"
@@ -13,9 +29,6 @@ class Root(object):
         self.actions = Actions()
         
                 
-    @cherrypy.expose
-    def index(self):
-        return "Eu sou o índice do Root (Root.index)"
     @cherrypy.expose
     def page(self2):
         return "Eu sou um método do Root (Root.page)"
@@ -29,9 +42,10 @@ class Actions(object):
 
     @cherrypy.expose
     def doLogin(self, username=None, password=None):
-        return "Verificar as credenciais do utilizador " + username
-
-
+        if username == "admin" and password == "admin":
+            return "Bem-vindo, administrador"
+        return "Acesso Negado, verificar as credenciais do utilizador "
 
 if __name__ == "__main__":
-    cherrypy.quickstart(Root(), "/")
+    cherrypy.quickstart(Root(), "/", config=conf)
+
