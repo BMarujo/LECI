@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Apr 29 19:31:17 2022
+Fitter Status : Successful - Sun May 21 04:12:54 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : BasicWatch
 Top-level Entity Name : BasicWatch
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 334 / 114,480 ( < 1 % )
-    Total combinational functions : 333 / 114,480 ( < 1 % )
+Total logic elements : 335 / 114,480 ( < 1 % )
+    Total combinational functions : 334 / 114,480 ( < 1 % )
     Dedicated logic registers : 50 / 114,480 ( < 1 % )
 Total registers : 50
 Total pins : 47 / 529 ( 9 % )

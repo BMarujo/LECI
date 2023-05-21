@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BasicWatch
-Fri Apr 29 19:31:05 2022
+Sun May 21 04:12:41 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,13 +51,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 29 19:31:05 2022       ;
+; Analysis & Synthesis Status        ; Successful - Sun May 21 04:12:41 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; BasicWatch                                  ;
 ; Top-level Entity Name              ; BasicWatch                                  ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 333                                         ;
-;     Total combinational functions  ; 333                                         ;
+; Total logic elements               ; 334                                         ;
+;     Total combinational functions  ; 334                                         ;
 ;     Dedicated logic registers      ; 50                                          ;
 ; Total registers                    ; 50                                          ;
 ; Total pins                         ; 47                                          ;
@@ -159,45 +159,46 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
-+-------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+-------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; ../../Aula02/Part3/Bin7SegDecoder.vhd           ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula02/Part3/Bin7SegDecoder.vhd           ;         ;
-; ../../Divisor de frequência crl/FreqDivider.vhd ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/Divisor de frequência crl/FreqDivider.vhd ;         ;
-; BasicWatch.vhd                                  ; yes             ; User VHDL File               ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd               ;         ;
-; lpm_divide.tdf                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf              ;         ;
-; abs_divider.inc                                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc             ;         ;
-; sign_div_unsign.inc                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc         ;         ;
-; aglobal201.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc              ;         ;
-; db/lpm_divide_m9m.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_m9m.tdf        ;         ;
-; db/sign_div_unsign_bkh.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_bkh.tdf   ;         ;
-; db/alt_u_div_a4f.tdf                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_a4f.tdf         ;         ;
-; db/add_sub_7pc.tdf                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/add_sub_7pc.tdf           ;         ;
-; db/add_sub_8pc.tdf                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/add_sub_8pc.tdf           ;         ;
-; db/lpm_divide_hhm.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_hhm.tdf        ;         ;
-; db/sign_div_unsign_9kh.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_9kh.tdf   ;         ;
-; db/alt_u_div_64f.tdf                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_64f.tdf         ;         ;
-; db/lpm_divide_k9m.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_k9m.tdf        ;         ;
-; db/sign_div_unsign_akh.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_akh.tdf   ;         ;
-; db/alt_u_div_74f.tdf                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_74f.tdf         ;         ;
-; db/lpm_divide_ghm.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_ghm.tdf        ;         ;
-; db/sign_div_unsign_8kh.tdf                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_8kh.tdf   ;         ;
-; db/alt_u_div_44f.tdf                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_44f.tdf         ;         ;
-+-------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                        ;
++---------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path      ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++---------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; ../../Aula02/Part3/Bin7SegDecoder.vhd ; yes             ; User VHDL File               ; C:/LECI/LSD/LSDbruh/Aula02/Part3/Bin7SegDecoder.vhd                        ;         ;
+; BasicWatch.vhd                        ; yes             ; User VHDL File               ; C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd                            ;         ;
+; FreqDivider.vhd                       ; yes             ; User VHDL File               ; C:/LECI/LSD/LSDbruh/Aula05/Part4/FreqDivider.vhd                           ;         ;
+; lpm_divide.tdf                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal201.inc                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc      ;         ;
+; db/lpm_divide_m9m.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_m9m.tdf                     ;         ;
+; db/sign_div_unsign_bkh.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_bkh.tdf                ;         ;
+; db/alt_u_div_a4f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_a4f.tdf                      ;         ;
+; db/add_sub_7pc.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/add_sub_7pc.tdf                        ;         ;
+; db/add_sub_8pc.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/add_sub_8pc.tdf                        ;         ;
+; db/lpm_divide_hhm.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_hhm.tdf                     ;         ;
+; db/sign_div_unsign_9kh.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_9kh.tdf                ;         ;
+; db/alt_u_div_64f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_64f.tdf                      ;         ;
+; db/lpm_divide_k9m.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_k9m.tdf                     ;         ;
+; db/sign_div_unsign_akh.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_akh.tdf                ;         ;
+; db/alt_u_div_74f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_74f.tdf                      ;         ;
+; db/lpm_divide_ghm.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_ghm.tdf                     ;         ;
+; db/sign_div_unsign_8kh.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_8kh.tdf                ;         ;
+; db/alt_u_div_44f.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_44f.tdf                      ;         ;
++---------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -205,16 +206,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 333          ;
+; Estimated Total logic elements              ; 334          ;
 ;                                             ;              ;
-; Total combinational functions               ; 333          ;
+; Total combinational functions               ; 334          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 138          ;
-;     -- 3 input functions                    ; 63           ;
+;     -- 4 input functions                    ; 141          ;
+;     -- 3 input functions                    ; 61           ;
 ;     -- <=2 input functions                  ; 132          ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 266          ;
+;     -- normal mode                          ; 267          ;
 ;     -- arithmetic mode                      ; 67           ;
 ;                                             ;              ;
 ; Total registers                             ; 50           ;
@@ -227,8 +228,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[3]~input ;
 ; Maximum fan-out                             ; 41           ;
-; Total fan-out                               ; 1199         ;
-; Average fan-out                             ; 2.51         ;
+; Total fan-out                               ; 1205         ;
+; Average fan-out                             ; 2.52         ;
 +---------------------------------------------+--------------+
 
 
@@ -237,14 +238,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name         ; Library Name ;
 +----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |BasicWatch                            ; 333 (75)            ; 50 (17)                   ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |BasicWatch                                                                                                 ; BasicWatch          ; work         ;
+; |BasicWatch                            ; 334 (76)            ; 50 (17)                   ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |BasicWatch                                                                                                 ; BasicWatch          ; work         ;
 ;    |Bin7SegDecoder:BIN0|               ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN0                                                                             ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:BIN1|               ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN1                                                                             ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:BIN1|               ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN1                                                                             ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:BIN2|               ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN2                                                                             ; Bin7SegDecoder      ; work         ;
-;    |Bin7SegDecoder:BIN3|               ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN3                                                                             ; Bin7SegDecoder      ; work         ;
+;    |Bin7SegDecoder:BIN3|               ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN3                                                                             ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:BIN4|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN4                                                                             ; Bin7SegDecoder      ; work         ;
 ;    |Bin7SegDecoder:BIN5|               ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|Bin7SegDecoder:BIN5                                                                             ; Bin7SegDecoder      ; work         ;
-;    |FreqDivider:FreqDivider|           ; 60 (60)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|FreqDivider:FreqDivider                                                                         ; FreqDivider         ; work         ;
+;    |FreqDivider:FreqDivider|           ; 62 (62)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|FreqDivider:FreqDivider                                                                         ; FreqDivider         ; work         ;
 ;    |lpm_divide:Mod0|                   ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
 ;       |lpm_divide_m9m:auto_generated|  ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m      ; work         ;
 ;          |sign_div_unsign_bkh:divider| ; 36 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BasicWatch|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh ; work         ;
@@ -459,19 +460,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 11                          ;
 ;     ENA SCLR          ; 6                           ;
 ;     plain             ; 33                          ;
-; cycloneiii_lcell_comb ; 335                         ;
+; cycloneiii_lcell_comb ; 336                         ;
 ;     arith             ; 67                          ;
 ;         2 data inputs ; 45                          ;
 ;         3 data inputs ; 22                          ;
-;     normal            ; 268                         ;
+;     normal            ; 269                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 77                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 138                         ;
+;         3 data inputs ; 39                          ;
+;         4 data inputs ; 141                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.20                       ;
-; Average LUT depth     ; 5.46                        ;
+; Average LUT depth     ; 5.49                        ;
 +-----------------------+-----------------------------+
 
 
@@ -490,107 +491,107 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Apr 29 19:30:57 2022
+    Info: Processing started: Sun May 21 04:12:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BasicWatch -c BasicWatch
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danie/disciplinas/2semestre/lsd/aula02/part3/bin7segdecoder.vhd
-    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula02/Part3/Bin7SegDecoder.vhd Line: 10
-    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula02/Part3/Bin7SegDecoder.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danie/disciplinas/2semestre/lsd/divisor de frequência crl/freqdivider.vhd
-    Info (12022): Found design unit 1: FreqDivider-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/Divisor de frequência crl/FreqDivider.vhd Line: 11
-    Info (12023): Found entity 1: FreqDivider File: C:/Users/danie/Disciplinas/2semestre/LSD/Divisor de frequência crl/FreqDivider.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /users/danie/disciplinas/2semestre/lsd/aula05/part3/timern.vhd
-    Info (12022): Found design unit 1: TimerN-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part3/TimerN.vhd Line: 13
-    Info (12023): Found entity 1: TimerN File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part3/TimerN.vhd Line: 4
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /leci/lsd/lsdbruh/aula02/part3/bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/LECI/LSD/LSDbruh/Aula02/Part3/Bin7SegDecoder.vhd Line: 10
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/LECI/LSD/LSDbruh/Aula02/Part3/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /leci/lsd/lsdbruh/aula05/part3/timern.vhd
+    Info (12022): Found design unit 1: TimerN-Behavioral File: C:/LECI/LSD/LSDbruh/Aula05/Part3/TimerN.vhd Line: 13
+    Info (12023): Found entity 1: TimerN File: C:/LECI/LSD/LSDbruh/Aula05/Part3/TimerN.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file basicwatch.vhd
-    Info (12022): Found design unit 1: BasicWatch-Behavioral File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 11
-    Info (12023): Found entity 1: BasicWatch File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 5
+    Info (12022): Found design unit 1: BasicWatch-Behavioral File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 11
+    Info (12023): Found entity 1: BasicWatch File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file freqdivider.vhd
+    Info (12022): Found design unit 1: FreqDivider-Behavioral File: C:/LECI/LSD/LSDbruh/Aula05/Part4/FreqDivider.vhd Line: 10
+    Info (12023): Found entity 1: FreqDivider File: C:/LECI/LSD/LSDbruh/Aula05/Part4/FreqDivider.vhd Line: 5
 Info (12127): Elaborating entity "BasicWatch" for the top level hierarchy
-Info (12129): Elaborating entity "FreqDivider" using architecture "A:behavioral" for hierarchy "FreqDivider:FreqDivider" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 16
-Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:BIN0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 52
+Info (12129): Elaborating entity "FreqDivider" using architecture "A:behavioral" for hierarchy "FreqDivider:FreqDivider" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 16
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:BIN0" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 52
 Info (278001): Inferred 6 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 58
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 63
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 68
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 73
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 78
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 53
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 53
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 58
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod1" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 63
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div1" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 68
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod2" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 73
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div2" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 78
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 53
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 53
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
-    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_m9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_m9m File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_m9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_bkh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_bkh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
-    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_a4f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_a4f.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/add_sub_7pc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_7pc File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 58
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 58
+    Info (12023): Found entity 1: add_sub_8pc File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/add_sub_8pc.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 58
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 58
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
-    Info (12023): Found entity 1: lpm_divide_hhm File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_hhm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_hhm File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_hhm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_9kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
-    Info (12023): Found entity 1: alt_u_div_64f File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_64f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 73
-Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 73
+    Info (12023): Found entity 1: alt_u_div_64f File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_64f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod2" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 73
+Info (12133): Instantiated megafunction "lpm_divide:Mod2" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 73
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_k9m.tdf
-    Info (12023): Found entity 1: lpm_divide_k9m File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_k9m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_k9m File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_k9m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_akh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_akh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_74f.tdf
-    Info (12023): Found entity 1: alt_u_div_74f File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_74f.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 78
-Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 78
+    Info (12023): Found entity 1: alt_u_div_74f File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_74f.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div2" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 78
+Info (12133): Instantiated megafunction "lpm_divide:Div2" with the following parameter: File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 78
     Info (12134): Parameter "LPM_WIDTHN" = "5"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ghm.tdf
-    Info (12023): Found entity 1: lpm_divide_ghm File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/lpm_divide_ghm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_ghm File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/lpm_divide_ghm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/sign_div_unsign_8kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/sign_div_unsign_8kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_44f.tdf
-    Info (12023): Found entity 1: alt_u_div_44f File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/db/alt_u_div_44f.tdf Line: 27
+    Info (12023): Found entity 1: alt_u_div_44f File: C:/LECI/LSD/LSDbruh/Aula05/Part4/db/alt_u_div_44f.tdf Line: 27
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "min_count[3]" is converted into an equivalent circuit using register "min_count[3]~_emulated" and latch "min_count[3]~1" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "min_count[0]" is converted into an equivalent circuit using register "min_count[0]~_emulated" and latch "min_count[0]~5" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "min_count[1]" is converted into an equivalent circuit using register "min_count[1]~_emulated" and latch "min_count[1]~9" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "min_count[2]" is converted into an equivalent circuit using register "min_count[2]~_emulated" and latch "min_count[2]~13" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "min_count[5]" is converted into an equivalent circuit using register "min_count[5]~_emulated" and latch "min_count[5]~17" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "min_count[4]" is converted into an equivalent circuit using register "min_count[4]~_emulated" and latch "min_count[4]~21" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "hor_count[3]" is converted into an equivalent circuit using register "hor_count[3]~_emulated" and latch "hor_count[3]~1" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "hor_count[0]" is converted into an equivalent circuit using register "hor_count[0]~_emulated" and latch "hor_count[0]~5" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "hor_count[1]" is converted into an equivalent circuit using register "hor_count[1]~_emulated" and latch "hor_count[1]~9" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "hor_count[2]" is converted into an equivalent circuit using register "hor_count[2]~_emulated" and latch "hor_count[2]~13" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
-    Warning (13310): Register "hor_count[4]" is converted into an equivalent circuit using register "hor_count[4]~_emulated" and latch "hor_count[4]~17" File: C:/Users/danie/Disciplinas/2semestre/LSD/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[3]" is converted into an equivalent circuit using register "min_count[3]~_emulated" and latch "min_count[3]~1" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[0]" is converted into an equivalent circuit using register "min_count[0]~_emulated" and latch "min_count[0]~5" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[1]" is converted into an equivalent circuit using register "min_count[1]~_emulated" and latch "min_count[1]~9" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[2]" is converted into an equivalent circuit using register "min_count[2]~_emulated" and latch "min_count[2]~13" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[5]" is converted into an equivalent circuit using register "min_count[5]~_emulated" and latch "min_count[5]~17" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "min_count[4]" is converted into an equivalent circuit using register "min_count[4]~_emulated" and latch "min_count[4]~21" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "hor_count[3]" is converted into an equivalent circuit using register "hor_count[3]~_emulated" and latch "hor_count[3]~1" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "hor_count[0]" is converted into an equivalent circuit using register "hor_count[0]~_emulated" and latch "hor_count[0]~5" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "hor_count[1]" is converted into an equivalent circuit using register "hor_count[1]~_emulated" and latch "hor_count[1]~9" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "hor_count[2]" is converted into an equivalent circuit using register "hor_count[2]~_emulated" and latch "hor_count[2]~13" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
+    Warning (13310): Register "hor_count[4]" is converted into an equivalent circuit using register "hor_count[4]~_emulated" and latch "hor_count[4]~17" File: C:/LECI/LSD/LSDbruh/Aula05/Part4/BasicWatch.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 380 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 381 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 333 logic cells
+    Info (21061): Implemented 334 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4805 megabytes
-    Info: Processing ended: Fri Apr 29 19:31:05 2022
+    Info: Peak virtual memory: 4874 megabytes
+    Info: Processing ended: Sun May 21 04:12:41 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:05
 
 
