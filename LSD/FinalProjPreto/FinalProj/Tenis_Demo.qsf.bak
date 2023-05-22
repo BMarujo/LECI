@@ -39,7 +39,7 @@
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY GameSetTest
+set_global_assignment -name TOP_LEVEL_ENTITY Tenis_Demo
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:39:51  JUNE 03, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -576,6 +576,9 @@ set_location_assignment PIN_H14 -to EX_IO[3]
 set_location_assignment PIN_F14 -to EX_IO[4]
 set_location_assignment PIN_E10 -to EX_IO[5]
 set_location_assignment PIN_D9 -to EX_IO[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE Game.vhd
 set_global_assignment -name VHDL_FILE Set.vhd
 set_global_assignment -name VHDL_FILE HexGames.vhd
@@ -584,15 +587,21 @@ set_global_assignment -name VHDL_FILE Match.vhd
 set_global_assignment -name VHDL_FILE Buff.vhd
 set_global_assignment -name VHDL_FILE HexSet.vhd
 set_global_assignment -name VHDL_FILE DebounceUnit.vhd
-set_global_assignment -name BDF_FILE TESTGame.bdf
-set_global_assignment -name VHDL_FILE PulseGeneratorCounter.vhd
-set_global_assignment -name VHDL_FILE ClkDividerN.vhd
+set_global_assignment -name VHDL_FILE DPoint.vhd
+set_global_assignment -name VHDL_FILE output_files/Sum.vhd
+set_global_assignment -name VHDL_FILE HexSetExp.vhd
+set_global_assignment -name VHDL_FILE output_files/VtoB.vhd
+set_global_assignment -name VHDL_FILE PulseGeneratorLed.vhd
+set_global_assignment -name VHDL_FILE Winner.vhd
+set_global_assignment -name VHDL_FILE Buff1bit.vhd
+set_global_assignment -name VHDL_FILE Buff2.vhd
+set_global_assignment -name VHDL_FILE Buff2led12.vhd
+set_global_assignment -name VHDL_FILE Buff3ledTo11.vhd
+set_global_assignment -name VHDL_FILE output_files/Buff3ledTo16.vhd
+set_global_assignment -name VHDL_FILE HexGamesExp.vhd
+set_global_assignment -name VHDL_FILE HexSet0.vhd
+set_global_assignment -name VHDL_FILE HexSet1.vhd
 set_global_assignment -name VHDL_FILE Game_Tb.vhd
-set_global_assignment -name VHDL_FILE Match_Tb.vhd
 set_global_assignment -name VHDL_FILE Set_Tb.vhd
-set_global_assignment -name VHDL_FILE GameSetTest.vhd
-set_global_assignment -name VHDL_FILE GameSet_Tb.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE Match_Tb.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

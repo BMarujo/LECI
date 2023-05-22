@@ -1,5 +1,5 @@
 Timing Analyzer report for Tenis_Demo
-Wed May 17 17:33:01 2023
+Mon May 22 21:19:10 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -137,14 +137,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.19        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   4.1%      ;
-;     Processor 3            ;   3.8%      ;
-;     Processor 4            ;   3.6%      ;
+;     Processor 2            ;   4.2%      ;
+;     Processor 3            ;   3.9%      ;
+;     Processor 4            ;   3.7%      ;
 ;     Processors 5-12        ;   1.0%      ;
 +----------------------------+-------------+
 
@@ -835,23 +835,23 @@ HTML report is unavailable in plain text report export.
 ; 0.408 ; Match:match|s_set2[2]                ; Match:match|s_set2[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.674      ;
 ; 0.408 ; Match:match|s_set1[2]                ; Match:match|s_set1[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.080      ; 0.674      ;
 ; 0.440 ; Game:Game|Tcounter2[1]               ; Game:Game|Tcounter2[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; Game:Game|Tcounter2[2]               ; Game:Game|Tcounter2[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|Tcounter1[2]               ; Game:Game|Tcounter1[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|Tcounter2[3]               ; Game:Game|Tcounter2[3]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|Tcounter2[0]               ; Game:Game|Tcounter2[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|Tcounter1[1]               ; Game:Game|Tcounter1[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Game:Game|Tcounter2[2]               ; Game:Game|Tcounter2[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Game:Game|counter2[0]                ; Game:Game|counter2[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|counter2[2]                ; Game:Game|counter2[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Game:Game|counter1[2]                ; Game:Game|counter1[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Set:set|counter1[0]                  ; Set:set|counter1[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Set:set|counter1[1]                  ; Set:set|counter1[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Set:set|counter1[2]                  ; Set:set|counter1[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.440 ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; Game:Game|counter2[0]                ; Game:Game|counter2[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; Set:set|counter2[0]                  ; Set:set|counter2[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
-; 0.445 ; Game:Game|counter1[0]                ; Game:Game|counter1[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.674      ;
+; 0.440 ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; Set:set|counter1[1]                  ; Set:set|counter1[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
+; 0.440 ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.445 ; Game:Game|Tcounter1[0]               ; Game:Game|Tcounter1[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.674      ;
+; 0.445 ; Game:Game|counter1[0]                ; Game:Game|counter1[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.043      ; 0.674      ;
 ; 0.447 ; PulseGeneratorLed:pgl|s_counter[24]  ; PulseGeneratorLed:pgl|s_counter[24]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.098      ; 0.731      ;
 ; 0.543 ; PulseGeneratorLed:pgl|s_counter[21]  ; PulseGeneratorLed:pgl|s_counter[22]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.513      ; 1.242      ;
 ; 0.556 ; PulseGeneratorLed:pgl|s_counter[16]  ; PulseGeneratorLed:pgl|s_counter[17]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.513      ; 1.255      ;
@@ -1591,8 +1591,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; -6.196 ; Game:Game|Tcounter2[3] ; Set:set|counter2[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.106     ; 7.089      ;
 ; -6.196 ; Game:Game|Tcounter2[0] ; Set:set|counter2[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.106     ; 7.089      ;
 ; -6.181 ; Set:set|counter1[2]    ; Set:set|PS            ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.673     ; 6.507      ;
-; -6.177 ; Game:Game|Tcounter2[1] ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.658     ; 6.518      ;
 ; -6.177 ; Game:Game|Tcounter2[3] ; Set:set|counter2[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 7.103      ;
+; -6.177 ; Game:Game|Tcounter2[1] ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.658     ; 6.518      ;
 ; -6.149 ; Set:set|counter2[0]    ; Set:set|counter2[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.039     ; 7.109      ;
 ; -6.119 ; Game:Game|Tcounter2[2] ; Set:set|counter2[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.106     ; 7.012      ;
 ; -6.100 ; Game:Game|Tcounter2[2] ; Set:set|counter2[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.073     ; 7.026      ;
@@ -2091,21 +2091,21 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.365 ; Match:match|s_set2[2]                ; Match:match|s_set2[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.608      ;
 ; 0.366 ; Match:match|s_set1[2]                ; Match:match|s_set1[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.608      ;
 ; 0.387 ; Game:Game|Tcounter2[1]               ; Game:Game|Tcounter2[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|Tcounter2[3]               ; Game:Game|Tcounter2[3]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|Tcounter1[1]               ; Game:Game|Tcounter1[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|Tcounter1[2]               ; Game:Game|Tcounter1[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|Tcounter2[0]               ; Game:Game|Tcounter2[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; Game:Game|Tcounter2[2]               ; Game:Game|Tcounter2[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|counter2[0]                ; Game:Game|counter2[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|counter2[2]                ; Game:Game|counter2[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|Tcounter1[2]               ; Game:Game|Tcounter1[2]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|Tcounter1[1]               ; Game:Game|Tcounter1[1]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|Tcounter2[3]               ; Game:Game|Tcounter2[3]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|Tcounter2[0]               ; Game:Game|Tcounter2[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; Game:Game|counter1[2]                ; Game:Game|counter1[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|counter2[2]                ; Game:Game|counter2[2]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|counter2[0]                ; Game:Game|counter2[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; Set:set|counter1[0]                  ; Set:set|counter1[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Set:set|counter1[2]                  ; Set:set|counter1[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; Set:set|counter2[0]                  ; Set:set|counter2[0]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
-; 0.387 ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; Set:set|counter1[1]                  ; Set:set|counter1[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Set:set|counter1[2]                  ; Set:set|counter1[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
+; 0.387 ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.398 ; Game:Game|Tcounter1[0]               ; Game:Game|Tcounter1[0]               ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.608      ;
 ; 0.398 ; Game:Game|counter1[0]                ; Game:Game|counter1[0]                ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.039      ; 0.608      ;
 ; 0.402 ; PulseGeneratorLed:pgl|s_counter[24]  ; PulseGeneratorLed:pgl|s_counter[24]  ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.089      ; 0.662      ;
@@ -2813,8 +2813,8 @@ No synchronizer chains to report.
 ; -3.113 ; Set:set|counter1[0]    ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.201     ; 3.899      ;
 ; -3.112 ; Set:set|counter2[0]    ; Set:set|counter1[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.093     ; 4.006      ;
 ; -3.081 ; Game:Game|Tcounter2[3] ; Set:set|counter1[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.996      ;
-; -3.079 ; Game:Game|Tcounter2[3] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.994      ;
 ; -3.079 ; Game:Game|Tcounter2[1] ; Set:set|counter1[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.994      ;
+; -3.079 ; Game:Game|Tcounter2[3] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.994      ;
 ; -3.077 ; Game:Game|Tcounter2[1] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.992      ;
 ; -3.076 ; Game:Game|Tcounter2[3] ; Set:set|counter1[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.991      ;
 ; -3.074 ; Game:Game|Tcounter2[1] ; Set:set|counter1[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.072     ; 3.989      ;
@@ -2841,13 +2841,13 @@ No synchronizer chains to report.
 ; -2.854 ; Game:Game|Tcounter2[3] ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.205     ; 3.636      ;
 ; -2.852 ; Set:set|counter2[2]    ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.226     ; 3.613      ;
 ; -2.836 ; Set:set|counter2[1]    ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.201     ; 3.622      ;
-; -2.830 ; Game:Game|Tcounter1[1] ; Set:set|counter1[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.876      ;
 ; -2.830 ; Game:Game|Tcounter2[1] ; Set:set|counter2[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.047     ; 3.770      ;
+; -2.830 ; Game:Game|Tcounter1[1] ; Set:set|counter1[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.876      ;
 ; -2.828 ; Game:Game|Tcounter1[1] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.874      ;
 ; -2.825 ; Game:Game|Tcounter1[1] ; Set:set|counter1[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.871      ;
 ; -2.811 ; Game:Game|Tcounter1[2] ; Set:set|counter1[2]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.857      ;
-; -2.809 ; Game:Game|Tcounter1[2] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.855      ;
 ; -2.809 ; Game:Game|Tcounter2[1] ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.205     ; 3.591      ;
+; -2.809 ; Game:Game|Tcounter1[2] ; Set:set|counter1[0]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.855      ;
 ; -2.806 ; Game:Game|Tcounter1[2] ; Set:set|counter1[1]   ; CLOCK_50     ; CLOCK_50    ; 1.000        ; 0.059      ; 3.852      ;
 ; -2.788 ; Game:Game|Tcounter2[2] ; Game:Game|j1          ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.205     ; 3.570      ;
 ; -2.777 ; Set:set|counter1[2]    ; Set:set|PS            ; CLOCK_50     ; CLOCK_50    ; 1.000        ; -0.201     ; 3.563      ;
@@ -3137,22 +3137,22 @@ No synchronizer chains to report.
 ; 0.179  ; Game:Game|j1                         ; Game:Game|j1                         ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.044      ; 0.307      ;
 ; 0.186  ; Match:match|s_set2[2]                ; Match:match|s_set2[2]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.044      ; 0.314      ;
 ; 0.186  ; Match:match|s_set1[2]                ; Match:match|s_set1[2]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.044      ; 0.314      ;
-; 0.199  ; Game:Game|Tcounter2[2]               ; Game:Game|Tcounter2[2]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|Tcounter2[1]               ; Game:Game|Tcounter2[1]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Game:Game|Tcounter1[1]               ; Game:Game|Tcounter1[1]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|Tcounter1[2]               ; Game:Game|Tcounter1[2]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Game:Game|Tcounter2[0]               ; Game:Game|Tcounter2[0]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|Tcounter2[3]               ; Game:Game|Tcounter2[3]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Game:Game|Tcounter2[0]               ; Game:Game|Tcounter2[0]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Game:Game|Tcounter2[2]               ; Game:Game|Tcounter2[2]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|counter2[0]                ; Game:Game|counter2[0]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|counter2[2]                ; Game:Game|counter2[2]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Game:Game|counter1[2]                ; Game:Game|counter1[2]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Set:set|counter1[2]                  ; Set:set|counter1[2]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Set:set|counter1[0]                  ; Set:set|counter1[0]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Set:set|counter2[1]                  ; Set:set|counter2[1]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Set:set|counter2[0]                  ; Set:set|counter2[0]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
-; 0.199  ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Set:set|counter1[2]                  ; Set:set|counter1[2]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Game:Game|Tcounter1[1]               ; Game:Game|Tcounter1[1]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.199  ; Set:set|counter1[1]                  ; Set:set|counter1[1]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Game:Game|counter2[1]                ; Game:Game|counter2[1]                ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
+; 0.199  ; Set:set|counter2[2]                  ; Set:set|counter2[2]                  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.307      ;
 ; 0.202  ; PulseGeneratorLed:pgl|s_counter[24]  ; PulseGeneratorLed:pgl|s_counter[24]  ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.051      ; 0.337      ;
 ; 0.204  ; Set:set|PS                           ; Set:set|counter2[2]                  ; Set:set|PS     ; CLOCK_50    ; -0.500       ; 2.210      ; 2.133      ;
 ; 0.206  ; Game:Game|Tcounter1[0]               ; Game:Game|Tcounter1[0]               ; CLOCK_50       ; CLOCK_50    ; 0.000        ; 0.024      ; 0.314      ;
@@ -4650,7 +4650,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 17 17:32:59 2023
+    Info: Processing started: Mon May 22 21:19:08 2023
 Info: Command: quartus_sta Tenis_Demo -c Tenis_Demo
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -4792,8 +4792,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4952 megabytes
-    Info: Processing ended: Wed May 17 17:33:01 2023
+    Info: Peak virtual memory: 4953 megabytes
+    Info: Processing ended: Mon May 22 21:19:10 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 

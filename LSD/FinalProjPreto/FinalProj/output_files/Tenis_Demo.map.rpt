@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Tenis_Demo
-Wed May 17 17:32:38 2023
+Mon May 22 21:18:49 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 17 17:32:38 2023       ;
+; Analysis & Synthesis Status        ; Successful - Mon May 22 21:18:49 2023       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Tenis_Demo                                  ;
 ; Top-level Entity Name              ; Tenis_Demo                                  ;
@@ -170,36 +170,36 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
-; Game.vhd                         ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd                      ;         ;
-; Set.vhd                          ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd                       ;         ;
-; HexGames.vhd                     ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/HexGames.vhd                  ;         ;
-; Tenis_Demo.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/Users/berna/Downloads/FinalProj/FinalProj/Tenis_Demo.bdf                ;         ;
-; Match.vhd                        ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Match.vhd                     ;         ;
-; Buff.vhd                         ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Buff.vhd                      ;         ;
-; DebounceUnit.vhd                 ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/DebounceUnit.vhd              ;         ;
-; DPoint.vhd                       ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd                    ;         ;
-; output_files/Sum.vhd             ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd          ;         ;
-; PulseGeneratorLed.vhd            ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/PulseGeneratorLed.vhd         ;         ;
-; Buff1bit.vhd                     ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Buff1bit.vhd                  ;         ;
-; Buff2.vhd                        ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2.vhd                     ;         ;
-; Buff2led12.vhd                   ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2led12.vhd                ;         ;
-; Buff3ledTo11.vhd                 ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/Buff3ledTo11.vhd              ;         ;
-; output_files/Buff3ledTo16.vhd    ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Buff3ledTo16.vhd ;         ;
-; HexGamesExp.vhd                  ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/HexGamesExp.vhd               ;         ;
-; HexSet0.vhd                      ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd                   ;         ;
-; HexSet1.vhd                      ; yes             ; User VHDL File                     ; C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd                   ;         ;
-; pulsegeneratorcounter.vhd        ; yes             ; Auto-Found VHDL File               ; C:/Users/berna/Downloads/FinalProj/FinalProj/pulsegeneratorcounter.vhd     ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; Game.vhd                         ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd                      ;         ;
+; Set.vhd                          ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd                       ;         ;
+; HexGames.vhd                     ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/HexGames.vhd                  ;         ;
+; Tenis_Demo.bdf                   ; yes             ; User Block Diagram/Schematic File  ; C:/LECI/LSD/FinalProjPreto/FinalProj/Tenis_Demo.bdf                ;         ;
+; Match.vhd                        ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Match.vhd                     ;         ;
+; Buff.vhd                         ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Buff.vhd                      ;         ;
+; DebounceUnit.vhd                 ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/DebounceUnit.vhd              ;         ;
+; DPoint.vhd                       ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd                    ;         ;
+; output_files/Sum.vhd             ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd          ;         ;
+; PulseGeneratorLed.vhd            ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/PulseGeneratorLed.vhd         ;         ;
+; Buff1bit.vhd                     ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Buff1bit.vhd                  ;         ;
+; Buff2.vhd                        ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2.vhd                     ;         ;
+; Buff2led12.vhd                   ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2led12.vhd                ;         ;
+; Buff3ledTo11.vhd                 ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/Buff3ledTo11.vhd              ;         ;
+; output_files/Buff3ledTo16.vhd    ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Buff3ledTo16.vhd ;         ;
+; HexGamesExp.vhd                  ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/HexGamesExp.vhd               ;         ;
+; HexSet0.vhd                      ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd                   ;         ;
+; HexSet1.vhd                      ; yes             ; User VHDL File                     ; C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd                   ;         ;
+; pulsegeneratorcounter.vhd        ; yes             ; Auto-Found VHDL File               ; C:/LECI/LSD/FinalProjPreto/FinalProj/pulsegeneratorcounter.vhd     ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -457,188 +457,188 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed May 17 17:32:29 2023
+    Info: Processing started: Mon May 22 21:18:41 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Tenis_Demo -c Tenis_Demo
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file game.vhd
-    Info (12022): Found design unit 1: Game-Behav File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 23
-    Info (12023): Found entity 1: Game File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 5
+    Info (12022): Found design unit 1: Game-Behav File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 23
+    Info (12023): Found entity 1: Game File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file set.vhd
-    Info (12022): Found design unit 1: Set-Behav File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 21
-    Info (12023): Found entity 1: Set File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 5
+    Info (12022): Found design unit 1: Set-Behav File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 21
+    Info (12023): Found entity 1: Set File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hexgames.vhd
-    Info (12022): Found design unit 1: HexGame-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGames.vhd Line: 13
-    Info (12023): Found entity 1: HexGame File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGames.vhd Line: 4
+    Info (12022): Found design unit 1: HexGame-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGames.vhd Line: 13
+    Info (12023): Found entity 1: HexGame File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGames.vhd Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file tenis_demo.bdf
     Info (12023): Found entity 1: Tenis_Demo
 Info (12021): Found 2 design units, including 1 entities, in source file match.vhd
-    Info (12022): Found design unit 1: Match-Set File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match.vhd Line: 19
-    Info (12023): Found entity 1: Match File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match.vhd Line: 5
+    Info (12022): Found design unit 1: Match-Set File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match.vhd Line: 19
+    Info (12023): Found entity 1: Match File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file buff.vhd
-    Info (12022): Found design unit 1: Buff-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff.vhd Line: 11
-    Info (12023): Found entity 1: Buff File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff.vhd Line: 4
+    Info (12022): Found design unit 1: Buff-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff.vhd Line: 11
+    Info (12023): Found entity 1: Buff File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hexset.vhd
-    Info (12022): Found design unit 1: HexSet-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet.vhd Line: 11
-    Info (12023): Found entity 1: HexSet File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet.vhd Line: 4
+    Info (12022): Found design unit 1: HexSet-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet.vhd Line: 11
+    Info (12023): Found entity 1: HexSet File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
-    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/DebounceUnit.vhd Line: 16
-    Info (12023): Found entity 1: DebounceUnit File: C:/Users/berna/Downloads/FinalProj/FinalProj/DebounceUnit.vhd Line: 5
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/DebounceUnit.vhd Line: 16
+    Info (12023): Found entity 1: DebounceUnit File: C:/LECI/LSD/FinalProjPreto/FinalProj/DebounceUnit.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file dpoint.vhd
-    Info (12022): Found design unit 1: DPoint-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 15
-    Info (12023): Found entity 1: DPoint File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 5
+    Info (12022): Found design unit 1: DPoint-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 15
+    Info (12023): Found entity 1: DPoint File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/sum.vhd
-    Info (12022): Found design unit 1: Sum-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 15
-    Info (12023): Found entity 1: Sum File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 5
+    Info (12022): Found design unit 1: Sum-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 15
+    Info (12023): Found entity 1: Sum File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hexsetexp.vhd
-    Info (12022): Found design unit 1: HexSetExp-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSetExp.vhd Line: 11
-    Info (12023): Found entity 1: HexSetExp File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSetExp.vhd Line: 4
+    Info (12022): Found design unit 1: HexSetExp-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSetExp.vhd Line: 11
+    Info (12023): Found entity 1: HexSetExp File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSetExp.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/vtob.vhd
-    Info (12022): Found design unit 1: VtoB-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/VtoB.vhd Line: 9
-    Info (12023): Found entity 1: VtoB File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/VtoB.vhd Line: 4
+    Info (12022): Found design unit 1: VtoB-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/VtoB.vhd Line: 9
+    Info (12023): Found entity 1: VtoB File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/VtoB.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file pulsegeneratorled.vhd
-    Info (12022): Found design unit 1: PulseGeneratorLed-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/PulseGeneratorLed.vhd Line: 11
-    Info (12023): Found entity 1: PulseGeneratorLed File: C:/Users/berna/Downloads/FinalProj/FinalProj/PulseGeneratorLed.vhd Line: 5
+    Info (12022): Found design unit 1: PulseGeneratorLed-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/PulseGeneratorLed.vhd Line: 11
+    Info (12023): Found entity 1: PulseGeneratorLed File: C:/LECI/LSD/FinalProjPreto/FinalProj/PulseGeneratorLed.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file winner.vhd
-    Info (12022): Found design unit 1: Winner-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Winner.vhd Line: 9
-    Info (12023): Found entity 1: Winner File: C:/Users/berna/Downloads/FinalProj/FinalProj/Winner.vhd Line: 4
+    Info (12022): Found design unit 1: Winner-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Winner.vhd Line: 9
+    Info (12023): Found entity 1: Winner File: C:/LECI/LSD/FinalProjPreto/FinalProj/Winner.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buff1bit.vhd
-    Info (12022): Found design unit 1: Buff1bit-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff1bit.vhd Line: 11
-    Info (12023): Found entity 1: Buff1bit File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff1bit.vhd Line: 4
+    Info (12022): Found design unit 1: Buff1bit-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff1bit.vhd Line: 11
+    Info (12023): Found entity 1: Buff1bit File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff1bit.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buff2.vhd
-    Info (12022): Found design unit 1: Buff2-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2.vhd Line: 11
-    Info (12023): Found entity 1: Buff2 File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2.vhd Line: 4
+    Info (12022): Found design unit 1: Buff2-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2.vhd Line: 11
+    Info (12023): Found entity 1: Buff2 File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buff2led12.vhd
-    Info (12022): Found design unit 1: Buff2led12-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2led12.vhd Line: 11
-    Info (12023): Found entity 1: Buff2led12 File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2led12.vhd Line: 4
+    Info (12022): Found design unit 1: Buff2led12-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2led12.vhd Line: 11
+    Info (12023): Found entity 1: Buff2led12 File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2led12.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file buff3ledto11.vhd
-    Info (12022): Found design unit 1: Buff3lebTo11-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff3ledTo11.vhd Line: 11
-    Info (12023): Found entity 1: Buff3lebTo11 File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff3ledTo11.vhd Line: 4
+    Info (12022): Found design unit 1: Buff3lebTo11-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff3ledTo11.vhd Line: 11
+    Info (12023): Found entity 1: Buff3lebTo11 File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff3ledTo11.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file output_files/buff3ledto16.vhd
-    Info (12022): Found design unit 1: Buff3lebTo16-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Buff3ledTo16.vhd Line: 11
-    Info (12023): Found entity 1: Buff3lebTo16 File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Buff3ledTo16.vhd Line: 4
+    Info (12022): Found design unit 1: Buff3lebTo16-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Buff3ledTo16.vhd Line: 11
+    Info (12023): Found entity 1: Buff3lebTo16 File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Buff3ledTo16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hexgamesexp.vhd
-    Info (12022): Found design unit 1: HexGameExp-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGamesExp.vhd Line: 14
-    Info (12023): Found entity 1: HexGameExp File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGamesExp.vhd Line: 4
+    Info (12022): Found design unit 1: HexGameExp-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGamesExp.vhd Line: 14
+    Info (12023): Found entity 1: HexGameExp File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGamesExp.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file hexset0.vhd
-    Info (12022): Found design unit 1: HexSet0-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 14
-    Info (12023): Found entity 1: HexSet0 File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 5
+    Info (12022): Found design unit 1: HexSet0-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 14
+    Info (12023): Found entity 1: HexSet0 File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hexset1.vhd
-    Info (12022): Found design unit 1: HexSet1-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 14
-    Info (12023): Found entity 1: HexSet1 File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 5
+    Info (12022): Found design unit 1: HexSet1-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 14
+    Info (12023): Found entity 1: HexSet1 File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file game_tb.vhd
-    Info (12022): Found design unit 1: Game_Tb-Simulation File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game_Tb.vhd Line: 7
-    Info (12023): Found entity 1: Game_Tb File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game_Tb.vhd Line: 4
+    Info (12022): Found design unit 1: Game_Tb-Simulation File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Game_Tb File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game_Tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file set_tb.vhd
-    Info (12022): Found design unit 1: Set_Tb-Simulation File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set_Tb.vhd Line: 7
-    Info (12023): Found entity 1: Set_Tb File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set_Tb.vhd Line: 4
+    Info (12022): Found design unit 1: Set_Tb-Simulation File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Set_Tb File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set_Tb.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file match_tb.vhd
-    Info (12022): Found design unit 1: Match_Tb-Simulation File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match_Tb.vhd Line: 7
-    Info (12023): Found entity 1: Match_Tb File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match_Tb.vhd Line: 4
+    Info (12022): Found design unit 1: Match_Tb-Simulation File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match_Tb.vhd Line: 7
+    Info (12023): Found entity 1: Match_Tb File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match_Tb.vhd Line: 4
 Info (12127): Elaborating entity "Tenis_Demo" for the top level hierarchy
 Info (12128): Elaborating entity "HexSet0" for hierarchy "HexSet0:hs0"
-Warning (10492): VHDL Process Statement warning at HexSet0.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 30
-Warning (10492): VHDL Process Statement warning at HexSet0.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at HexSet0.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at HexSet0.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
 Info (12128): Elaborating entity "Match" for hierarchy "Match:match"
-Warning (10492): VHDL Process Statement warning at Match.vhd(53): signal "set_Pt1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at Match.vhd(55): signal "set_Pt2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Match.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at Match.vhd(53): signal "set_Pt1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at Match.vhd(55): signal "set_Pt2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Match.vhd Line: 55
 Info (12128): Elaborating entity "Set" for hierarchy "Set:set"
-Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt1", which holds its previous value in one or more paths through the process File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 60
-Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt2", which holds its previous value in one or more paths through the process File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 60
-Info (10041): Inferred latch for "set_Pt2" at Set.vhd(60) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 60
-Info (10041): Inferred latch for "set_Pt1" at Set.vhd(60) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Set.vhd Line: 60
+Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt1", which holds its previous value in one or more paths through the process File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 60
+Warning (10631): VHDL Process Statement warning at Set.vhd(60): inferring latch(es) for signal or variable "set_Pt2", which holds its previous value in one or more paths through the process File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 60
+Info (10041): Inferred latch for "set_Pt2" at Set.vhd(60) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 60
+Info (10041): Inferred latch for "set_Pt1" at Set.vhd(60) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Set.vhd Line: 60
 Info (12128): Elaborating entity "DebounceUnit" for hierarchy "DebounceUnit:DU1"
 Info (12128): Elaborating entity "Game" for hierarchy "Game:Game"
-Warning (10492): VHDL Process Statement warning at Game.vhd(84): signal "tb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at Game.vhd(85): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 85
-Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at Game.vhd(91): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 91
-Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 94
-Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 94
-Warning (10631): VHDL Process Statement warning at Game.vhd(76): inferring latch(es) for signal or variable "NS", which holds its previous value in one or more paths through the process File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at Game.vhd(175): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 175
-Info (10041): Inferred latch for "NS.A2" at Game.vhd(76) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-Info (10041): Inferred latch for "NS.A1" at Game.vhd(76) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-Info (10041): Inferred latch for "NS.D" at Game.vhd(76) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-Info (10041): Inferred latch for "NS.S" at Game.vhd(76) File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Game.vhd(84): signal "tb" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at Game.vhd(85): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Game.vhd(88): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at Game.vhd(91): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at Game.vhd(94): signal "Tcounter1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 94
+Warning (10631): VHDL Process Statement warning at Game.vhd(76): inferring latch(es) for signal or variable "NS", which holds its previous value in one or more paths through the process File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at Game.vhd(175): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 175
+Info (10041): Inferred latch for "NS.A2" at Game.vhd(76) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.A1" at Game.vhd(76) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.D" at Game.vhd(76) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+Info (10041): Inferred latch for "NS.S" at Game.vhd(76) File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
 Info (12128): Elaborating entity "DebounceUnit" for hierarchy "DebounceUnit:DU"
 Info (12128): Elaborating entity "PulseGeneratorLed" for hierarchy "PulseGeneratorLed:pgl"
 Warning (12125): Using design file pulsegeneratorcounter.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: PulseGeneratorCounter-Behavioral File: C:/Users/berna/Downloads/FinalProj/FinalProj/pulsegeneratorcounter.vhd Line: 11
-    Info (12023): Found entity 1: PulseGeneratorCounter File: C:/Users/berna/Downloads/FinalProj/FinalProj/pulsegeneratorcounter.vhd Line: 5
+    Info (12022): Found design unit 1: PulseGeneratorCounter-Behavioral File: C:/LECI/LSD/FinalProjPreto/FinalProj/pulsegeneratorcounter.vhd Line: 11
+    Info (12023): Found entity 1: PulseGeneratorCounter File: C:/LECI/LSD/FinalProjPreto/FinalProj/pulsegeneratorcounter.vhd Line: 5
 Info (12128): Elaborating entity "PulseGeneratorCounter" for hierarchy "PulseGeneratorCounter:puls"
 Info (12128): Elaborating entity "HexSet1" for hierarchy "HexSet1:hs1"
-Warning (10492): VHDL Process Statement warning at HexSet1.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 30
-Warning (10492): VHDL Process Statement warning at HexSet1.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at HexSet1.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at HexSet1.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
 Info (12128): Elaborating entity "DPoint" for hierarchy "DPoint:dp"
-Warning (10492): VHDL Process Statement warning at DPoint.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 30
-Warning (10492): VHDL Process Statement warning at DPoint.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-Warning (10492): VHDL Process Statement warning at DPoint.vhd(44): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(30): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(31): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at DPoint.vhd(44): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 44
 Info (12128): Elaborating entity "Sum" for hierarchy "Sum:sum"
-Warning (10492): VHDL Process Statement warning at Sum.vhd(36): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 36
-Warning (10492): VHDL Process Statement warning at Sum.vhd(37): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
+Warning (10492): VHDL Process Statement warning at Sum.vhd(36): signal "enable" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at Sum.vhd(37): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
 Info (12128): Elaborating entity "HexGameExp" for hierarchy "HexGameExp:hge"
-Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(18): signal "win1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGamesExp.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(21): signal "win2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGamesExp.vhd Line: 21
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(18): signal "win1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGamesExp.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at HexGamesExp.vhd(21): signal "win2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGamesExp.vhd Line: 21
 Info (12128): Elaborating entity "HexGame" for hierarchy "HexGame:Hex420"
-Warning (10492): VHDL Process Statement warning at HexGames.vhd(17): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexGames.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at HexGames.vhd(17): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexGames.vhd Line: 17
 Info (12128): Elaborating entity "Buff" for hierarchy "Buff:buff2"
-Warning (10492): VHDL Process Statement warning at Buff.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at Buff.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff.vhd Line: 16
 Info (12128): Elaborating entity "Buff1bit" for hierarchy "Buff1bit:buf"
-Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff1bit.vhd Line: 16
-Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(17): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff1bit.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff1bit.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff1bit.vhd(17): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff1bit.vhd Line: 17
 Info (12128): Elaborating entity "Buff2led12" for hierarchy "Buff2led12:b1"
-Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2led12.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2led12.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2led12.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff2led12.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2led12.vhd Line: 16
 Info (12128): Elaborating entity "Buff3lebTo16" for hierarchy "Buff3lebTo16:bu1"
-Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Buff3ledTo16.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Buff3ledTo16.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Buff3ledTo16.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff3ledTo16.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Buff3ledTo16.vhd Line: 16
 Info (12128): Elaborating entity "Buff3lebTo11" for hierarchy "Buff3lebTo11:bu0"
-Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff3ledTo11.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff3ledTo11.vhd Line: 16
+Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff3ledTo11.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff3ledTo11.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff3ledTo11.vhd Line: 16
 Info (12128): Elaborating entity "Buff2" for hierarchy "Buff2:b0"
-Warning (10492): VHDL Process Statement warning at Buff2.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2.vhd Line: 15
-Warning (10492): VHDL Process Statement warning at Buff2.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/berna/Downloads/FinalProj/FinalProj/Buff2.vhd Line: 16
-Warning (13012): Latch Game:Game|NS.A1_492 has unsafe behavior File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter1[2] File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 34
-Warning (13012): Latch Game:Game|NS.S_536 has unsafe behavior File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 25
-Warning (13012): Latch Game:Game|NS.A2_470 has unsafe behavior File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter2[2] File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 34
-Warning (13012): Latch Game:Game|NS.D_514 has unsafe behavior File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 76
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 25
-Info (13000): Registers with preset signals will power-up high File: C:/Users/berna/Downloads/FinalProj/FinalProj/Game.vhd Line: 172
+Warning (10492): VHDL Process Statement warning at Buff2.vhd(15): signal "win" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2.vhd Line: 15
+Warning (10492): VHDL Process Statement warning at Buff2.vhd(16): signal "input" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LECI/LSD/FinalProjPreto/FinalProj/Buff2.vhd Line: 16
+Warning (13012): Latch Game:Game|NS.A1_492 has unsafe behavior File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter1[2] File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 34
+Warning (13012): Latch Game:Game|NS.S_536 has unsafe behavior File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 25
+Warning (13012): Latch Game:Game|NS.A2_470 has unsafe behavior File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|counter2[2] File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 34
+Warning (13012): Latch Game:Game|NS.D_514 has unsafe behavior File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 76
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Game:Game|PS.S File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 25
+Info (13000): Registers with preset signals will power-up high File: C:/LECI/LSD/FinalProjPreto/FinalProj/Game.vhd Line: 172
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "HexSet0:hs0|decOut[6]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[6]~_emulated" and latch "HexSet0:hs0|decOut[6]~1" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[5]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[5]~_emulated" and latch "HexSet0:hs0|decOut[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[4]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[4]~_emulated" and latch "HexSet0:hs0|decOut[4]~11" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[3]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[3]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[2]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[2]~_emulated" and latch "HexSet0:hs0|decOut[2]~21" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[1]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[1]~_emulated" and latch "HexSet0:hs0|decOut[1]~26" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet0:hs0|decOut[0]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[0]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet0.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[6]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[6]~_emulated" and latch "HexSet1:hs1|decOut[6]~1" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[5]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[5]~_emulated" and latch "HexSet1:hs1|decOut[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[4]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[4]~_emulated" and latch "HexSet1:hs1|decOut[4]~11" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[3]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[3]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[2]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[2]~_emulated" and latch "HexSet1:hs1|decOut[2]~21" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[1]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[1]~_emulated" and latch "HexSet1:hs1|decOut[1]~26" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "HexSet1:hs1|decOut[0]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[0]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/Users/berna/Downloads/FinalProj/FinalProj/HexSet1.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[6]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[6]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[5]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[5]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[4]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[4]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[3]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[3]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[2]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[2]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[1]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[1]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "DPoint:dp|decOut_n[0]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[0]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/DPoint.vhd Line: 31
-    Warning (13310): Register "Sum:sum|decOut[6]" is converted into an equivalent circuit using register "Sum:sum|decOut[6]~_emulated" and latch "Sum:sum|decOut[6]~1" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[5]" is converted into an equivalent circuit using register "Sum:sum|decOut[5]~_emulated" and latch "Sum:sum|decOut[5]~6" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[4]" is converted into an equivalent circuit using register "Sum:sum|decOut[4]~_emulated" and latch "Sum:sum|decOut[4]~11" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[3]" is converted into an equivalent circuit using register "Sum:sum|decOut[3]~_emulated" and latch "Sum:sum|decOut[3]~16" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[2]" is converted into an equivalent circuit using register "Sum:sum|decOut[2]~_emulated" and latch "Sum:sum|decOut[2]~21" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[1]" is converted into an equivalent circuit using register "Sum:sum|decOut[1]~_emulated" and latch "Sum:sum|decOut[1]~26" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
-    Warning (13310): Register "Sum:sum|decOut[0]" is converted into an equivalent circuit using register "Sum:sum|decOut[0]~_emulated" and latch "Sum:sum|decOut[0]~31" File: C:/Users/berna/Downloads/FinalProj/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "HexSet0:hs0|decOut[6]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[6]~_emulated" and latch "HexSet0:hs0|decOut[6]~1" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[5]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[5]~_emulated" and latch "HexSet0:hs0|decOut[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[4]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[4]~_emulated" and latch "HexSet0:hs0|decOut[4]~11" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[3]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[3]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[2]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[2]~_emulated" and latch "HexSet0:hs0|decOut[2]~21" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[1]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[1]~_emulated" and latch "HexSet0:hs0|decOut[1]~26" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet0:hs0|decOut[0]" is converted into an equivalent circuit using register "HexSet0:hs0|decOut[0]~_emulated" and latch "HexSet0:hs0|decOut[3]~16" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet0.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[6]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[6]~_emulated" and latch "HexSet1:hs1|decOut[6]~1" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[5]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[5]~_emulated" and latch "HexSet1:hs1|decOut[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[4]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[4]~_emulated" and latch "HexSet1:hs1|decOut[4]~11" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[3]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[3]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[2]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[2]~_emulated" and latch "HexSet1:hs1|decOut[2]~21" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[1]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[1]~_emulated" and latch "HexSet1:hs1|decOut[1]~26" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "HexSet1:hs1|decOut[0]" is converted into an equivalent circuit using register "HexSet1:hs1|decOut[0]~_emulated" and latch "HexSet1:hs1|decOut[3]~16" File: C:/LECI/LSD/FinalProjPreto/FinalProj/HexSet1.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[6]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[6]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[5]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[5]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[4]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[4]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[3]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[3]~_emulated" and latch "DPoint:dp|decOut_n[6]~1" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[2]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[2]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[1]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[1]~_emulated" and latch "DPoint:dp|decOut_n[4]~11" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "DPoint:dp|decOut_n[0]" is converted into an equivalent circuit using register "DPoint:dp|decOut_n[0]~_emulated" and latch "DPoint:dp|decOut_n[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/DPoint.vhd Line: 31
+    Warning (13310): Register "Sum:sum|decOut[6]" is converted into an equivalent circuit using register "Sum:sum|decOut[6]~_emulated" and latch "Sum:sum|decOut[6]~1" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[5]" is converted into an equivalent circuit using register "Sum:sum|decOut[5]~_emulated" and latch "Sum:sum|decOut[5]~6" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[4]" is converted into an equivalent circuit using register "Sum:sum|decOut[4]~_emulated" and latch "Sum:sum|decOut[4]~11" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[3]" is converted into an equivalent circuit using register "Sum:sum|decOut[3]~_emulated" and latch "Sum:sum|decOut[3]~16" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[2]" is converted into an equivalent circuit using register "Sum:sum|decOut[2]~_emulated" and latch "Sum:sum|decOut[2]~21" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[1]" is converted into an equivalent circuit using register "Sum:sum|decOut[1]~_emulated" and latch "Sum:sum|decOut[1]~26" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
+    Warning (13310): Register "Sum:sum|decOut[0]" is converted into an equivalent circuit using register "Sum:sum|decOut[0]~_emulated" and latch "Sum:sum|decOut[0]~31" File: C:/LECI/LSD/FinalProjPreto/FinalProj/output_files/Sum.vhd Line: 37
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -649,9 +649,9 @@ Info (21057): Implemented 749 device resources after synthesis - the final resou
     Info (21059): Implemented 82 output pins
     Info (21061): Implemented 662 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Wed May 17 17:32:38 2023
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Mon May 22 21:18:49 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
 
 
