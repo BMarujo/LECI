@@ -1,0 +1,28 @@
+|temperature_counter_join
+dezenas[0] => Mult0.IN10
+dezenas[1] => Mult0.IN9
+dezenas[2] => Mult0.IN8
+dezenas[3] => Mult0.IN7
+unidades[0] => Add1.IN11
+unidades[0] => Add0.IN8
+unidades[1] => Add1.IN10
+unidades[1] => Add0.IN7
+unidades[2] => Add0.IN5
+unidades[2] => Add0.IN6
+unidades[3] => Add0.IN3
+unidades[3] => Add0.IN4
+decimas[0] => Add2.IN22
+decimas[1] => Add2.IN21
+decimas[2] => Add2.IN20
+decimas[3] => Add2.IN19
+endereco[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[4] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[5] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[6] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[7] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+endereco[8] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+
+

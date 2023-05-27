@@ -1,0 +1,98 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/PROJETOLSD/simulation/modelsim
+Erom_temp
+Z1 w1684949646
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8C:/PROJETOLSD/Rom_temp.vhd
+Z6 FC:/PROJETOLSD/Rom_temp.vhd
+l0
+L5 1
+VloUdok=oIHYbFjDN]?7BD3
+!s100 T_Bia7631dE5Xe=B5A;352
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1684950030
+!i10b 1
+Z9 !s108 1684950029.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/PROJETOLSD/Rom_temp.vhd|
+Z11 !s107 C:/PROJETOLSD/Rom_temp.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 8 rom_temp 0 22 loUdok=oIHYbFjDN]?7BD3
+!i122 0
+l17
+L10 10
+Va[3C]?nhE7T<6eFN^`9P<0
+!s100 @l3e3NDO[e;hF=mQI8eae0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Erom_temptb
+Z15 w1684949992
+R2
+R3
+R4
+!i122 1
+R0
+Z16 8C:/PROJETOLSD/Rom_tempTB.vhd
+Z17 FC:/PROJETOLSD/Rom_tempTB.vhd
+l0
+L5 1
+VlZ_C1@dz`nlHbKk_hhO]g3
+!s100 9Gk7Y^;7eT;3[TOc7Be8T3
+R7
+32
+Z18 !s110 1684950042
+!i10b 1
+Z19 !s108 1684950042.000000
+Z20 !s90 -reportprogress|300|-work|work|C:/PROJETOLSD/Rom_tempTB.vhd|
+!s107 C:/PROJETOLSD/Rom_tempTB.vhd|
+!i113 1
+Z21 o-work work
+R13
+Astimulus
+R14
+R2
+R3
+R4
+DEx4 work 10 rom_temptb 0 22 lZ_C1@dz`nlHbKk_hhO]g3
+!i122 1
+l11
+L8 25
+VBo]XzY8`6I?:Y8GcMhU7L1
+!s100 ;GC?K9`NU[gddS8fMm1[41
+R7
+32
+R18
+!i10b 1
+R19
+R20
+Z22 !s107 C:/PROJETOLSD/Rom_tempTB.vhd|
+!i113 1
+R21
+R13

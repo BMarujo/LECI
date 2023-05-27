@@ -1,0 +1,43 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Rom_tempTB is 
+end Rom_tempTB; 
+
+architecture Stimulus of Rom_tempTB is
+	signal s_clock: std_logic;
+	signal s_s_button: std_logic;
+	signal s_stout:std_logic_vector(1 downto 0);
+begin
+
+	uut: entity work.Rom_temp(Behavioral)
+			port map (clock => s_clock,
+						s_button=> s_s_button,
+						stout => s_stout);
+						
+	clock_proc : process
+	begin
+		s_clock <= '0'; 
+		wait for 100 ns;
+		s_clock <= '1';
+		wait for 100 ns;
+	end process;
+	
+	stim_proc : process
+	begin
+		s_s_button <= '1'; 
+		
+		wait for 100 ns;
+		s_s_button <= '0'; 
+		
+		wait for 100 ns;
+		s_s_button <= '1'; 
+		
+		wait for 100 ns;
+		s_s_button <= '0'; 
+		wait for 100 ns;
+	end process;
+	
+end Stimulus;
+	

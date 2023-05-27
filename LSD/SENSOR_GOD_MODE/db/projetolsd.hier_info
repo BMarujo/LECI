@@ -1,0 +1,123 @@
+|projetolsd
+LEDG[0] <= Rom_temp:inst2.dataOut[0]
+LEDG[1] <= Rom_temp:inst2.dataOut[1]
+SW6 => Bin7SegDecoder_invert:inst3.decOut_n[6]
+SW5 => Bin7SegDecoder_invert:inst3.decOut_n[5]
+SW4 => Bin7SegDecoder_invert:inst3.decOut_n[4]
+SW3 => Bin7SegDecoder_invert:inst3.decOut_n[3]
+SW2 => Bin7SegDecoder_invert:inst3.decOut_n[2]
+SW1 => Bin7SegDecoder_invert:inst3.decOut_n[1]
+SW0 => Bin7SegDecoder_invert:inst3.decOut_n[0]
+SW17 => Bin7SegDecoder_invert:inst4.decOut_n[6]
+SW16 => Bin7SegDecoder_invert:inst4.decOut_n[5]
+SW15 => Bin7SegDecoder_invert:inst4.decOut_n[4]
+SW14 => Bin7SegDecoder_invert:inst4.decOut_n[3]
+SW13 => Bin7SegDecoder_invert:inst4.decOut_n[2]
+SW12 => Bin7SegDecoder_invert:inst4.decOut_n[1]
+SW11 => Bin7SegDecoder_invert:inst4.decOut_n[0]
+
+
+|projetolsd|Rom_temp:inst2
+address[0] => Mux1.IN36
+address[1] => Mux0.IN19
+address[1] => Mux1.IN35
+address[2] => Mux0.IN18
+address[2] => Mux1.IN34
+address[3] => Mux0.IN17
+address[3] => Mux1.IN33
+address[4] => Mux0.IN16
+address[4] => Mux1.IN32
+dataOut[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetolsd|Hour_join:inst1
+dezenas[0] => Add0.IN62
+dezenas[0] => Add1.IN59
+dezenas[1] => Add0.IN61
+dezenas[1] => Add1.IN58
+dezenas[2] => Add0.IN59
+dezenas[2] => Add0.IN60
+dezenas[3] => Add0.IN57
+dezenas[3] => Add0.IN58
+unidades[0] => endereco[0].DATAIN
+unidades[1] => Add1.IN62
+unidades[2] => Add1.IN61
+unidades[3] => Add1.IN60
+endereco[0] <= unidades[0].DB_MAX_OUTPUT_PORT_TYPE
+endereco[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+endereco[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+endereco[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+endereco[4] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetolsd|Bin7SegDecoder_invert:inst3
+binInput[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+binInput[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+binInput[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+binInput[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+decOut_n[0] => Mux0.IN134
+decOut_n[0] => Mux1.IN134
+decOut_n[0] => Mux2.IN134
+decOut_n[0] => Mux3.IN134
+decOut_n[1] => Mux0.IN133
+decOut_n[1] => Mux1.IN133
+decOut_n[1] => Mux2.IN133
+decOut_n[1] => Mux3.IN133
+decOut_n[2] => Mux0.IN132
+decOut_n[2] => Mux1.IN132
+decOut_n[2] => Mux2.IN132
+decOut_n[2] => Mux3.IN132
+decOut_n[3] => Mux0.IN131
+decOut_n[3] => Mux1.IN131
+decOut_n[3] => Mux2.IN131
+decOut_n[3] => Mux3.IN131
+decOut_n[4] => Mux0.IN130
+decOut_n[4] => Mux1.IN130
+decOut_n[4] => Mux2.IN130
+decOut_n[4] => Mux3.IN130
+decOut_n[5] => Mux0.IN129
+decOut_n[5] => Mux1.IN129
+decOut_n[5] => Mux2.IN129
+decOut_n[5] => Mux3.IN129
+decOut_n[6] => Mux0.IN128
+decOut_n[6] => Mux1.IN128
+decOut_n[6] => Mux2.IN128
+decOut_n[6] => Mux3.IN128
+
+
+|projetolsd|Bin7SegDecoder_invert:inst4
+binInput[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+binInput[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+binInput[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+binInput[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+decOut_n[0] => Mux0.IN134
+decOut_n[0] => Mux1.IN134
+decOut_n[0] => Mux2.IN134
+decOut_n[0] => Mux3.IN134
+decOut_n[1] => Mux0.IN133
+decOut_n[1] => Mux1.IN133
+decOut_n[1] => Mux2.IN133
+decOut_n[1] => Mux3.IN133
+decOut_n[2] => Mux0.IN132
+decOut_n[2] => Mux1.IN132
+decOut_n[2] => Mux2.IN132
+decOut_n[2] => Mux3.IN132
+decOut_n[3] => Mux0.IN131
+decOut_n[3] => Mux1.IN131
+decOut_n[3] => Mux2.IN131
+decOut_n[3] => Mux3.IN131
+decOut_n[4] => Mux0.IN130
+decOut_n[4] => Mux1.IN130
+decOut_n[4] => Mux2.IN130
+decOut_n[4] => Mux3.IN130
+decOut_n[5] => Mux0.IN129
+decOut_n[5] => Mux1.IN129
+decOut_n[5] => Mux2.IN129
+decOut_n[5] => Mux3.IN129
+decOut_n[6] => Mux0.IN128
+decOut_n[6] => Mux1.IN128
+decOut_n[6] => Mux2.IN128
+decOut_n[6] => Mux3.IN128
+
+
