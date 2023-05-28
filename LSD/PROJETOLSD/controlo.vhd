@@ -5,6 +5,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity controlo is
 
+	generic(histerese: std_logic_vector(2 downto 0) :="101");
+
 	
 
 	port(Tref: in std_logic_vector(8 downto 0);
@@ -24,17 +26,19 @@ begin
 
 	process(clk)
 	
+	begin
+	
 	
 		if rising_edge(clk) then
 		
 		
-			if (Tref > Tamb) then
-			
-				rad <= '1';
-				
-			else
+			if (Tamb >= std_logic_vector(unsigned(Tref)+unsigned(histerese))) then
 			
 				rad <= '0';
+				
+			elsif (Tamb <= std_logic_vector(unsigned(Tref)-unsigned(histerese))) then
+			
+				rad <= '1';
 			
 			end if;
 			
