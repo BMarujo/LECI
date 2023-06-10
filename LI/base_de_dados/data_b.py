@@ -3,6 +3,8 @@ import sys
 def main(argv):
     db = sql.connect(argv[1]) # estabelecer ligação à BD 
     # realizar operações sobre a BD
+    db.execute("INSERT INTO contacts (firstname, lastname, email) VALUES (?, ?, ?)", ("123", "456", "abc@abc.pt"))
+    db.commit() # gravar alterações
     result = db.execute("SELECT firstname FROM contacts")
     x=0
 
