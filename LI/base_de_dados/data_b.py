@@ -5,7 +5,7 @@ def main(argv):
     # realizar operações sobre a BD
     db.execute("INSERT INTO contacts (firstname, lastname, email) VALUES (?, ?, ?)", ("123", "456", "abc@abc.pt"))
     db.commit() # gravar alterações
-    result = db.execute("SELECT firstname FROM contacts")
+    result = db.execute("SELECT * FROM contacts")
     x=0
 
 
@@ -22,7 +22,7 @@ def main(argv):
 
     for row in result:
         x+=1
-        print(row[0])
+        print(row[0],"\n",row[5])
 
     print("número de contactos = %d" % (x))
 
