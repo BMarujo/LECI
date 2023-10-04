@@ -8,7 +8,7 @@ main:	ori $v0,$0,5
 	add $t1,$t0,$t0 # $t1 = $t0 + $t0 = x + x = 2 * x
 	add $t1,$t1,$t2 # $t1 = $t1 + $t2 = y = 2 * x + 8
 	or $a0,$0,$t1 #$a0=$t1
-	ori $v0,$0,11 #imprimir em decimal $a0=$t1=y
+	ori $v0,$0,1 #imprimir em decimal $a0=$t1=y
 	syscall 
 	ori $v0,$0,34 #imprimir em hexadecimal
 	syscall
