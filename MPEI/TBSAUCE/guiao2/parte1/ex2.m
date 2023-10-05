@@ -77,10 +77,10 @@ for i = 1 : 9
     for j = 1:N
         res(j) = length(unique(a(:, j))) < n;
     end
-    prob(i) = sum(res)/N;
+    prob2(i) = sum(res)/N;
 end
 
-plot(prob, m)
+plot(prob2, m)
 
 
 

