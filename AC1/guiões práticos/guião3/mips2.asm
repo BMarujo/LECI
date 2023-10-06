@@ -6,28 +6,41 @@ str2:	.asciiz "\nO valor binário é: "
 	.eqv read_int, 5
 	.text
 	.globl main
+	# value = $t0
+	# bit = $t1
+	# i = $t2
 		
 main:	la $a0, str1
 	ori $v0, $0, print_string
 	syscall
 	li $v0, read_int
 	syscall
-	or $t0, $0, $v0
+	or $t0, $v0, $0
 	la $a0 , str2
 	ori $v0 , $0, print_string
 	syscall
-	li $t2, 32 
-	bge $t2, $t0, endfor
+	li $t2, 0 
+if:	bge $t2, 32, endfor
 	
 	li $t3, 0x80000000
 	and $t1, $t0, $t3
 	
+	bne $t1, $0, else
 	
+	li $a0, 0x30
+	li $v0, print_char
+	syscall
+	j soma
+
+else:	li $a0, 0x31
+	li $v0, print_char
+	syscall
 	
+soma:	sll $t0, $t0, 1
+	addi $t2, $t2, 1
+	j if
 	
-	
-	
-	
+
 	
 	
 endfor:	jr $ra
