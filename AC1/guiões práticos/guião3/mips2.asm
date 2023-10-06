@@ -20,7 +20,7 @@ main:	la $a0, str1
 	ori $v0 , $0, print_string
 	syscall
 	li $t2, 0 
-if:	bge $t2, 32, endfor
+for:	bge $t2, 32, endfor
 	
 	li $t3, 0x80000000
 	and $t1, $t0, $t3
@@ -38,7 +38,7 @@ else:	li $a0, 0x31
 	
 soma:	sll $t0, $t0, 1
 	addi $t2, $t2, 1
-	j if
+	j for
 	
 
 	
