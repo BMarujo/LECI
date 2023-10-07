@@ -1,33 +1,40 @@
-p = 0;
 pessoas = 1;
-N = 1e3;
-while p < 0.5
-  pessoas = pessoas + 1;
-  aniversarios = randi([1,365], pessoas, N)
-  sum = 0;
+N = 10000;
+prob = 0;
+while prob < 0.5
+  aniversarios = randi(365, pessoas, N);
+  sucessos = 0;
   for i = 1:N
-      if length(unique(aniversarios(:, i))) ~= pessoas
-          sum = sum + 1;
+      
+      if length(unique(aniversarios(:, i))) == pessoas
+  
+      else 
+          sucessos = sucessos + 1;
       end
   end
-  p = sum / N;
+  prob = sucessos / N;
+  pessoas = pessoas + 1;
 end
-fprintf("A) %d pessoas", pessoas);
+menor_numero_de_pessoas_necessarias_para_mesmo_aniversario=pessoas
 
 
 %% b
-p = 0;
 pessoas = 1;
-N = 1e3;
-while p < 0.9
-  pessoas = pessoas + 1;
-  aniversarios = randi([1,365], pessoas, N)
-  sum = 0;
+N = 10000;
+prob = 0;
+while prob < 0.9
+  aniversarios = randi(365, pessoas, N);
+  sucessos = 0;
   for i = 1:N
-      if length(unique(aniversarios(:, i))) ~= pessoas
-          sum = sum + 1;
+      if length(unique(aniversarios(:, i))) == pessoas
+         
+
+      else
+
+          sucessos = sucessos + 1;
       end
   end
-  p = sum / N;
+  prob = sucessos / N;
+  pessoas = pessoas + 1;
 end
-fprintf("B) %d pessoas", pessoas);
+menor_numero_de_pessoas_necessarias_para_mesmo_aniversario=pessoas
