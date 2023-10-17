@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, inicial-scaled=1.0">
+        <title>Xadrez</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/mainpage.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="js/graphic.js"></script>
+    </head>
+    <body>
+        <nav class="navbar22">
+                <a href="index.html" id="logo"><img id="logoimage" src="images/ailogo.png" alt="logo da AI"><b>Inteligência Artificial</b></a>
+                <ul id="hide">
+                    <li>
+                        <a href="robos.html">Robôs e Automóveis</a>
+                    </li>
+                    <li>
+                        <a href="github.html">GitHub Copilot</a>
+                    </li>
+                    <li>
+                        <span><a href="xadrez.html#home" id="current" onclick="currentpage()">Xadrez</a></span>
+                    </li>
+                    <li>
+                        <a href="about.html">Informações</a>
+                    </li>
+                </ul>
+                <button onclick="hideNavbar()" id="Btn"><div id="line"></div><div id="line2"></div><div id="line3"></div></button>
+        </nav>
+        <div id="navpic"> <section id="home"> </section><img src="images/ailogo.png" alt="logo da AI"> </div>
+
+
+        <div class="mainpage2">
+
+            <br>
+
+            <div class="container">
+
+
+                <div class="row">
+
+
+                    <h1 id="chesstitle">
+                        <b><i>Xadrez</i></b>
+                    </h1>
+                    <img id="chessgame" src="images/xadrez.gif" alt="chessgame">
+                        
+                    <h3>
+                        <hr>
+
+                        <b><i>O que é uma Chess Engine</i></b>
+
+                        
+                    </h3>
+                    <p>Chess Engines (CE) são programas de computador projetados para jogar
+                    o jogo de xadrez. Esses programas usam algoritmos avançados e técnicas de
+                    inteligência artificial para analisar o tabuleiro de xadrez e tomar decisões sobre
+                    quais jogadas fazer.</p>
+                    <p>Os mecanismos de xadrez são uma ferramenta importante para os jogadores
+                    de xadrez, pois podem fornecer informações e análises valiosas que podem ajudar
+                    os jogadores a melhorar o seu jogo. Muitas CE estão disponíveis, variando
+                    de programas simples que fornecem análises básicas a mecanismos altamente
+                    sofisticados capazes de competir nos níveis mais altos do jogo.</p>
+                    <p>Uma das principais características das CE é sua capacidade de pesquisar um
+                    grande número de movimentos e variações possíveis em um curto período de
+                    tempo. Isso permite que elas analisem posições complexas e avaliem diferentes
+                    linhas de jogo, proporcionando aos jogadores uma compreensão mais profunda
+                    da posição no tabuleiro.</p>
+                    <p>As CE também podem ser usadas para ajudar os jogadores a praticar e
+                    melhorar suas habilidades. Muitos mecanismos incluem recursos de treinamento
+                    e quebra-cabeças táticos, que podem ajudar os jogadores a desenvolver o seu
+                    pensamento estratégico e habilidades táticas. Alguns motores também incluem
+                    recursos que permitem aos jogadores jogar contra o motor, proporcionando um
+                    adversário desafiador para jogadores de todos os níveis.</p>
+                    <p>No geral, as CE são uma ferramenta importante para jogadores de xadrez,
+                    fornecendo análise valiosa e recursos de treinamento que podem ajudar os jogadores a melhorar o seu nível de jogo. À medida que a tecnologia continua a
+                    evoluir, podemos esperar ver CE ainda mais avançadas e sofisticadas no futuro.</p>
+
+
+
+                    <hr>
+                    <h3>
+                        
+
+                        <b><i> Torneios de CE</i></b>
+
+                        
+                    </h3>
+                    <p>
+                        Existem vários campeonatos de CE que são realizados a cada ano, incluindo
+                        o Top Chess Engine Championship (TCEC) e o Computer Chess Championship
+                        (CCC). Estes campeonatos são organizados por várias organizações e sites de
+                        xadrez e são projetados para determinar a CE mais forte do mundo.
+                    </p>
+                    <p>
+                        O TCEC é um prestigioso campeonato anual de CE que acontece desde 2010.
+                        É organizado pelo site Chessdom e apresenta um formato de vários estágios com
+                        uma variedade de controles de tempo e livros de abertura. O vencedor do TCEC
+                        é considerado CE mais forte do mundo
+                    </p>
+                    <p>
+                        O CCC é outro campeonato anual de CE, organizado pela International
+                        Computer Games Association (ICGA). O CCC apresenta um formato roundrobin, com motores competindo entre si em uma série de jogos. O vencedor do
+                        CCC também é considerado uma das CE mais fortes do mundo.
+                    </p>
+                    <p>
+                        No geral, os campeonatos de CE são eventos importantes no mundo do
+                        xadrez, fornecendo uma plataforma para os melhores motores competirem e
+                        determinarem o mais forte. Esses campeonatos são acompanhados de perto
+                        pelos entusiastas do xadrez e podem fornecer informações valiosas sobre o estado
+                        da arte da tecnologia de CE.
+                       
+                    </p>
+                    <p>
+                        Um dos sites mais populares do mundo de xadrez é o Chess.com, onde é
+                        possível assistir em tempo real a um dos campeonatos de CE mais prestigiados.
+                    </p>
+
+
+                    <hr>
+                    <h3>
+                        
+
+                        <b><i>Site mais popular de Xadrez online onde são aplicadas CE</i></b>
+
+                       
+                    </h3>
+                        <p>
+                        Chess.com é um site popular e uma plataforma online para jogar e aprender
+                        xadrez. O site foi fundado em 2005 e está sediado em San Francisco, Califórnia.
+                        Ele oferece uma variedade de recursos e ferramentas para jogadores de xadrez
+                        de todos os níveis, de iniciantes a grandes mestres.</p>
+                        <p>Uma das principais características do Chess.com é sua plataforma de xadrez
+                        online, que permite aos usuários jogar contra outros jogadores de todo o mundo.
+                        A plataforma oferece uma variedade de modos de jogo, incluindo xadrez padrão,
+                        blitz e bala, bem como variantes de xadrez como Crazyhouse e Chess960.</p>
+                        <p>Além da sua plataforma de xadrez online, o Chess.com também oferece uma
+                        variedade de ferramentas de aprendizado e treinamento para jogadores de xadrez. Isso inclui vídeos instrutivos, aulas interativas e quebra-cabeças táticos,
+                        bem como acesso a uma grande comunidade de jogadores de xadrez que podem
+                        fornecer conselhos e suporte e claro, a integração de CE como auxiliar em todos
+                        estes recursos.</p>
+                        <p>O Chess.com também hospeda torneios de xadrez online, com jogadores
+                        de todo o mundo competindo por prémios em dinheiro e outras recompensas.
+                        O site também oferece uma variedade de ferramentas e recursos para clubes e
+                        organizações de xadrez, incluindo ferramentas para gerir associações e organizar
+                        eventos.</p>
+                        <p>
+                        No geral, o Chess.com é um destino popular e respeitado para jogadores
+                        de xadrez de todos os níveis. Sua combinação de xadrez online, ferramentas de
+                        aprendizado e recursos da comunidade tornam-no um recurso valioso para quem
+                        quer melhorar suas habilidades no xadrez e aproveitar o jogo.</p>
+                    <hr>
+                    <div class="row">
+
+                        <div class="col-8">
+                        <h3>
+                            <b><i>Chess Engines mais populares</i></b>
+                        </h3>
+                        <button class="btn btn-primary" onclick="draw()">Mostrar Gráfico</button>
+                        <div alt="Gráfico do Rating das CE" id="myGraph" style="width: 90%; height: 70%; margin-top: 20px;"></div>
+                        <br>
+
+                        </div>
+                        <div class="col-4">
+                        <h3>
+                            <b><i>Comparação entre uma CE e os melhores jogadores de Xadrez do mundo</i></b>
+                        </h3>
+
+                        <table style="width:100%; border-collapse: collapse;">
+                            <tr>
+                              <th style="border: 1px solid #dddddd; padding: 8px; text-align:center;" colspan=2>Fide Rating</th>
+                            </tr>
+                            <tr>
+                              <td style="border: 1px solid #dddddd; padding: 8px;">Players</td>
+                              <td style="border: 1px solid #dddddd; padding: 8px;">Fide Elo Points</td>
+                            </tr>
+                            <tr>
+                              <td style="border: 1px solid #dddddd; padding: 8px;">
+                                <p><b>Stockfish </b></p>
+                                <p>Magnus Carlsen </p>
+                                <p>Liren Ding </p>
+                                <p>Ian Nepomniatchi </p>
+                                <p>Alireza Firouzja </p>
+                                <p>Hikaru Nakamura </p>
+                                Fabiano Caruana </td>
+                              <td style="border: 1px solid #dddddd; padding: 8px;"><p><b>3620</b></p> <p>2859 </p><p>2811</p> <p>2793 </p><p>2785</p> <p>2768</p>2766</td>
+                              
+                            </tr>
+                        </table>
+                        <br>
+                        </div>
+                    </div>
+                    <hr>
+                    <h3>
+                        <b><i>Jogo entre uma Chess Engine e um Grand
+                            Master, a primeira vez que uma CE derrota o campeão mundial</i></b>
+                    </h3>
+                    
+                    <iframe id="9915245" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="https://chess.com/emboard?id=9915245"></iframe><script>window.addEventListener("message",e=>{e['data']&&"9915245"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+30}px`)});</script>
+                    <blockquote>
+                        <p>"It’s 1997, and the world watches
+                            in disbelief as GM Garry
+                            Kasparov, arguably the best chess
+                            player in history, loses a match
+                            against a computer. The era of
+                            chess engines has started,
+                            changing the game’s landscape
+                            forever."
+                        </p>
+                        <cite>Chess.com</cite>
+                    </blockquote>
+                      
+
+
+                    <hr>
+                    <h3>
+                        <b><i>O futuro das Chess Engines</i></b>
+                    </h3>
+
+                    <p>O futuro dos motores de xadrez provavelmente será caracterizado por avanços contínuos em tecnologia e inteligência artificial. À medida que as capacidades dos mecanismos de xadrez continuam a melhorar, eles se tornarão oponentes
+                        ainda mais fortes e desafiadores para os jogadores humanos.</p><p>
+                        Uma das principais tendências no futuro dos mecanismos de xadrez é o uso
+                        crescente de aprendizado de máquina e algoritmos de aprendizado profundo.
+                        Esses algoritmos permitem que os mecanismos de xadrez aprendam e melhorem
+                        com o tempo, analisando grandes quantidades de dados e identificando padrões e
+                        tendências no jogo. Isso permitirá que os mecanismos de xadrez se tornem ainda
+                        mais sofisticados e capazes de tomar decisões estratégicas a par dos melhores
+                        jogadores humanos.</p><p>
+                        Outra tendência no futuro dos motores de xadrez é o uso crescente de computação em nuvem e sistemas distribuídos. Isso permitirá que os mecanismos
+                        de xadrez aproveitem o poder de muitos computadores trabalhando juntos, permitindo que eles analisem e avaliem mais posições e variações em um período
+                        de tempo menor. Isso tornará os mecanismos de xadrez ainda mais poderosos e
+                        desafiadores para os jogadores humanos.</p><p>
+                        No geral, o futuro dos mecanismos de xadrez provavelmente será de crescimento e desenvolvimento contínuos, à medida que a tecnologia e a inteligência
+                        artificial continuam avançando.
+                        </p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="js/mainpage.js"></script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #1d2026;
+    color: #fff;
+}
+#navpic{
+    width: 100%;
+    height: 70px;
+    background-color: #1d2026;
+    padding-top: 5px;
+    padding-left: 45%;
+    display: inline-flex;
+}
+.mainpage {
+    position: relative;
+    background: #1d2026;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+.mainpage2 {
+    background: #7887a5;
+    width: 100%;
+    color: #fff;
+}
+
+.mainpage4 {
+    position: relative;
+    background: #7887a5;
+    width: 100%;
+    color: #fff;
+    height: 140vh;
+}
+
+#hand{
+    position: absolute;
+    height: 25%;
+    width: 20%;
+    bottom: 54%;
+    left: 73.8%;
+    opacity: 0;
+    transition: opacity;
+    transition-duration: 0.5s;
+
+}
+#mainimage{
+    width: 100%; 
+    height: 100%;
+}
+
+#refhand{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+#refhand:hover{
+    color: rgb(158, 67, 67);
+    cursor: pointer;
+}
+
+#light{
+    position: absolute;
+    height: 25%;
+    width: 30%;
+    bottom: 55%;
+    left: 69%;
+    opacity: 0;
+    transition: opacity;
+    transition-duration: 1s;
+}
+#ualogo{
+    position: relative;
+    height: 25%;
+    width: 30%;
+}
+#mapa{
+    position: relative;
+    height: 50%;
+    width: 40%;
+    left: 29%;
+}
+#aboutstuff{
+    text-align: center;
+    color: black;
+}
+#chesstitle{
+    font-size: 130px;
+    z-index: 1;
+    color: rgb(18, 46, 77);
+    opacity: 1;
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 32%;
+    top: 40%;
+    transform: rotate(-20deg);
+
+}
+#chessgame{
+    position: relative;
+    opacity: 0.5;
+    width: 50%;
+    left: 24%;
+}
+blockquote {
+    background: #7d788e;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote p {
+    display: inline;
+}
+cite {
+    color: rgb(3, 1, 1);
+    font-size: 0.8em;
+    font-style: normal;
+}
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0em;
+    vertical-align: -0.4em;
+}
+#mygraph{
+    position: relative;
+}
+#githubid{
+    position: relative;
+    height: 90%;
+    width: 50%;
+    left: 30%;  
+    bottom: 10%;
+}
+
+#robots_st{
+    position: relative;
+    height: 90%;
+    width: 100%;
+    top: 7%;
+    bottom: 10%;
+}
+  
+
+  

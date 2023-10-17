@@ -1,0 +1,3 @@
+scp ~/exemplo.txt informatica-t2a1@xcoa.av.it.pt:/home/user
+
+para copiar folders é com o comando padrão acrescentando a opção -r
