@@ -23,6 +23,7 @@ main:
 	or $a0, $0,$t1
 	li $v0, 11
 	syscall
+	sb $t1, 4($t2)
 	or $a0, $0, $t2
 	li $v0, 4
 	syscall
