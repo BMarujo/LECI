@@ -1,0 +1,8 @@
+-Distribuição de segurança Kali Linux:
+https://www.kali.org/get-kali/#kali-virtual-machines
+
+-Link para a máquina vulnerável 1 – metasploitable2:
+https://sonaesystems-my.sharepoint.com/:u:/g/personal/ajfranca_mc_pt/EdIqUr_ffHVFqME1dZj3ivcB8JB3AGjmN87zGQkXygzvmQ?e=fR7zzC
+
+-Link para a máquina vulnerável 2 – forhacksoft:
+https://sonaesystems-my.sharepoint.com/:u:/g/personal/ajfranca_mc_pt/EXJlXPPuDLpAtHFqIQvFHqUBIyOH1WIIYrllVq0jn3JY1g?e=BxCFSe
