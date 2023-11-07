@@ -1,84 +1,120 @@
 %% a
 
 T = [
-        0.7    0.2     0.1;
-        0.2    0.3     0.5;
-        0.3    0.3     0.4
-    ]';
+        0.7    0.2     0.3;
+        0.2    0.3     0.3;
+        0.1    0.5     0.4
+    ]
 
 %% b
     
+T = [
+    0.7    0.2     0.3;
+    0.2    0.3     0.3;
+    0.1    0.5     0.4
+];
+
 x0=[1;0;0];
 
-n = [1 2];
+sol_segundo_dia=T * x0;
+sol_segundo_dia=sol_segundo_dia(1)
 
-for i = 1 : length(n)
-    res(:,i ) = T^n(1, i) * x0;
-end
-
-res
-fprintf("Segundo terceiro dia estar sol %f\n", res(1,1) * res(1,2));
+sol_terceiro_dia=T^2 * x0;
+sol_terceiro_dia=sol_terceiro_dia(1)
 
 %% c
 
-x1=[1;0;0];     %dia1
+T = [
+    0.7    0.2     0.3;
+    0.2    0.3     0.3;
+    0.1    0.5     0.4
+];
 
-x2 = T  * x1;   %dia 2
+x0=[1;0;0];
 
-x2linha = [0.7 ; 0.2 ; 0];   %dia 2 forcando n chover
+nao_chuva_segundo_dia=T * x0;
 
-x2linha = x2linha / sum(x2linha);
+nao_chuva_segundo_dia(3) = 0;
 
-x3 =  T * x2linha;      %dia 3 tendo considerando n ter chovido
+nao_chuva_segundo_dia = sum(nao_chuva_segundo_dia)
 
-fprintf("Nem segundo nem no terceiro chover %f\n",sum(x2(1:2)) * sum(x3(1:2)));
+nao_chuva_terceiro_dia=T^2 * x0;
+
+nao_chuva_terceiro_dia(3) = 0;
+
+nao_chuva_terceiro_dia = sum(nao_chuva_terceiro_dia)
+
 
 %% d
-clear res
-for i = 1:30
-    res(:,i) = T^i * x0;
+
+T = [
+    0.7    0.2     0.3;
+    0.2    0.3     0.3;
+    0.1    0.5     0.4
+];
+
+x0=[1;0;0];
+estados=zeros(3,31);
+for i = 1:31
+    estados(:,i) = T^i * x0;
 end
 
-res = [x0 res];
-fprintf("Numero de dias de sol em janeiro %f\n", sum(res(1, :)));
-fprintf("Numero de dias de nuvens em janeiro %f\n", sum(res(2, :)));
-fprintf("Numero de dias de chuva em janeiro %f\n", sum(res(3, :)));
+dias_de_sol=sum(estados(1,:))
+dias_de_nuvens=sum(estados(2,:))
+dias_de_chuva=sum(estados(3,:))
+
 
 %% e
 
-x0=[0;0;1];
+T = [
+    0.7    0.2     0.3;
+    0.2    0.3     0.3;
+    0.1    0.5     0.4
+];
 
-for i = 1:30
-    res(:,i) = T^i * x0;
+x0=[0;0;1];
+estados=zeros(3,31);
+for i = 1:31
+    estados(:,i) = T^i * x0;
 end
 
-res = [x0 res];
-fprintf("Numero de dias de sol em janeiro %f\n", sum(res(1, :)));
-fprintf("Numero de dias de nuvnes em janeiro %f\n", sum(res(2, :)));
-fprintf("Numero de dias de chuva em janeiro %f\n", sum(res(3, :)));
+dias_de_sol_primeiro_dia_chuva=sum(estados(1,:))
+dias_de_nuvens_primeiro_dia_chuva=sum(estados(2,:))
+dias_de_chuva_primeiro_dia_chuva=sum(estados(3,:))
 
+
+% Conclusão: Comparando com o item anterior, o número médio de dias de sol, de nuvens e de chuva são equivalentes.
 
 %% f
-clear res
-x0=[0;0;1];
 
-for i = 1:30
-    res(:,i) = T^i * x0;
-end
+T = [
+    0.7    0.2     0.3;
+    0.2    0.3     0.3;
+    0.1    0.5     0.4
+];
 
-res = [x0 res];
-fprintf("Numero de dores comecando em chuva em janeiro %f\n", sum(res(1, :)) * 0.1);
-fprintf("Numero de dores comecando em chuva em janeiro %f\n", sum(res(2, :)) * 0.3);
-fprintf("Numero de dores comecando em chuva em janeiro %f\n", sum(res(3, :)) * 0.5);
-clear res
 x0=[1;0;0];
-
-for i = 1:30
-    res(:,i) = T^i * x0;
+estados=zeros(3,31);
+for i = 1:31
+    estados(:,i) = T^i * x0;
 end
 
-res = [x0 res];
-fprintf("Numero de dores comecando em sol em janeiro %f\n", sum(res(1, :)) * 0.1);
-fprintf("Numero de dores comecando em sol em janeiro %f\n", sum(res(2, :)) * 0.3);
-fprintf("Numero de dores comecando em sol em janeiro %f\n", sum(res(3, :)) * 0.5);
+dores_dias_de_sol_primeiro_dia_sol=sum(estados(1,:))*0.1;
+dores_dias_de_nuvens_primeiro_dia_sol=sum(estados(2,:))*0.3;
+dores_dias_de_chuva_primeiro_dia_sol=sum(estados(3,:))*0.5;
+
+dias_totais_com_dores_primeiro_dia_sol=dores_dias_de_sol_primeiro_dia_sol+dores_dias_de_nuvens_primeiro_dia_sol+dores_dias_de_chuva_primeiro_dia_sol
+
+
+x0=[0;0;1];
+estados=zeros(3,31);
+for i = 1:31
+    estados(:,i) = T^i * x0;
+end
+
+dores_dias_de_sol_primeiro_dia_chuva=sum(estados(1,:))*0.1;
+dores_dias_de_nuvens_primeiro_dia_chuva=sum(estados(2,:))*0.3;
+dores_dias_de_chuva_primeiro_dia_chuva=sum(estados(3,:))*0.5;
+
+dias_totais_com_dores_primeiro_dia_chuva=dores_dias_de_sol_primeiro_dia_chuva+dores_dias_de_nuvens_primeiro_dia_chuva+dores_dias_de_chuva_primeiro_dia_chuva
 
