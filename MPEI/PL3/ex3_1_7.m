@@ -12,12 +12,13 @@
 
 x0 = [1/6; 1/6; 1/6; 1/6; 1/6; 1/6];
 
-for i= 0: 10
+for i= 0: 9
     x0 = H * x0;
 end
 
-x0
-% C e D
+depois_de_10_iteracoes=x0
+
+% as páginas com maior pagerank são C (0.3315) e D (0.3304)
 
 %% b
 
@@ -36,32 +37,43 @@ H = [
     ];
 
 x0 = [1/6; 1/6; 1/6; 1/6; 1/6; 1/6];
-for i= 0: 10
+for i= 0: 9
     x0 = H * x0;
 end
 
-x0
+depois_de_10_iteracoes_no_dead_end=x0
 
 %% d
 
-beta = 0.9;
-A = beta *H + (1-beta)*(1/6* ones(6));
+H = [
+        0   0   0   0   1/3     1/6;
+        1   0   0   0   1/3     1/6;
+        0   1/2 0   1   0       1/6;
+        0   0   1   0   0       1/6;
+        0   1/2 0   0   0       1/6;
+        0   0   0   0   1/3     1/6;
+    ];
+
+beta = 0.8;
+A = beta * H + (1-beta) * (ones(6)/6);
 
 
 x0 = [1/6; 1/6; 1/6; 1/6; 1/6; 1/6];
-for i= 0: 10
+for i= 0: 9
     x0 = A * x0;
 end
 
-x0
+no_spider_trap_and_no_dead_end=x0
 
 %% e 
 x0 = [1/6; 1/6; 1/6; 1/6; 1/6; 1/6];
-for i= 0: 26
+for i= 0: 19
     x0 = A * x0;
+    pagerankporiteracao(:,i+1) = x0;
 end
 
-x0
+pagerankporiteracao=pagerankporiteracao
 
-% nas 10 transicoes a matriz e estacionaria ou perto
+% são necessárias 12 iterações
+% nas 10 transicoes a matriz é quase estacionária
 
