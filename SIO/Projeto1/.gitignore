@@ -1,0 +1,6 @@
+app/venv/
+app/__pycache__/
+phishing/venv/
+phishing/__pycache__/
+venv/
+__pycache__/
