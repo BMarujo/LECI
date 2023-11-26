@@ -1,5 +1,3 @@
-<font size= "5">
-
 # **Educação Financeira**
 ### **107322_BernardoMarujo_TP1-3**
 
@@ -37,5 +35,3 @@
   - Capturar uma parcela significativa do mercado jovem em busca de recursos educacionais financeiros.
   - Preencher uma lacuna crucial, capacitando esta geração com as habilidades necessárias para uma gestão financeira bem sucedida.
   - Proporcionar aos jovens o conhecimento necessário para entender e navegar de maneira efetiva no mundo financeiro não é apenas uma lacuna no mercado, mas uma missão de impacto social.
-
-</font>
