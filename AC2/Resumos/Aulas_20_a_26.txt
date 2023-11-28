@@ -1,0 +1,446 @@
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+• Tecnologias de memória
+• Organização genérica de um circuito de memória a partir de uma célula
+    básica
+• Memória SRAM (Static Random Access Memory):
+    - organização de células básicas num array
+    - ciclos de acesso para leitura e escrita: diagramas temporais
+    - construção de módulos de memória SRAM
+• Memória DRAM (Dynamic Random Access Memory):
+    - célula básica; organização interna
+    - ciclos de acesso para leitura e escrita: diagramas temporais
+    - refrescamento: modo "RAS only"
+    - construção de módulos de memória DRAM
+
+--------------------------------------------------------------------------------------------
+Introdução - Conceitos básicos
+
+• RAM - Random Access Memory
+    - Designação para memória volátil que pode ser lida e escrita
+    - Acesso "random" a qualquer posição de memória
+
+• ROM - Read Only Memory
+    - Designação para memória não volátil que apenas pode ser lida
+    - Acesso "random" a qualquer posição de memória
+
+    * Acesso "random" - tempo de acesso é o mesmo para qualquer posição de memória
+
+• Tecnologias:
+    - Semicondutores
+    - Magnética
+    - Óptica
+    - Magneto-óptica
+
+• Memória volátil:
+    - Informação perdida quando a alimentação é desligada (ex: RAM, SRAM, DRAM)
+    
+• Memória não volátil:
+    - Informação armazenada mantém-se até ser deliberadamente alterada
+        (ex: EEPROM, Flash EEPROM, tecnologias magnéticas)
+
+--------------------------------------------------------------------------------------------
+Memória não volátil – evolução histórica
+
+• ROM – programada durante o processo de fabrico (1965)
+• PROM – Programmable Read Only Memory: programável uma única vez (1970)
+• EPROM – Erasable PROM: escrita em segundos, apagamento em minutos
+    (ambas efectuadas em dispositivos especiais) (1971)
+• EEPROM – Electrically Erasable PROM (1976)
+    - O apagamento e a escrita podem ser efetuados no próprio circuito em 
+        que a memória está integrada
+    - O apagamento é feito byte a byte
+    - Escrita muito mais lenta que leitura
+• Flash EEPROM (tecnologia semelhante à EEPROM) (1985)
+    - A escrita pressupõe o prévio apagamento das zonas de memória a
+        escrever
+    - O apagamento é feito por blocos (por exemplo, blocos de 4 kB) o que
+        torna esta tecnologia mais rápida que a EEPROM
+    - O apagamento e a escrita podem ser efetuados no próprio circuito em
+        que a memória está integrada
+• Escrita muito mais lenta que leitura
+
+--------------------------------------------------------------------------------------------
+Tecnologias de memória
+
+                                                             Dados de 2012
+    +-------------------+-------------------+-------------------+
+    | Tecnologia        | Tempo de acesso   | $ / GB            |
+    +-------------------+-------------------+-------------------+
+    | SRAM              | 0.5 - 2.5 ns      | 500 - 1000 $      |
+    +-------------------+-------------------+-------------------+
+    | DRAM              | 35 - 70 ns        | 10 - 20 $         |
+    +-------------------+-------------------+-------------------+
+    | Flash             | 5 - 50 us         | 0.75 - 1 $        |
+    +-------------------+-------------------+-------------------+
+    | Disco magnético   | 5 - 20 ms         | 0.005 - 0.1 $     |
+    +-------------------+-------------------+-------------------+
+
+    • SRAM - Static RAM
+    • DRAM - Dynamic RAM
+
+• Dadas estas diferenças, é natural que sejam usadas para aplicações
+    diferentes:
+    - SRAM: memória cache, memória principal de computadores de
+        elevado desempenho
+    - DRAM: memória principal de computadores pessoais
+    - Flash: memória de armazenamento de dados em dispositivos
+        portáteis (ex: telemóveis, câmaras fotográficas, etc.)
+    - Disco magnético: memória de armazenamento de dados em
+        grande escala (ex: discos rígidos)
+
+--------------------------------------------------------------------------------------------
+Organização básica de memória
+
+• Uma memória pode ser encarada como uma coleção de N registos de dimentsão K (N*K bits)
+    - N: número de registos
+    - K: dimensão de cada registo (número de bits)
+
+• Cada registo é formado por K células, cada uma delas capaz de armazenar um bit
+    - Cada célula é identificada por um endereço (endereço da célula)
+    - O endereço de um registo é o endereço da sua primeira célula
+
+• Uma célula de memória (de 1 bit) pode ser representada por:
+                 
+                    ↓               Dout    - Dados de saída (1 bit)
+        +--------------+            Din     - Dados de entrada (1 bit)
+        |         sel  |            sel     - Sinal de seleção
+    --->|rd\           |            rd\     - Sinal de leitura (negado)
+        |         Dout |<---        wr\     - Sinal de escrita (negado)
+    --->|wr\           |
+        |          Din |<---
+        +--------------+
+
+                    ↓               Di/o    - Dados de entrada/saída (1 bit)
+        +--------------+            sel     - Sinal de seleção
+        |         sel  |            rd\     - Sinal de leitura (negado)
+    --->|rd\           |            wr\     - Sinal de escrita (negado)
+        |         Di/o |<--->
+    --->|wr\           |
+        |              |
+        +--------------+
+
+• Uma possível implementação de uma célula de memória é a seguinte:
+
+                          +--------------------+                        ↓         
+                          | +-------+          |  Di/o       +--------------+     
+                          +-|D     Q|---|>-----+----         |         sel  |     
+wr\                         |       |    |               --->|rd\           |     
+-------•--------------------|>      |    |                   |         Di/o |<--->
+       |                    |   En  |    |               --->|wr\           |
+       |                    +---+---+    |                   |              |
+sel    |                        |        |                   +--------------+
+-------|--•---------------------+        |
+       |  |                              |
+       |  +---|\                         |
+rd\    +------| )------------------------•
+-------------o|/
+
+--------------------------------------------------------------------------------------------
+Agrupamento de células de memória
+
+• Através do agrupamento de células-base pode formar-se uma memória de maior dimensão
+
+• O que é necessário especificar:
+    - O número total de words (N) que a memória pode armazenar
+    - O word size (K) de cada registo
+    
+• Exemplos:
+    - 1K x 8
+        - 8 bits / word
+        - 1k = 2^10 -> 10 linhas de endereço -> 1024 endereços
+    - 1M x 4
+        - 4 bits / word
+        - 1M = 2^20 -> 20 linhas de endereço -> 1.048.576 endereços
+
+--------------------------------------------------------------------------------------------
+Memória do tipo RAM ( volátil )
+
+• SRAM - Static RAM
+    - Vantagens:
+        - Acesso rápido
+        - Informação mantém-se enquanto a alimentação é mantida
+    - Inconvenientes:
+        - Implementações típicas: 6 transístores / célula, que levam a:
+            - Área de célula grande, logo baixa densidade
+            - Consumo de potência elevado
+            - Custo elevado
+    
+• DRAM - Dynamic RAM
+    - Vantagens:
+        - Implementações típicas: 1 transístor / célula, que levam a:
+            - Área de célula pequena, logo elevada densidade
+            - Consumo de potência reduzido
+            - Custo reduzido
+    - Inconvenientes:
+        - Acesso lento (pelo menos 10 vezes mais lento que SRAM)
+        - Informação permanece apenas durante alguns milissegundos
+            (necessidade de refrescamento - daí o nome "dynamic")
+
+--------------------------------------------------------------------------------------------
+RAM estática (SRAM)
+
+• 6 transístores / célula
+    - Write:
+        * Colocar a informação em "bit" (e "bit\").
+            Exemplo: para a escrita do valor lógico "1" -> "bit" = 1, "bit\" = 0
+        * Ativar a linha "select"
+    
+    - Read:
+        * Ativar a linha "select"
+        * O valor lógico armazenado na célula é detetado pela diferença de tensão
+            entre as linhas "bit" e "bit\"
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+124.    Numa memória estática SRAM, uma célula de um bit é composta por seis transístores.
+        Descreva sucintamente as vantagens e desvantagens entre a solução SRAM
+            quando comparada com a versão de uma célula DRAM de um bit.
+
+< Resposta >
+    Vantagens:
+        - Acesso rápido
+        - Informação mantém-se enquanto a alimentação é mantida
+    Inconvenientes:
+        - Área de célula grande, logo baixa densidade
+        - Consumo de potência elevado
+        - Custo elevado
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+125.    A solução de organização matricial de uma memória RAM
+        apresenta vantagens quando comparada com uma organização linear.
+        Explique qual é essa vantagem e dê um exemplo que demonstre essa vantagem.
+
+< Resposta >
+Numa organização matricial, as células de memória são organizadas em linhas e colunas,
+formando uma estrutura semelhante a uma grade. Cada célula é identificada exclusivamente
+pela sua posição de linha e coluna. Isso permite acesso direto e simultâneo a qualquer
+célula de memória na matriz, independentemente de sua localização física.
+
+Para ilustrar essa vantagem, vamos considerar um cenário em que vários processos ou tarefas
+precisam aceder a diferentes locais de memória simultaneamente. Nma organização linear, 
+apenas um processo pode aceder a memória por vez, e os outros devem aguardar sua vez. 
+Isso pode levar a atrasos e ineficiências significativos, principalmente em cenários 
+de multitasking ou processamento paralelo.
+
+Em contraste, uma organização matricial permite que vários processos acessem células de
+memória simultaneamente. Cada processo pode aceder diretamente o local de memória
+específico que requer sem interferir com outros processos que acessam locais diferentes. 
+Esse recurso de acesso paralelo melhora muito o desempenho geral do sistema, 
+especialmente em situações em que há uma alta demanda de acesso à memória de várias 
+fontes simultaneamente.
+
+Por exemplo, imagine um sistema de computador com vários núcleos executando diferentes
+tarefas simultaneamente. Cada núcleo requer acesso a células de memória específicas 
+para ler ou gravar dados. Com uma organização matricial, cada núcleo pode aceder às
+suas células de memória designadas diretamente, independentemente de outros núcleos. 
+Isso permite processamento paralelo eficiente e reduz a contenção de recursos de memória, 
+resultando em tempos de execução mais rápidos e melhor desempenho do sistema.
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+126. Quando falamos em tRC (Read Cycle Time) de uma memória nas operações de leitura
+estamos a referir-nos especificamente a que tempo?
+
+< Resposta >
+O tempo de ciclo de leitura (tRC) é o tempo mínimo entre duas operações de leitura consecutivas.
+É uma métrica importante que determina o intervalo de tempo que deve decorrer entre uma operação
+de leitura e a próxima operação de leitura na mesma memória. É necessário aguardar o tRC para
+garantir que a leitura anterior tenha sido concluída e que a memória esteja pronta para uma
+nova leitura.
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+127. Descreva sucintamente os conceitos de:
+    a. Access Time
+    b. taxa de transferência
+
+< Resposta >
+a. O tempo de acesso é o tempo necessário para que uma operação de leitura ou escrita seja
+concluída. É uma métrica importante que determina a velocidade de uma memória. Quanto menor
+o tempo de acesso, mais rápido é o desempenho da memória.
+
+b. A taxa de transferência é a quantidade de dados que uma memória pode transferir por unidade
+de tempo. É uma métrica importante que determina a velocidade de uma memória. Quanto maior a
+taxa de transferência, mais rápido é o desempenho da memória.
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+128. Para construir um módulo de memória SRAM de 128k x 8 bits, são necessários quantos circuitos,
+admitindo que dispõe de:
+a. circuitos de 32k x 1 bit
+b. circuitos de 32k x 4 bits
+c. circuitos de 16k x 8 bits
+d. circuitos de 64k x 8 bits
+e. circuitos de 128k x 1 bit
+
+< Resposta >
+a. 128k/32k * 8b/1b = 32 circuitos
+b. 128k/32k * 8b/4b = 8 circuitos
+c. 128k/16k * 8b/8b = 8 circuitos
+d. 128k/64k * 8b/8b = 2 circuitos
+e. 128k/128k * 8b/1b = 8 circuitos
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+129. Admita que dispõe de uma memória estática SRAM de 256k × 8 (num único circuito)
+com uma organização matricial.
+Determine por quantas matrizes de células é constituída
+e qual é o número de linhas e colunas que compõe cada matriz.
+
+< Resposta >
+Cada matriz dá output a 1 bit. Como temos 8 bits de output, temos 8 matrizes.
+Cada matriz tem 256k células dispostas em linhas(n) e colunas(m).
+O número de células é dado por 2^n * 2^m = 2^(n+m) = 256k = 2^18.
+Logo, n+m = 18. Assumindo que n = m, temos n = m = 9.
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+130. Suponha que dispõe de 16 circuitos de memória de 1Mx4.
+Usando todos estes circuitos, determine qual a dimensão da memória quando:
+a. a largura da palavra é 4bits
+b. a largura da palavra é 8bits
+c. a largura da palavra é 32bits
+d. a memória tem 2M endereços
+e. a memória tem 8M endereços
+
+< Resposta >
+a. 16 * 1M * 4b / (4b/word_size), com word_size = 4b => 16 * 1M * 4b / 1 = 64Mb 
+b. 16 * 1M * 4b / (4b/word_size), com word_size = 8b => 16 * 1M * 4b / 2 = 32Mb
+c. 16 * 1M * 4b / (4b/word_size), com word_size = 32b => 16 * 1M * 4b / 8 = 8Mb
+d. 16 * 1M * 4b / (1M/addr_size), com addr_size = 2M => 16 * 1M * 4b / 2M = 32Mb
+e. 16 * 1M * 4b / (1M/addr_size), com addr_size = 8M => 16 * 1M * 4b / 8M = 8Mb
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+131. Determine o número de bits do barramento de endereços
+de uma memória dinâmica DRAM, se este tiver as seguintes características:
+a. 512M x 8 bits, implementada com uma matriz de células com 16k linhas
+b. 256M x 1 bit, implementada com uma matriz de células com 16k linhas
+c. 4G x 4 bit, implementada com uma matriz quadrada
+d. 1G x 1 bit, implementada com uma matriz de células com 32k linhas
+e. 2G x 8 bit, implementada com uma matriz de células com 64k linhas
+f. 256M x 1 bit, implementada com uma matriz de células com 8K linhas   
+
+< Resposta >
+a. 512M = 2^29, 2^29/2^14 = 2^15 = 32K colunas => max(14,15) = 15 bits 
+b. 256M = 2^28, 2^28/2^14 = 2^14 = 16K colunas => max(14,14) = 14 bits
+c. 4G = 2^32, 2^32/2^16 = 2^16 = 64K colunas => max(16,16) = 16 bits
+d. 1G = 2^30, 2^30/2^15 = 2^15 = 32K colunas => max(15,15) = 15 bits
+e. 2G = 2^31, 2^31/2^16 = 2^15 = 32K colunas => max(16,15) = 16 bits
+f. 256M = 2^28, 2^28/2^13 = 2^15 = 32K colunas => max(13,15) = 15 bits
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+132. Considere uma memória DRAM de 2Mx16,
+implementada com matrizes de armazenamento de 2048 colunas.
+Determine aproximadamente o tempo necessário para efetuar um refrescamento completo
+dessa memória se os seus parâmetros relativos a um ciclo de refrescamento,
+do tipo RAS Only, forem os seguintes:
+a. RAS width=50 ns; Precharge time=25 ns:
+b. RAS width=40 ns; Precharge time=15 ns:
+c. RAS width=65 ns; Precharge time=30 ns:
+
+< Resposta >
+#linhas = #endereços / #colunas = 2M / 2048 = 1024
+
+a.  t_RC = 50ns + 25ns = 75ns / linha
+    r_RC_total = 1024 * 75ns = 76.8us
+
+b.  t_RC = 40ns + 15ns = 55ns / linha
+    r_RC_total = 1024 * 55ns = 56.32us
+
+c.  t_RC = 65ns + 30ns = 95ns / linha
+    r_RC_total = 1024 * 95ns = 97.28us
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+133. Repita o exercício anterior admitindo agora:
+a. uma memória DRAM de 8Mx16, implementada com matrizes de armazenamento de 1024 colunas
+b. uma memória DRAM de 512Mx16, implementada com uma matriz de células com 16k linhas
+c. uma memória DRAM de 4Mx32, implementada com matrizes de armazenamento de 4096 colunas
+d. uma memória DRAM de 8Mx16, implementada com matrizes de armazenamento de 1024 colunas.
+
+< Resposta >
+a.  #linhas = #endereços / #colunas = 8M / 1024 = 8192
+    a.  t_RC = 50ns + 25ns = 75ns / linha
+        r_RC_total = 8192 * 75ns = 614.4us
+    b.  t_RC = 40ns + 15ns = 55ns / linha
+        r_RC_total = 8192 * 55ns = 450.56us
+    c.  t_RC = 65ns + 30ns = 95ns / linha
+        r_RC_total = 8192 * 95ns = 778.24us
+
+b.  #linhas = #endereços / #colunas = 512M / 2048 = 262144
+    a.  t_RC = 50ns + 25ns = 75ns / linha
+        r_RC_total = 262144 * 75ns = 19.7ms
+    b.  t_RC = 40ns + 15ns = 55ns / linha
+        r_RC_total = 262144 * 55ns = 14.42ms
+    c.  t_RC = 65ns + 30ns = 95ns / linha
+        r_RC_total = 262144 * 95ns = 24.9ms
+
+c.  #linhas = #endereços / #colunas = 4M / 4096 = 1024
+    a.  t_RC = 50ns + 25ns = 75ns / linha
+        r_RC_total = 1024 * 75ns = 76.8us
+    b.  t_RC = 40ns + 15ns = 55ns / linha
+        r_RC_total = 1024 * 55ns = 56.32us
+    c.  t_RC = 65ns + 30ns = 95ns / linha
+        r_RC_total = 1024 * 95ns = 97.28us
+
+d.  #linhas = #endereços / #colunas = 8M / 1024 = 8192
+    a.  t_RC = 50ns + 25ns = 75ns / linha
+        r_RC_total = 8192 * 75ns = 614.4us
+    b.  t_RC = 40ns + 15ns = 55ns / linha
+        r_RC_total = 8192 * 55ns = 450.56us
+    c.  t_RC = 65ns + 30ns = 95ns / linha
+        r_RC_total = 8192 * 95ns = 778.24us
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+134. Descreva os passos necessários para efetuar uma operação de leitura de uma
+célula numa memória do tipo DRAM.
+
+< Resposta >
+1. Seleção da linha de endereço
+    a. Definir linha de endereço (Addr = row address)
+    b. Ativar o sinal de seleção da linha de endereço (RAS\ = 0)
+2. Ativar o sinal de leitura
+    a. Definir coluna de endereço (Addr = column address)
+    b. Ativar o sinal de leitura (CAS\ = 0)
+3. Esperar pelo tempo de acesso e obter o valor da célula (WE\ = 1)
+4. Desativar o sinal de seleção	da coluna de endereço (CAS\ = 1)
+5. Desativar o sinal de seleção da linha de endereço (RAS\ = 1)
+
+--------------------------------------------------------------------------------------------
+!!! Pergunta !!!
+135. O diagrama apresentado abaixo representa uma operação efetuada numa memória DRAM.
+Identifique o modo adotado nesta operação, a natureza da operação e
+descreva sucintamente o seu funcionamento.
+
+        __________
+RAS\              \  
+                   \__________________________________________________________________
+
+        ___________________________          ______          ______          ______
+CAS\                               \        /      \        /      \        /      \
+                                    \______/        \______/        \______/        \_
+
+        _____  ___________  _  ___________  _  ___________  _  ___________  __________
+Addr         \/ row  addr \/ \/ col. addr \/ \/ col. addr \/ \/ col. addr \/ 
+        _____/\___________/\_/\___________/\_/\___________/\_/\___________/\__________
+
+        ______________________________________________________________________________
+WE\     / / / / / / / / / / /                                                 \  / / /
+       /_/_/_/_/_/_/_/_/_/_/                                                   \/_/_/_
+
+                                       ______          ______          ______
+Dout   _______________________________/valid \________/valid \________/valid \________
+                                      \______/        \______/        \______/
+
+< Resposta >
+Fast Page Mode (FPM)
+    Consiste em manter a linha de endereço ativa (RAS\ = 0) e efetuar várias operações
+    de leitura ou escrita na mesma linha de endereço, alterando apenas a coluna de endereço.
+    Poupam-se assim os tempos de acesso e pré-carregamento da linha de endereço.
+    As operações foram apenas de leitura, pois o sinal WE\ = 1.
