@@ -1,4 +1,4 @@
-load keys;
+load keys.mat;
 tamanhos = [5e5, 1e6, 2e6];
 
 %% String2Hash djb2
@@ -23,6 +23,7 @@ for j = 1 : length(tamanhos)
  
 end
 
+save hashCodes_djb2 hashCodes
 %% String2Hash sdbm
 
 for j = 1 : length(tamanhos)
@@ -44,6 +45,7 @@ for j = 1 : length(tamanhos)
     fprintf('Running time: %f seconds\n', toc);
 end
 
+save hashCodes_sdbm hashCodes
 %% DJB31MA
 
 for j = 1 : length(tamanhos)
@@ -64,6 +66,7 @@ for j = 1 : length(tamanhos)
     fprintf('Number of atributions: %d\n', max(vector));
     fprintf('Running time: %f seconds\n', toc);
 end
+save hashCodes_DJB31MA hashCodes
 
 %% hashstring
 
@@ -85,3 +88,4 @@ for j = 1 : length(tamanhos)
     fprintf('Number of atributions: %d\n', max(vector));
     fprintf('Running time: %f seconds\n', toc);
 end
+save hashCodes_hashstring hashCodes
