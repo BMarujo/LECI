@@ -16,10 +16,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d djb2\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d djb2\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
  
 end
 
@@ -39,10 +39,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d sdbm\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d sdbm\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 
 save 2hashCodes_sdbm hashCodes
@@ -61,10 +61,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d DJB31MA\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d DJB31MA\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 save 2hashCodes_DJB31MA hashCodes
 
@@ -83,10 +83,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d hashstring\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d hashstring\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 save 2hashCodes_hashstring hashCodes
 
@@ -97,33 +97,41 @@ for j = 1 : length(tamanhos)
     vector = zeros(1, tamanhos(j));
     load 2hashCodes_djb2.mat
     h = hashCodes/length(vector);
-    %histogram(hashCodes, 100)
-    fprintf("keys from prob djb2\n");
-    fprintf('Momento 2: medio  - %f teorico - %f\n', mean(h.^2),1/(2+1));
-    fprintf('Momento 5: medio  - %f teorico - %f\n', mean(h.^5),1/(5+1));
-    fprintf('Momento 10: medio - %f teorico - %f\n\n', mean(h.^10),1/(10+1));
+    figure;
+    histogram(hashCodes, 100)
+    title(tamanhos(j), "prob djb2");
+    fprintf("prob djb2\n");
+    fprintf('Momento 2: %f teorico - %f\n', mean(h.^2),1/(2+1));
+    fprintf('Momento 5: %f teorico - %f\n', mean(h.^5),1/(5+1));
+    fprintf('Momento 10: %f teorico - %f\n\n', mean(h.^10),1/(10+1));
     
     load 2hashCodes_DJB31MA.mat
     h = hashCodes/length(vector);
-    %histogram(hashCodes, 100)
-    fprintf("keys from prob DJB31MA\n");
-    fprintf('Momento 2: medio  - %f teorico - %f\n', mean(h.^2),1/(2+1));
-    fprintf('Momento 5: medio  - %f teorico - %f\n', mean(h.^5),1/(5+1));
-    fprintf('Momento 10: medio - %f teorico - %f\n\n', mean(h.^10),1/(10+1));
+    figure;
+    histogram(hashCodes, 100)
+    title(tamanhos(j), "prob DJB31MA");
+    fprintf("prob DJB31MA\n");
+    fprintf('Momento 2: %f teorico - %f\n', mean(h.^2),1/(2+1));
+    fprintf('Momento 5: %f teorico - %f\n', mean(h.^5),1/(5+1));
+    fprintf('Momento 10: %f teorico - %f\n\n', mean(h.^10),1/(10+1));
     
     load 2hashCodes_hashstring.mat
     h = hashCodes/length(vector);
-    %histogram(hashCodes, 100)
-    fprintf("keys from prob hashstring\n");
-    fprintf('Momento 2: medio  - %f teorico - %f\n', mean(h.^2),1/(2+1));
-    fprintf('Momento 5: medio  - %f teorico - %f\n', mean(h.^5),1/(5+1));
-    fprintf('Momento 10: medio - %f teorico - %f\n\n', mean(h.^10),1/(10+1));
+    figure;
+    histogram(hashCodes, 100)
+    title(tamanhos(j), "prob hashstring");
+    fprintf("prob hashstring\n");
+    fprintf('Momento 2: %f teorico - %f\n', mean(h.^2),1/(2+1));
+    fprintf('Momento 5: %f teorico - %f\n', mean(h.^5),1/(5+1));
+    fprintf('Momento 10: %f teorico - %f\n\n', mean(h.^10),1/(10+1));
     
     load 2hashCodes_sdbm.mat
     h = hashCodes/length(vector);
-    %histogram(hashCodes, 100)
-    fprintf("keys from prob sdbm\n");
-    fprintf('Momento 2: medio  - %f teorico - %f\n', mean(h.^2),1/(2+1));
-    fprintf('Momento 5: medio  - %f teorico - %f\n', mean(h.^5),1/(5+1));
-    fprintf('Momento 10: medio - %f teorico - %f\n\n', mean(h.^10),1/(10+1));
+    figure;
+    histogram(hashCodes, 100)
+    title(tamanhos(j), "prob sdbm");
+    fprintf("prob sdbm\n");
+    fprintf('Momento 2: %f teorico - %f\n', mean(h.^2),1/(2+1));
+    fprintf('Momento 5: %f teorico - %f\n', mean(h.^5),1/(5+1));
+    fprintf('Momento 10: %f teorico - %f\n\n', mean(h.^10),1/(10+1));
 end

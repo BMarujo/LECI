@@ -16,10 +16,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d djb2\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d djb2\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
  
 end
 
@@ -39,10 +39,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d sdbm\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d sdbm\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 
 save hashCodes_sdbm hashCodes
@@ -61,10 +61,10 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d DJB31MA\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d DJB31MA\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 save hashCodes_DJB31MA hashCodes
 
@@ -83,9 +83,9 @@ for j = 1 : length(tamanhos)
 
         vector(hashCodes(i)) = vector(hashCodes(i)) + 1;
     end
-    fprintf('Chaining HashTable %d hashstring\n', tamanhos(j));
-    fprintf('Number of Collisions: %d\n', count);
-    fprintf('Number of atributions: %d\n', max(vector));
-    fprintf('Running time: %f seconds\n', toc);
+    fprintf('tamanho HashTable %d hashstring\n', tamanhos(j));
+    fprintf('colisões: %d\n', count);
+    fprintf('maior número de atribuições a uma única posição: %d\n', max(vector));
+    fprintf('tempo: %f segundos\n', toc);
 end
 save hashCodes_hashstring hashCodes
