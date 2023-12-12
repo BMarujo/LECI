@@ -19,40 +19,44 @@ for n = 1:Nu                % Para cada utilizador
     Set{n} = [Set{n} u(ind,2)];
 end
 
+
 tic
-K=50;
-MinHashValue=inf(Nu,K);
+K = 50;
+MinHashValue = inf(Nu, K);
 
 for i=1:Nu
     conjunto=Set{i};
     for j=1:length(conjunto)
         chave = char(conjunto(j));
         hash=zeros(1,K);
-        for kk=1:K
-            chave=[chave num2str(kk)];
-            hash(kk)=DJB31MA(chave,127);
+        for y=1:K
+            chave=[chave num2str(y)];
+            hash(y)=DJB31MA(chave,127);
         end
         MinHashValue(i,:)=min([MinHashValue(i,:);hash]);
     end
 end
- fprintf('Tempo calculo min hash: %f\n',toc);
+
+Tempo_min_hash=toc
+
+
 % Calcula a distancia de Jaccard entre todos os pares pela definição.
 tic
 J=zeros(Nu,Nu);               % array para guardar distancias
 h= waitbar(0,'Calculating');
+
 for n1= 1:Nu
     waitbar(n1/Nu,h);
     for n2= n1+1:Nu
-        %similaridade de Jaccard
-        %simJ = length(intersect(Set{n1}, Set{n2})) / length(union(Set{n1}, Set{n2})); 
-        %Distancia de Jaccard = 1 - similaridade de Jaccard
-        %distJ = 1 - simJ; 
+        %similaridade_jacard = length(intersect(Set{n1}, Set{n2})) / length(union(Set{n1}, Set{n2})); 
+        %distancia_jacard = 1 - similaridade_jacard; 
         J(n1,n2) = sum(MinHashValue(n1,:)~=MinHashValue(n2,:))/K;
     end
 end
+
 save 'J.mat' J
 delete(h)
-fprintf('Tempo calculo das distancias dadas por min hash: %f segundos\n',toc);
+Tempo_distancias_min_hash=toc
 tic
 % Com base na distancia, determina pares com
 % distancia inferior a um limiar pre-definido
@@ -68,6 +72,7 @@ for n1= 1:Nu
         end
     end
 end
-fprintf('Tempo calculo dos users mais similares: %f segundos\n',toc);
-fprintf('Num pares mais similares= %d\n',size(SimilarUsers,1));
+
+tempo_users_mais_similares=toc
+numero_pares_mais_similares=size(SimilarUsers,1);
 SimilarUsers
