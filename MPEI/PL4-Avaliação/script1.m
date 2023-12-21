@@ -35,13 +35,17 @@ matrizMinHashTitles = minHashTitles(titles,numHash,shingleSize);
 
 %==========================Option 5============================
 numFilms = height(movies);
+numHash = 100; 
+% genres = getGenres(movies);
 numGenres = length(genres);
-matrizMinHashGenres = minHash(movies(:,3:12),numHash);
+matrizAssGenres = matrizAss(movies,genres);
+matrizMinHashGenres = minHash(matrizAssGenres,numHash);
+%distancesGenres = getDistancesMinHashGenres(numFilms,matrizMinHashGenres,numHash);
 %==============================================================
 
 
 %==========================Save in data========================
-save data.mat genres BF BF_years years matrizMinHashTitles matrizMinHashGenres numHash shingleSize titles numFilms numGenres numTitles movies
+save data.mat genres BF BF_years years matrizMinHashGenres matrizMinHashTitles numHash shingleSize titles numFilms numGenres numTitles matrizAssGenres movies
 %==============================================================
 
 
@@ -135,30 +139,39 @@ function matrizMinHashTitles = minHashTitles(titles,numHash,shingleSize)
     end
     delete(x);
 end
+%================================================================
 
 
 %========================MinHash Genres==========================
+function matrizAss = matrizAss(movies,genres)
+    numFilms = height(movies);
+    numGenres = length(genres);
+    matrizAss = zeros(numGenres,height(movies));
 
-function matrizMinHashGenres = minHash(genres,numHash)
-    numGenres = height(genres);
-    matrizMinHashGenres = inf(numGenres, numHash);
-    x = waitbar(0,'MinHash Genre');
-    for k = 1:numGenres
-        waitbar(k/numGenres,x);
-        shingle="";
-        values = genres(k,:);
-        for j = 1 : (height(values))
-            shingle = [shingle values{j,1}];
-            h = zeros(1, numHash);
-            for i = 1 : numHash
-                shingle = [shingle num2str(i)];
-                h(i) = DJB31MA(shingle, 127);
+    x = waitbar(0,'MinHash Genres');
+    for i= 1:numGenres
+        waitbar(i/numGenres,x);
+        for n= 1:numFilms
+            for k= 2:7
+                if ~anymissing(movies{n,k})
+                    if strcmp(genres(i),movies{n,k})
+                        matrizAss(i,n) = 1;
+                    end
+                end
             end
-            matrizMinHashGenres(1, :) = min([matrizMinHashGenres(1, :); h]);
         end
-     end
-    delete(x);
-
+    end
 end
 
+function matrizMinHashGenres = minHash(matrizAss,numHashFunc)
+    p = primes(10000);
+    matrizMinHashGenres = zeros(numHashFunc,width(matrizAss));
+    kList = p(randperm(length(p),numHashFunc));
+
+    for func= 1:length(kList)
+        for d= 1:width(matrizAss)
+            matrizMinHashGenres(func,d) = min(mod(find(matrizAss(:,d)==1),kList(func)));
+        end
+    end
+end
 %================================================================
