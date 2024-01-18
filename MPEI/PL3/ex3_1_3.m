@@ -1,7 +1,7 @@
 %% a)
 T=rand(20,20);
 for i=1:20
-    T(i,:)=T(i,:)/sum(T(i,:));
+    T(:,i)=T(:,i)/sum(T(:,i));
 end
 T
 
@@ -9,9 +9,9 @@ T
 
 T=rand(20,20);
 for i=1:20
-    T(i,:)=T(i,:)/sum(T(i,:));
+    T(:,i)=T(:,i)/sum(T(:,i));
 end
-T;
+T
 
 estado_inicial=zeros(20,1);
 estado_inicial(1)=1;
