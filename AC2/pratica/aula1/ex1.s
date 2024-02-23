@@ -11,7 +11,7 @@ main:
     li $s0 , 0
 
 
-    li $s1, 10
+    li $s1, 20
 
 while:    beq $s1, '\n', end
 
@@ -27,11 +27,16 @@ while:    beq $s1, '\n', end
 
     move $s1, $a0
 
+    li $a0, '\n'	
+
+    li $v0, putchar 
+    syscall
+
     j while
 
 end:
 
-
+    addi $s0, $s0, -1
     li $a1, 10
     move $a0, $s0
     li $v0, printint
