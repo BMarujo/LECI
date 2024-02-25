@@ -7,7 +7,7 @@ const Color transparentYellow = Color.fromRGBO(253, 184, 70, 0.7);
 const Color transparentGrey = Color.fromARGB(155, 90, 90, 90);
 const Color darkGrey = Color(0xff202020);
 
-const String viperVaultApiBaseUrl = "127.0.0.1:8000";
+const String viperVaultApiBaseUrl = "192.168.1.75:8000";
 
 const LinearGradient mainButton = LinearGradient(colors: [
   Color.fromRGBO(236, 60, 3, 1),
