@@ -1,0 +1,39 @@
+https://flutterbyexample.com/lesson/intro-to-widgets
+
+
+
+opcional (dev tools):
+
+https://www.youtube.com/watch?v=_EYk-E29edo&t=172s
+
+https://medium.com/flutter/how-to-debug-layout-issues-with-the-flutter-inspector-87460a7b9db
+
+
+
+link do stor com recursos para explorar:
+https://docs.google.com/document/d/1MfBWgc1XXuvFpiSlcyZtqn2oYqHvXjNAPh4R2W7NaHE/edit
+
+documentação do flutter:
+https://docs.flutter.dev/
+
+
+
+
+Advance Routing and Navigator:
+
+Flutter Advance Routing — Part 1: Talked about only Routing
+https://nitishk72.medium.com/flutter-advance-routing-and-navigator-df0f86f0974f
+Flutter Advance Routing — Part 2: Talked about only Data Sharing
+https://nitishk72.medium.com/flutter-advance-routing-and-navigator-971c1e97d3d2
+
+
+
+melhores playlist para iniciantes:
+
+https://www.youtube.com/playlist?list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ
+
+
+
+Workshop de Flutter para iniciantes:
+https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0 
