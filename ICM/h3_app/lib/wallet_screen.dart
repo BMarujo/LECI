@@ -3,19 +3,21 @@ import 'wallet.dart';
 import 'package:provider/provider.dart';
 
 class WalletScreen extends StatelessWidget {
+  const WalletScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     TextEditingController money = TextEditingController();
     Wallet wallet = Provider.of<Wallet>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('A minha carteira'),
+        title: const Text('A minha carteira'),
       ),
       body: Column(
         children: [
           Text(
             'Saldo: \$${wallet.balance.toStringAsFixed(2)}',
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
           TextFormField(
             controller: money,
@@ -44,7 +46,7 @@ class WalletScreen extends StatelessWidget {
             onPressed: () {
               wallet.deposit(money.text.isEmpty ? 0 : double.parse(money.text));
             },
-            child: Text('Depositar Quantia'),
+            child: const Text('Depositar Quantia'),
           ),
         ],
       ),

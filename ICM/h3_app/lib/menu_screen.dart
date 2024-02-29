@@ -35,12 +35,14 @@ class MenuScreen extends StatelessWidget {
     // Add more items as needed
   ];
 
+  MenuScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     Wallet wallet = Provider.of<Wallet>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Restaurant Menu'),
+        title: const Text('Restaurant Menu'),
       ),
       body: ListView.builder(
         itemCount: menuItems.length,
@@ -54,7 +56,7 @@ class MenuScreen extends StatelessWidget {
   Widget _buildMenuItemCard(
       BuildContext context, Wallet wallet, MenuItem menuItem) {
     return Card(
-      margin: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
       child: Column(
         children: [
           ListTile(
@@ -62,7 +64,7 @@ class MenuScreen extends StatelessWidget {
             subtitle: Text(menuItem.description),
           ),
           Padding(
-            padding: EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -71,7 +73,7 @@ class MenuScreen extends StatelessWidget {
                   onPressed: () {
                     _showCheckoutDialog(context, wallet, menuItem);
                   },
-                  child: Text('Add to Cart'),
+                  child: const Text('Add to Cart'),
                 ),
               ],
             ),
@@ -87,14 +89,14 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirm Purchase'),
+          title: const Text('Confirm Purchase'),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
               Text('Item: ${menuItem.name}'),
               Text('Price: \$${menuItem.price.toStringAsFixed(2)}'),
-              Divider(),
+              const Divider(),
               Text('Current Balance: \$${wallet.balance.toStringAsFixed(2)}'),
             ],
           ),
@@ -103,7 +105,7 @@ class MenuScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context); // Close the dialog
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -130,7 +132,7 @@ class MenuScreen extends StatelessWidget {
                   }
                 }
               },
-              child: Text('Confirm'),
+              child: const Text('Confirm'),
             ),
           ],
         );
@@ -143,14 +145,14 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Purchase Successful'),
-          content: Text('Thank you for your purchase!'),
+          title: const Text('Purchase Successful'),
+          content: const Text('Thank you for your purchase!'),
           actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context); // Close the dialog
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -163,14 +165,14 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Purchase Successful'),
-          content: Text('Points used!'),
+          title: const Text('Purchase Successful'),
+          content: const Text('Points used!'),
           actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context); // Close the dialog
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -183,14 +185,14 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Insufficient Funds'),
-          content: Text('You do not have enough money in your wallet.'),
+          title: const Text('Insufficient Funds'),
+          content: const Text('You do not have enough money in your wallet.'),
           actions: [
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );

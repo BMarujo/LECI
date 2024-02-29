@@ -9,7 +9,7 @@ import 'wallet_screen.dart';
 void main() {
   runApp(
     MaterialApp(
-      home: LoginPage(),
+      home: const LoginPage(),
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
           case '/home':
@@ -18,9 +18,10 @@ void main() {
                 builder: (context) => HomePage(user: user));
           case '/login':
             return MaterialPageRoute(
-              builder: (context) => LoginPage(),
+              builder: (context) => const LoginPage(),
             );
         }
+        return null;
       },
     ),
   );
@@ -33,17 +34,18 @@ class User {
 }
 
 class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     TextEditingController name = TextEditingController();
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 73, 110, 211),
+      backgroundColor: const Color.fromARGB(255, 73, 110, 211),
       body: Center(
         child: Column(
           children: [
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 60, vertical: 100),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 60, vertical: 100),
               child: Text.rich(
                 textAlign: TextAlign.left,
                 TextSpan(
@@ -96,7 +98,7 @@ class LoginPage extends StatelessWidget {
                   Navigator.pushNamed(context, '/home', arguments: user);
                 }
               },
-              child: Text('Entrar'),
+              child: const Text('Entrar'),
             ),
           ],
         ),
@@ -108,27 +110,27 @@ class LoginPage extends StatelessWidget {
 class HomePage extends StatelessWidget {
   final User user;
 
-  HomePage({required this.user});
+  HomePage({super.key, required this.user});
 
-  PersistentTabController _controller =
-      new PersistentTabController(initialIndex: 1);
+  final PersistentTabController _controller =
+      PersistentTabController(initialIndex: 1);
 
   List<Widget> _buildScreens() {
-    return [MenuScreen(), MainScreen(), WalletScreen()];
+    return [MenuScreen(), const MainScreen(), const WalletScreen()];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.menu),
+        icon: const Icon(Icons.menu),
         title: ("Menu"),
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.home),
+        icon: const Icon(Icons.home),
         title: ("Home"),
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.account_balance_wallet),
+        icon: const Icon(Icons.account_balance_wallet),
         title: ("Carteira"),
       ),
     ];
@@ -157,12 +159,12 @@ class HomePage extends StatelessWidget {
           ),
           popAllScreensOnTapOfSelectedTab: true,
           popActionScreens: PopActionScreensType.all,
-          itemAnimationProperties: ItemAnimationProperties(
+          itemAnimationProperties: const ItemAnimationProperties(
             // Navigation Bar's items animation properties.
             duration: Duration(milliseconds: 200),
             curve: Curves.ease,
           ),
-          screenTransitionAnimation: ScreenTransitionAnimation(
+          screenTransitionAnimation: const ScreenTransitionAnimation(
             // Screen transition animation on change of selected tab.
             animateTabTransition: true,
             curve: Curves.ease,
