@@ -3,7 +3,7 @@ import 'wallet.dart';
 import 'package:provider/provider.dart';
 
 class WalletScreen extends StatelessWidget {
-  const WalletScreen({super.key});
+  const WalletScreen({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,44 +11,68 @@ class WalletScreen extends StatelessWidget {
     Wallet wallet = Provider.of<Wallet>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('A minha carteira'),
+        title: const Text('A Minha Carteira'),
+        backgroundColor:
+            Colors.blue, // Set the app bar background color to blue
       ),
-      body: Column(
-        children: [
-          Text(
-            'Saldo: \$${wallet.balance.toStringAsFixed(2)}',
-            style: const TextStyle(fontSize: 24),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.shade200, Colors.blue.shade400],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
           ),
-          TextFormField(
-            controller: money,
-            decoration: const InputDecoration(
-              labelStyle: TextStyle(
-                color: Color.fromARGB(255, 240, 104, 104),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Saldo: \$${wallet.balance.toStringAsFixed(2)}',
+                style: const TextStyle(fontSize: 40, color: Colors.white),
               ),
-              labelText: 'Quantia a depositar',
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                borderSide: BorderSide(
-                  color: Color.fromARGB(255, 187, 231, 161),
-                  width: 3,
+              const SizedBox(height: 50),
+              TextFormField(
+                controller: money,
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  labelStyle: TextStyle(
+                    color: Color.fromARGB(179, 26, 25, 25),
+                  ),
+                  labelText: 'Quantia a depositar',
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      width: 3,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(25)),
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      width: 3,
+                    ),
+                  ),
                 ),
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-                borderSide: BorderSide(
-                  color: Color.fromARGB(255, 187, 231, 161),
-                  width: 3,
+              const SizedBox(height: 50),
+              ElevatedButton(
+                onPressed: () {
+                  wallet.deposit(
+                      money.text.isEmpty ? 0 : double.parse(money.text));
+                },
+                style: ElevatedButton.styleFrom(
+                  shadowColor: Colors.blue
+                      .shade800, // Set button color to a darker shade of blue
                 ),
+                child: const Text('Depositar'),
               ),
-            ),
+            ],
           ),
-          ElevatedButton(
-            onPressed: () {
-              wallet.deposit(money.text.isEmpty ? 0 : double.parse(money.text));
-            },
-            child: const Text('Depositar Quantia'),
-          ),
-        ],
+        ),
       ),
     );
   }

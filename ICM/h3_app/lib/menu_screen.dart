@@ -42,7 +42,7 @@ class MenuScreen extends StatelessWidget {
     Wallet wallet = Provider.of<Wallet>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Restaurant Menu'),
+        title: const Text('Pratos Disponíveis'),
       ),
       body: ListView.builder(
         itemCount: menuItems.length,
@@ -73,7 +73,7 @@ class MenuScreen extends StatelessWidget {
                   onPressed: () {
                     _showCheckoutDialog(context, wallet, menuItem);
                   },
-                  child: const Text('Add to Cart'),
+                  child: const Text('Comprar'),
                 ),
               ],
             ),
@@ -89,15 +89,15 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Confirm Purchase'),
+          title: const Text('Confirmar Compra'),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('Item: ${menuItem.name}'),
-              Text('Price: \$${menuItem.price.toStringAsFixed(2)}'),
+              Text('Prato: ${menuItem.name}'),
+              Text('Preço: \$${menuItem.price.toStringAsFixed(2)}'),
               const Divider(),
-              Text('Current Balance: \$${wallet.balance.toStringAsFixed(2)}'),
+              Text('Saldo atual: \$${wallet.balance.toStringAsFixed(2)}'),
             ],
           ),
           actions: [
@@ -105,12 +105,12 @@ class MenuScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context); // Close the dialog
               },
-              child: const Text('Cancel'),
+              child: const Text('Cancelar'),
             ),
             ElevatedButton(
               onPressed: () {
                 // Confirm purchase and deduct the amount from the wallet
-                if (wallet.points >= 10) {
+                if (wallet.points >= 6) {
                   wallet.removePoints();
                   // Optionally, you can perform other actions here
                   // such as sending the order to the server
@@ -132,7 +132,7 @@ class MenuScreen extends StatelessWidget {
                   }
                 }
               },
-              child: const Text('Confirm'),
+              child: const Text('Confirmar'),
             ),
           ],
         );
@@ -145,8 +145,8 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Purchase Successful'),
-          content: const Text('Thank you for your purchase!'),
+          title: const Text(' Sucesso!'),
+          content: const Text('Obrigado pela sua compra!'),
           actions: [
             ElevatedButton(
               onPressed: () {
@@ -165,8 +165,8 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Purchase Successful'),
-          content: const Text('Points used!'),
+          title: const Text('Sucesso!'),
+          content: const Text('Você usou os seus pontos!'),
           actions: [
             ElevatedButton(
               onPressed: () {
@@ -185,8 +185,9 @@ class MenuScreen extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Insufficient Funds'),
-          content: const Text('You do not have enough money in your wallet.'),
+          title: const Text('Insucesso'),
+          content: const Text(
+              'Você não tem saldo suficiente para comprar este prato!'),
           actions: [
             ElevatedButton(
               onPressed: () {
