@@ -53,7 +53,7 @@ class _SplashScreenState extends State<SplashScreen>
           const BoxDecoration(color: Color.fromARGB(155, 165, 179, 241)),
       child: SafeArea(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(155, 182, 191, 231),
+          backgroundColor: const Color.fromARGB(155, 182, 191, 231),
           body: Column(
             children: [
               Expanded(

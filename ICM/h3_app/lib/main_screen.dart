@@ -7,7 +7,7 @@ import 'history.dart';
 class MainScreen extends StatelessWidget {
   final User user;
 
-  const MainScreen({Key? key, required this.user}) : super(key: key);
+  const MainScreen({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class MainScreen extends StatelessWidget {
             children: [
               Text(
                 'Os teus Pontos: ${wallet.points}',
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),

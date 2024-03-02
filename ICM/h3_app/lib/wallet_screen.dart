@@ -3,7 +3,7 @@ import 'wallet.dart';
 import 'package:provider/provider.dart';
 
 class WalletScreen extends StatelessWidget {
-  const WalletScreen({Key? key});
+  const WalletScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +36,8 @@ class WalletScreen extends StatelessWidget {
               const SizedBox(height: 50),
               TextFormField(
                 controller: money,
-                style: TextStyle(color: Colors.white),
-                decoration: InputDecoration(
+                style: const TextStyle(color: Colors.white),
+                decoration: const InputDecoration(
                   labelStyle: TextStyle(
                     color: Color.fromARGB(179, 26, 25, 25),
                   ),

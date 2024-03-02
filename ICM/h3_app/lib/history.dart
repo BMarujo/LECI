@@ -31,7 +31,7 @@ class HistoryPage extends StatelessWidget {
               onPressed: (context) {
                 user.addHistory("asdasd");
               },
-              backgroundColor: Color(0xFFFE4A49),
+              backgroundColor: const Color(0xFFFE4A49),
               foregroundColor: Colors.white,
               icon: Icons.delete,
               label: 'Delete',
@@ -40,7 +40,7 @@ class HistoryPage extends StatelessWidget {
               onPressed: (context) {
                 user.addHistory("asdasd");
               },
-              backgroundColor: Color(0xFF21B7CA),
+              backgroundColor: const Color(0xFF21B7CA),
               foregroundColor: Colors.white,
               icon: Icons.share,
               label: 'Share',
@@ -50,7 +50,7 @@ class HistoryPage extends StatelessWidget {
 
         // The end action pane is the one at the right or the bottom side.
         endActionPane: ActionPane(
-          motion: ScrollMotion(),
+          motion: const ScrollMotion(),
           children: [
             SlidableAction(
               // An action can be bigger than the others.
@@ -58,7 +58,7 @@ class HistoryPage extends StatelessWidget {
               onPressed: (context) {
                 user.addHistory("asdasd");
               },
-              backgroundColor: Color(0xFF7BC043),
+              backgroundColor: const Color(0xFF7BC043),
               foregroundColor: Colors.white,
               icon: Icons.archive,
               label: 'Archive',
@@ -67,7 +67,7 @@ class HistoryPage extends StatelessWidget {
               onPressed: (context) {
                 user.addHistory("asdasd");
               },
-              backgroundColor: Color(0xFF0392CF),
+              backgroundColor: const Color(0xFF0392CF),
               foregroundColor: Colors.white,
               icon: Icons.save,
               label: 'Save',

@@ -94,8 +94,8 @@ class MenuScreen extends StatelessWidget {
                     _showCheckoutDialog(context, wallet, menuItem);
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 126, 188, 240),
-                    foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                    backgroundColor: const Color.fromARGB(255, 126, 188, 240),
+                    foregroundColor: const Color.fromARGB(255, 0, 0, 0),
                     fixedSize: const Size(110, 45),
                   ),
                   child: const Text('Comprar', style: TextStyle(fontSize: 15)),
