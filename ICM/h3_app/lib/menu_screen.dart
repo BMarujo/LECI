@@ -43,12 +43,23 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Pratos Disponíveis'),
+        backgroundColor:
+            Colors.blue, // Set the app bar background color to blue
       ),
-      body: ListView.builder(
-        itemCount: menuItems.length,
-        itemBuilder: (context, index) {
-          return _buildMenuItemCard(context, wallet, menuItems[index]);
-        },
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.blue.shade200, Colors.blue.shade400],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: ListView.builder(
+          itemCount: menuItems.length,
+          itemBuilder: (context, index) {
+            return _buildMenuItemCard(context, wallet, menuItems[index]);
+          },
+        ),
       ),
     );
   }
@@ -90,6 +101,7 @@ class MenuScreen extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Confirmar Compra'),
+          contentPadding: const EdgeInsets.all(30.0),
           content: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
