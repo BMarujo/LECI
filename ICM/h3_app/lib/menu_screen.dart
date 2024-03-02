@@ -6,31 +6,38 @@ class MenuItem {
   final String name;
   final String description;
   final double price;
+  final Image image;
 
   MenuItem({
     required this.name,
     required this.description,
     required this.price,
+    required this.image,
   });
 }
 
 class MenuScreen extends StatelessWidget {
   final List<MenuItem> menuItems = [
     MenuItem(
-      name: 'Grilled Chicken Salad',
+      name: 'GRELHADO',
       description:
-          'Fresh greens, grilled chicken, cherry tomatoes, and balsamic vinaigrette.',
+          'Um hambúrguer de 200 gramas de pura carne, grelhado no ponto escolhido e servido num prato aquecido.',
       price: 12.99,
+      image: Image.asset('assets/grelhado.jpg', height: 200, width: 300),
     ),
     MenuItem(
-      name: 'Margherita Pizza',
-      description: 'Classic pizza with tomato, mozzarella, and basil.',
+      name: 'COM MOLHO',
+      description:
+          'O primeiro é que usamos produtos frescos para o fazer e o segundo não revelamos porque faz parte, neste tipo de molhos, haver um segredo.',
       price: 14.99,
+      image: Image.asset('assets/comMolho_crop.jpg', height: 200, width: 300),
     ),
     MenuItem(
-      name: 'Spaghetti Bolognese',
-      description: 'Homemade spaghetti with rich Bolognese sauce.',
+      name: 'CHAMPIGNON',
+      description:
+          'Não gostamos de cogumelos em lata. E isto basta para que este molho seja feito apenas com cogumelos frescos.',
       price: 10.99,
+      image: Image.asset('assets/champignon_crop.jpg', height: 200, width: 300),
     ),
     // Add more items as needed
   ];
@@ -74,17 +81,24 @@ class MenuScreen extends StatelessWidget {
             title: Text(menuItem.name),
             subtitle: Text(menuItem.description),
           ),
+          menuItem.image,
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('\$${menuItem.price.toStringAsFixed(2)}'),
+                Text('\$${menuItem.price.toStringAsFixed(2)}',
+                    style: const TextStyle(fontSize: 20)),
                 ElevatedButton(
                   onPressed: () {
                     _showCheckoutDialog(context, wallet, menuItem);
                   },
-                  child: const Text('Comprar'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 126, 188, 240),
+                    foregroundColor: Color.fromARGB(255, 0, 0, 0),
+                    fixedSize: const Size(110, 45),
+                  ),
+                  child: const Text('Comprar', style: TextStyle(fontSize: 15)),
                 ),
               ],
             ),
