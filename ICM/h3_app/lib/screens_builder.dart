@@ -3,7 +3,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'wallet.dart';
 import 'package:provider/provider.dart';
 import 'menu_screen.dart';
-import 'main_screen.dart';
+import 'home_screen.dart';
 import 'wallet_screen.dart';
 import 'user.dart';
 
@@ -18,7 +18,7 @@ class ScreenBuilder extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       MenuScreen(user: user),
-      MainScreen(user: user),
+      HomeScreen(user: user),
       const WalletScreen()
     ];
   }

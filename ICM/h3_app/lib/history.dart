@@ -20,20 +20,22 @@ class HistoryPage extends StatelessWidget {
         itemCount: user.getHistory.length,
         itemBuilder: (context, index) {
           String historyItem = user.getHistory[index];
+          String dateItem = user.getDate[index];
           Key itemkey = Key(historyItem);
           return Card(
             color: Colors.blue.shade200,
-            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: Dismissible(
               key: itemkey,
               direction: DismissDirection.startToEnd,
               onDismissed: (direction) {
                 user.removeHistory(historyItem);
+                user.removeDate(dateItem);
               },
               background: Container(
                 color: Colors.red,
                 alignment: Alignment.centerLeft,
-                padding: const EdgeInsets.only(left: 16),
+                padding: const EdgeInsets.only(left: 20),
                 child: const Row(
                   children: [
                     Icon(
@@ -48,9 +50,15 @@ class HistoryPage extends StatelessWidget {
                 ),
               ),
               child: ListTile(
+                subtitle: Text(
+                  'Data da Compra: $dateItem',
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0), fontSize: 17),
+                ),
                 title: Text(
                   historyItem,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0), fontSize: 25),
                 ),
               ),
             ),

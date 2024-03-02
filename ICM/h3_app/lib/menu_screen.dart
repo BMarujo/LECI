@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'wallet.dart';
 import 'package:provider/provider.dart';
 import 'user.dart';
+import 'package:intl/intl.dart';
 
 class MenuItem {
   final String name;
@@ -43,6 +44,21 @@ class MenuScreen extends StatelessWidget {
           'Não gostamos de cogumelos em lata. E isto basta para que este molho seja feito apenas com cogumelos frescos.',
       price: 10.99,
       image: Image.asset('assets/champignon_crop.jpg', height: 200, width: 300),
+    ),
+    MenuItem(
+      name: 'COM QUEIJO',
+      description:
+          'O queijo é um dos ingredientes mais importantes na cozinha. E é por isso que usamos um queijo de qualidade.',
+      price: 16.99,
+      image: Image.asset('assets/comQueijo_crop.jpg', height: 200, width: 300),
+    ),
+    MenuItem(
+      name: 'MEDITERRÂNEO',
+      description:
+          'Rúcula, tomate seco, lascas de parmesão e molho de azeite virgem extra e limão. E é isto.',
+      price: 13.39,
+      image:
+          Image.asset('assets/mediterraneo_crop.jpg', height: 200, width: 300),
     ),
     // Add more items as needed
   ];
@@ -142,6 +158,10 @@ class MenuScreen extends StatelessWidget {
                 if (wallet.points >= 6) {
                   wallet.removePoints();
                   user.addHistory(menuItem.name);
+                  DateTime now = DateTime.now();
+                  String formattedDate =
+                      DateFormat('EEE d MMM y\nkk:mm:ss', 'pt_PT').format(now);
+                  user.addDate(formattedDate);
                   // Optionally, you can perform other actions here
                   // such as sending the order to the server
                   // or updating the cart state.
@@ -155,6 +175,11 @@ class MenuScreen extends StatelessWidget {
                     wallet.withdraw(menuItem.price);
                     wallet.addPoint();
                     user.addHistory(menuItem.name);
+                    DateTime now = DateTime.now();
+                    String formattedDate =
+                        DateFormat('EEE d MMM y\nkk:mm:ss', 'pt_PT')
+                            .format(now);
+                    user.addDate(formattedDate);
                     // Optionally, you can perform other actions here
                     // such as sending the order to the server
                     // or updating the cart state.
