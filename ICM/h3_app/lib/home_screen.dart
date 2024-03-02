@@ -15,7 +15,17 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Olá, ${user.getname}!'),
+        title: Text(
+          'Olá, ${user.getname}!',
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 40,
+            fontFamily: 'Roboto',
+          ),
+          strutStyle: const StrutStyle(
+            height: 3.5,
+          ),
+        ),
         backgroundColor: Colors.blue,
       ),
       body: Container(
@@ -30,18 +40,34 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset('assets/qrcode.png', width: 200, height: 200),
+            const SizedBox(height: 75),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(width: 10),
+                Text(
+                  '6 Pontos = Menu Grátis!',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                Icon(
+                  Icons.money_off,
+                  size: 50,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            const SizedBox(height: 50),
             Text(
               'Os teus Pontos: ${wallet.points}',
               style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
-            ),
-            const SizedBox(height: 50),
-            const Text(
-              textAlign: TextAlign.center,
-              'Junta 6 pontos para teres direito a uma refeição grátis!!!',
-              style: TextStyle(fontSize: 20, color: Colors.white),
             ),
             const SizedBox(height: 50),
             ElevatedButton(
@@ -51,7 +77,8 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(context, route);
               },
               style: ElevatedButton.styleFrom(
-                shadowColor: Colors.blue.shade800,
+                elevation: 30,
+                shadowColor: const Color.fromARGB(255, 0, 0, 0),
               ),
               child: const Text('Ver Histórico de Compras'),
             ),

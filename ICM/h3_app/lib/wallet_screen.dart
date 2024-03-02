@@ -29,9 +29,36 @@ class WalletScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                'Saldo: \$${wallet.balance.toStringAsFixed(2)}',
-                style: const TextStyle(fontSize: 40, color: Colors.white),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Saldo na Carteira:',
+                    style: TextStyle(
+                        fontSize: 40,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        wallet.balance.toStringAsFixed(2),
+                        style: const TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const Icon(
+                        Icons.euro_symbol,
+                        size: 40,
+                        color: Colors.white,
+                      ),
+                    ],
+                  ),
+                ],
               ),
               const SizedBox(height: 50),
               TextFormField(
@@ -45,7 +72,7 @@ class WalletScreen extends StatelessWidget {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(25)),
                     borderSide: BorderSide(
-                      color: Color.fromARGB(255, 0, 0, 0),
+                      color: Color.fromARGB(255, 87, 78, 78),
                       width: 3,
                     ),
                   ),
@@ -65,10 +92,18 @@ class WalletScreen extends StatelessWidget {
                       money.text.isEmpty ? 0 : double.parse(money.text));
                 },
                 style: ElevatedButton.styleFrom(
-                  shadowColor: Colors.blue
-                      .shade800, // Set button color to a darker shade of blue
+                  elevation: 20,
+                  backgroundColor: Colors.white70,
+                  foregroundColor: Colors.black,
+                  fixedSize: const Size(150, 70),
+                  padding: const EdgeInsets.all(20),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25),
+                  ),
                 ),
-                child: const Text('Depositar'),
+                child: const Text('Depositar',
+                    style:
+                        TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
               ),
             ],
           ),
