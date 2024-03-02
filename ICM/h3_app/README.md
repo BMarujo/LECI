@@ -7,3 +7,5 @@ $ flutter clean
 $ flutter pub get
 $ flutter run
 ```
+
+Developed by: Bernardo Marujo 107322
