@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'wallet.dart';
 import 'package:provider/provider.dart';
 import 'user.dart';
+import 'history.dart';
 
 class MainScreen extends StatelessWidget {
   final User user;
@@ -15,8 +16,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Olá, ${user.getname}!'),
-        backgroundColor:
-            Colors.blue, // Set the app bar background color to blue
+        backgroundColor: Colors.blue,
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -47,12 +47,12 @@ class MainScreen extends StatelessWidget {
               const SizedBox(height: 40),
               ElevatedButton(
                 onPressed: () {
-                  // Add the functionality to open purchase history
-                  // You can navigate to another screen or show a modal, for example.
+                  Route route = MaterialPageRoute(
+                      builder: (context) => HistoryPage(user: user));
+                  Navigator.push(context, route);
                 },
                 style: ElevatedButton.styleFrom(
-                  shadowColor: Colors.blue
-                      .shade800, // Set button color to a darker shade of blue
+                  shadowColor: Colors.blue.shade800,
                 ),
                 child: const Text('Ver Histórico de Compras'),
               ),
