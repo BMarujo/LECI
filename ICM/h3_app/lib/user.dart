@@ -7,6 +7,8 @@ class User {
 
   String? get getname => name;
 
+  List<String> get getHistory => history;
+
   void addHistory(String item) {
     history.add(item);
   }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'user.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 
 class HistoryPage extends StatelessWidget {
   final User user;
@@ -10,74 +9,53 @@ class HistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Histórico de Compras'),
+        title: const Text(
+          'Histórico de Compras',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor:
+            Colors.blue, // Set the app bar background color to blue
       ),
-      body: Slidable(
-        // Specify a key if the Slidable is dismissible.
-        key: const ValueKey(0),
-
-        // The start action pane is the one at the left or the top side.
-        startActionPane: ActionPane(
-          // A motion is a widget used to control how the pane animates.
-          motion: const ScrollMotion(),
-
-          // A pane can dismiss the Slidable.
-          dismissible: DismissiblePane(onDismissed: () {}),
-
-          // All actions are defined in the children parameter.
-          children: [
-            // A SlidableAction can have an icon and/or a label.
-            SlidableAction(
-              onPressed: (context) {
-                user.addHistory("asdasd");
+      body: ListView.builder(
+        itemCount: user.getHistory.length,
+        itemBuilder: (context, index) {
+          String historyItem = user.getHistory[index];
+          Key itemkey = Key(historyItem);
+          return Card(
+            color: Colors.blue.shade200,
+            margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Dismissible(
+              key: itemkey,
+              direction: DismissDirection.startToEnd,
+              onDismissed: (direction) {
+                user.removeHistory(historyItem);
               },
-              backgroundColor: const Color(0xFFFE4A49),
-              foregroundColor: Colors.white,
-              icon: Icons.delete,
-              label: 'Delete',
+              background: Container(
+                color: Colors.red,
+                alignment: Alignment.centerLeft,
+                padding: const EdgeInsets.only(left: 16),
+                child: const Row(
+                  children: [
+                    Icon(
+                      Icons.delete,
+                      color: Colors.white,
+                    ),
+                    Text(
+                      'Remover',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              child: ListTile(
+                title: Text(
+                  historyItem,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
             ),
-            SlidableAction(
-              onPressed: (context) {
-                user.addHistory("asdasd");
-              },
-              backgroundColor: const Color(0xFF21B7CA),
-              foregroundColor: Colors.white,
-              icon: Icons.share,
-              label: 'Share',
-            ),
-          ],
-        ),
-
-        // The end action pane is the one at the right or the bottom side.
-        endActionPane: ActionPane(
-          motion: const ScrollMotion(),
-          children: [
-            SlidableAction(
-              // An action can be bigger than the others.
-              flex: 2,
-              onPressed: (context) {
-                user.addHistory("asdasd");
-              },
-              backgroundColor: const Color(0xFF7BC043),
-              foregroundColor: Colors.white,
-              icon: Icons.archive,
-              label: 'Archive',
-            ),
-            SlidableAction(
-              onPressed: (context) {
-                user.addHistory("asdasd");
-              },
-              backgroundColor: const Color(0xFF0392CF),
-              foregroundColor: Colors.white,
-              icon: Icons.save,
-              label: 'Save',
-            ),
-          ],
-        ),
-
-        // The child of the Slidable is what the user sees when the
-        // component is not dragged.
-        child: const ListTile(title: Text('Slide me')),
+          );
+        },
       ),
     );
   }

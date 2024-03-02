@@ -16,7 +16,11 @@ class ScreenBuilder extends StatelessWidget {
       PersistentTabController(initialIndex: 1);
 
   List<Widget> _buildScreens() {
-    return [MenuScreen(), MainScreen(user: user), const WalletScreen()];
+    return [
+      MenuScreen(user: user),
+      MainScreen(user: user),
+      const WalletScreen()
+    ];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {

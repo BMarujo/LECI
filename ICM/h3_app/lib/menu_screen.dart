@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'wallet.dart';
 import 'package:provider/provider.dart';
+import 'user.dart';
 
 class MenuItem {
   final String name;
@@ -17,6 +18,10 @@ class MenuItem {
 }
 
 class MenuScreen extends StatelessWidget {
+  final User user;
+
+  MenuScreen({super.key, required this.user});
+
   final List<MenuItem> menuItems = [
     MenuItem(
       name: 'GRELHADO',
@@ -41,8 +46,6 @@ class MenuScreen extends StatelessWidget {
     ),
     // Add more items as needed
   ];
-
-  MenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -138,6 +141,7 @@ class MenuScreen extends StatelessWidget {
                 // Confirm purchase and deduct the amount from the wallet
                 if (wallet.points >= 6) {
                   wallet.removePoints();
+                  user.addHistory(menuItem.name);
                   // Optionally, you can perform other actions here
                   // such as sending the order to the server
                   // or updating the cart state.
@@ -150,6 +154,7 @@ class MenuScreen extends StatelessWidget {
                   } else {
                     wallet.withdraw(menuItem.price);
                     wallet.addPoint();
+                    user.addHistory(menuItem.name);
                     // Optionally, you can perform other actions here
                     // such as sending the order to the server
                     // or updating the cart state.
