@@ -40,8 +40,9 @@ class WalletScreen extends StatelessWidget {
                       children: [
                         const Text(
                           'Saldo na Carteira:',
+                          textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 40,
+                              fontSize: 39,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
@@ -126,7 +127,7 @@ class WalletScreen extends StatelessWidget {
               child: const Text('Depositar',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
             ),
-            const SizedBox(height: 70),
+            const SizedBox(height: 60),
           ],
         ),
       ),
