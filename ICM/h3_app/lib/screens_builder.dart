@@ -26,15 +26,27 @@ class ScreenBuilder extends StatelessWidget {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.menu),
+        icon: const Icon(
+          Icons.menu,
+          size: 35,
+          weight: 20,
+        ),
         title: ("Menu"),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.home),
+        icon: const Icon(
+          Icons.home,
+          size: 35,
+          weight: 20,
+        ),
         title: ("Home"),
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.account_balance_wallet),
+        icon: const Icon(
+          Icons.account_balance_wallet,
+          size: 35,
+          weight: 20,
+        ),
         title: ("Carteira"),
       ),
     ];

@@ -13,14 +13,14 @@ class LoginPage extends StatelessWidget {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 60, vertical: 100),
+              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 100),
               child: Text.rich(
                 textAlign: TextAlign.left,
                 TextSpan(
                   text: 'Olá, como se chama?',
                   style: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
-                    fontSize: 30,
+                    fontSize: 50,
                     fontWeight: FontWeight.w500,
                     fontStyle: FontStyle.italic,
                   ),
@@ -28,12 +28,21 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 20),
               child: TextFormField(
                 controller: name,
+                strutStyle: const StrutStyle(
+                  fontSize: 20,
+                  height: 2,
+                ),
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  fontSize: 20,
+                ),
                 decoration: const InputDecoration(
                   labelStyle: TextStyle(
                     color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 20,
                   ),
                   labelText: 'Nome',
                   enabledBorder: OutlineInputBorder(
@@ -53,7 +62,13 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: 30),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 187, 231, 161),
+                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                fixedSize: const Size(200, 70),
+              ),
               onPressed: () {
                 if (name.text.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
@@ -66,7 +81,10 @@ class LoginPage extends StatelessWidget {
                   Navigator.pushNamed(context, '/home', arguments: user);
                 }
               },
-              child: const Text('Entrar'),
+              child: const Text(
+                'Entrar',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
