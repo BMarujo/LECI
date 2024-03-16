@@ -40,4 +40,12 @@ https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ
 
 
 Workshop de Flutter para iniciantes:
-https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0 
+https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0
+
+
+firebase:
+https://www.youtube.com/watch?v=13eja_RYimU&list=PL4cUxeGkcC9jERUGvbudErNCeSZHWUVlb&index=4
+https://www.youtube.com/watch?v=sfA3NWDBPZ4&list=PL4cUxeGkcC9j--TKIdkb3ISfRbJeJYQwC
+https://www.youtube.com/watch?v=4d-gIPGzmK4&list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB
+https://www.youtube.com/watch?v=aN1LnNq4z54&list=PL4cUxeGkcC9jUPIes_B8vRjn1_GaplOPQ
+https://www.youtube.com/watch?v=udHm7I_OvJs&list=PL4cUxeGkcC9i_aLkr62adUTJi53y7OjOf

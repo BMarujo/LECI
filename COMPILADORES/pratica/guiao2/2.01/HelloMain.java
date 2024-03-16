@@ -16,11 +16,13 @@ public class HelloMain {
          // replace error listener:
          //parser.removeErrorListeners(); // remove ConsoleErrorListener
          //parser.addErrorListener(new ErrorHandlingListener());
-         // begin parsing at main rule:
-         ParseTree tree = parser.main();
+         // begin parsing at top rule:
+         ParseTree tree = parser.top();
          if (parser.getNumberOfSyntaxErrors() == 0) {
             // print LISP-style tree:
             // System.out.println(tree.toStringTree(parser));
+            Execute visitor0 = new Execute();
+            visitor0.visit(tree);
          }
       }
       catch(IOException e) {
