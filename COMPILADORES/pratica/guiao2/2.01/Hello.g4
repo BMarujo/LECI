@@ -1,8 +1,8 @@
 grammar Hello;
 
 top: (greetings|bye)* EOF;
-greetings : 'hello' ID;
-bye : 'goodbye' ID;
-
+greetings : 'hello' name;
+bye : 'goodbye' name;
+name: ID+;
 ID : [a-zA-Z]+;
 WS : [ \t\r\n]+ -> skip;
