@@ -69,7 +69,7 @@ class HomeScreenState extends State<HomeScreen> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // While the future is being resolved, show a loading indicator
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         } else if (snapshot.hasError) {
           // If an error occurs, handle it accordingly
           return Text('Error: ${snapshot.error}');
@@ -95,7 +95,7 @@ class HomeScreenState extends State<HomeScreen> {
           'Olá, ${widget.user.getname}!',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 40,
+            fontSize: 30,
             fontFamily: 'Roboto',
           ),
           strutStyle: const StrutStyle(
@@ -104,95 +104,113 @@ class HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue.shade200, Colors.blue.shade400],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue.shade200, Colors.blue.shade400],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ImagePickerWidget(
-              onValueChanged: onImageChanged,
-              edit: "",
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () async {
-                await _firestore
-                    .collection('Users')
-                    .doc(_auth.currentUser!.uid)
-                    .set({'available': true}, SetOptions(merge: true));
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 30),
+              ImagePickerWidget(
+                onValueChanged: onImageChanged,
+                edit: "",
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                style: ButtonStyle(
+                  fixedSize: MaterialStateProperty.all(const Size(290, 60)),
+                  backgroundColor: MaterialStateProperty.all(
+                      const Color.fromARGB(255, 243, 224, 230)),
+                ),
+                onPressed: () async {
+                  await _firestore
+                      .collection('Users')
+                      .doc(_auth.currentUser!.uid)
+                      .set({'available': true}, SetOptions(merge: true));
 
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Estás disponível para entregas!'),
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text(
+                          style: TextStyle(fontSize: 17),
+                          'Estás disponível para entregas!'),
+                    ),
+                  );
+                },
+                child: const Text(
+                    style: TextStyle(fontSize: 17),
+                    'Estou disponível para entregas!'),
+              ),
+              const SizedBox(height: 20),
+              ListTile(
+                trailing: Icon(
+                  size: 30,
+                  Icons.person_off_outlined,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                title: const Text(style: TextStyle(fontSize: 25), "Logout"),
+                leading: Icon(
+                  size: 30,
+                  Icons.logout,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                onTap: () async {
+                  await AuthServices(_firestore, _auth)
+                      .signOut(context, logoutHelper);
+                },
+              ),
+              const SizedBox(height: 40),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(width: 10),
+                  Text(
+                    '6 Pontos = Menu Grátis!',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
-                );
-              },
-              child: const Text('Estou disponível para entregas!'),
-            ),
-            ListTile(
-              trailing: Icon(
-                Icons.person_off_outlined,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              title: const Text("Logout"),
-              leading: Icon(
-                Icons.logout,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-              onTap: () async {
-                await AuthServices(_firestore, _auth)
-                    .signOut(context, logoutHelper);
-              },
-            ),
-            const SizedBox(height: 40),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(width: 10),
-                Text(
-                  '6 Pontos = Menu Grátis!',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                  Icon(
+                    Icons.money_off,
+                    size: 35,
                     color: Colors.white,
                   ),
-                ),
-                Icon(
-                  Icons.money_off,
-                  size: 50,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Os teus Pontos: ${wallet.points}',
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Route route = MaterialPageRoute(
-                    builder: (context) => HistoryPage(user: widget.user));
-                Navigator.push(context, route);
-              },
-              style: ElevatedButton.styleFrom(
-                elevation: 30,
-                shadowColor: const Color.fromARGB(255, 0, 0, 0),
+                ],
               ),
-              child: const Text('Ver Histórico de Compras'),
-            ),
-          ],
+              const SizedBox(height: 20),
+              Text(
+                'Os teus Pontos: ${wallet.points}',
+                style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Route route = MaterialPageRoute(
+                      builder: (context) => HistoryPage(user: widget.user));
+                  Navigator.push(context, route);
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(290, 60),
+                  elevation: 30,
+                  shadowColor: const Color.fromARGB(255, 0, 0, 0),
+                ),
+                child: const Text(
+                    style: TextStyle(fontSize: 18), 'Ver Histórico de Compras'),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );
@@ -205,7 +223,7 @@ class HomeScreenState extends State<HomeScreen> {
           'Olá, ${widget.user.getname}!',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 40,
+            fontSize: 30,
             fontFamily: 'Roboto',
           ),
           strutStyle: const StrutStyle(
@@ -214,80 +232,88 @@ class HomeScreenState extends State<HomeScreen> {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Colors.blue.shade200, Colors.blue.shade400],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+      body: SingleChildScrollView(
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue.shade200, Colors.blue.shade400],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ImagePickerWidget(
-              onValueChanged: onImageChanged,
-              edit: "",
-            ),
-            const SizedBox(height: 40),
-            ListTile(
-              trailing: Icon(
-                Icons.person_off_outlined,
-                color: Theme.of(context).colorScheme.primary,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 30),
+              ImagePickerWidget(
+                onValueChanged: onImageChanged,
+                edit: "",
               ),
-              title: const Text("Logout"),
-              leading: Icon(
-                Icons.logout,
-                color: Theme.of(context).colorScheme.primary,
+              const SizedBox(height: 40),
+              ListTile(
+                trailing: Icon(
+                  size: 30,
+                  Icons.person_off_outlined,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                title: const Text(style: TextStyle(fontSize: 25), "Logout"),
+                leading: Icon(
+                  size: 30,
+                  Icons.logout,
+                  color: Theme.of(context).colorScheme.primary,
+                ),
+                onTap: () async {
+                  await AuthServices(_firestore, _auth)
+                      .signOut(context, logoutHelper);
+                },
               ),
-              onTap: () async {
-                await AuthServices(_firestore, _auth)
-                    .signOut(context, logoutHelper);
-              },
-            ),
-            const SizedBox(height: 40),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(width: 10),
-                Text(
-                  '6 Pontos = Menu Grátis!',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+              const SizedBox(height: 40),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(width: 10),
+                  Text(
+                    '6 Pontos = Menu Grátis!',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Icon(
+                    Icons.money_off,
+                    size: 35,
                     color: Colors.white,
                   ),
-                ),
-                Icon(
-                  Icons.money_off,
-                  size: 50,
-                  color: Colors.white,
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Os teus Pontos: ${wallet.points}',
-              style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Route route = MaterialPageRoute(
-                    builder: (context) => HistoryPage(user: widget.user));
-                Navigator.push(context, route);
-              },
-              style: ElevatedButton.styleFrom(
-                elevation: 30,
-                shadowColor: const Color.fromARGB(255, 0, 0, 0),
+                ],
               ),
-              child: const Text('Ver Histórico de Compras'),
-            ),
-          ],
+              const SizedBox(height: 40),
+              Text(
+                'Os teus Pontos: ${wallet.points}',
+                style: const TextStyle(
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(height: 40),
+              ElevatedButton(
+                onPressed: () {
+                  Route route = MaterialPageRoute(
+                      builder: (context) => HistoryPage(user: widget.user));
+                  Navigator.push(context, route);
+                },
+                style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(290, 60),
+                  elevation: 30,
+                  shadowColor: const Color.fromARGB(255, 0, 0, 0),
+                ),
+                child: const Text(
+                    style: TextStyle(fontSize: 18), 'Ver Histórico de Compras'),
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );
