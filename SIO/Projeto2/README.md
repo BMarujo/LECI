@@ -4,6 +4,13 @@
 
 This web application represents a simple vulnerable web app in the form of a store.
 
+## Audited issues 
+ASVS 2.1.1, 2.1.2, 2.1.3, 2.1.7, 2.1.8, 2.8.1, 3.2.2, 3.7.1, 5.1.1, 8.3.1, 8.3.2, 8.3.3, 8.3.4, 12.1.1, 13.1.3
+
+## Implemented improvements
+
+The application now has an encrypted database storage, a MFA and a solid password strength evaluator 
+
 ## Authors
 - Daniel Emídio **Nº 108986**
 - Henrique Coelho **Nº 108342**

@@ -209,7 +209,7 @@ function check(){
     }).done(function( data ) {
         info = JSON.parse(data)
         if (info.DONE === "NO") {
-            alert("Password Errada");
+            alert("Password incorreta");
         } else {
             const modal = document.getElementById("modal2");
             if(modal == null) return;

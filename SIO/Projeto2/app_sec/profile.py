@@ -13,9 +13,7 @@ class Profile(object):
     def show_avatar(self,token, **params):
         if type(token)==list:
             token=token[0]
-        #print("TOKEN CIPHERED ------------------------> ",token)
         token = decryptData(token)  # decryptToken
-        #print("TOKEN DECIPHERED ------------------------> ",token)
         if token == None:
             raise cherrypy.HTTPRedirect("/collections", status=301)
         
@@ -95,17 +93,12 @@ class Profile(object):
     def show_username(self, token=None, **params):
         if type(token)==list:
             token=token[0]
-        #print("TOKEN CIPHERED ------------------------> ",token)
         token = decryptData(token)  # decryptToken
-        #print("TOKEN DECIPHERED ------------------------> ",token)
         if token == None:
             raise cherrypy.HTTPRedirect("/collections", status=301)
-        
-        
 
         db = sql.connect("database.db")
         username = db.execute("SELECT name FROM Users WHERE token=?;", (token,)).fetchall()
-
         if username[0][0] == None:
             username = db.execute("SELECT user FROM Users WHERE token=?;", (token,)).fetchall()
 
@@ -116,14 +109,10 @@ class Profile(object):
     def change_username(self, token=None, newUsername="", **params):   # by adding "**params" to the function parameters, we can handle the extra parameters that attackers might add 
         if type(token)==list:
             token=token[0]
-        #print("TOKEN CIPHERED ------------------------> ",token)
         token = decryptData(token)  # decryptToken
-        #print("TOKEN DECIPHERED ------------------------> ",token)
         if token == None:
             raise cherrypy.HTTPRedirect("/collections", status=301)
         
-        
-
         if newUsername == "":
             return json.dumps("Por favor insira um username.")
         elif type(newUsername)==list:   # if the attacker tries to use "HTTP parameter pollution" 
@@ -140,15 +129,11 @@ class Profile(object):
         # we need at least the token or the username to be valid
         if type(token)==list:
             token=token[0]
-        #print("TOKEN CIPHERED ------------------------> ",token)
         token = decryptData(token)  # decryptToken
-        #print("TOKEN DECIPHERED ------------------------> ",token)
         if token == None:
             raise cherrypy.HTTPRedirect("/collections", status=301)
-        
 
         result = {"DONE": "NO", "ERROR": ""}
-
 
         # check password
         if type(password)==list:  # if the attacker tries to use "HTTP parameter pollution" 
@@ -167,9 +152,7 @@ class Profile(object):
             return json.dumps(result)
         elif type(newPassword)==list:   # if the attacker tries to use "HTTP parameter pollution" 
             newPassword=newPassword[0]  # we will utilize the first "newPassword" provided in the URL
-        print("NEWPASSWORD CIPHERED ------------------------> ",newPassword)
         newPassword = decryptData(newPassword)
-        print("NEWPASSWORD DECIPHERED ------------------------> ",newPassword)
 
 
         # check if new password meets the requirements
@@ -187,9 +170,7 @@ class Profile(object):
         newPassword = hashlib.sha256(newPassword.encode()).hexdigest()
 
         # check password by username or by token
-        
         current_password = db.execute("SELECT password FROM Users WHERE token=?;", (token,)).fetchall()
-
         if len(current_password) == 0:
             result["ERROR"] = "Token inválido."
             return json.dumps(result)
@@ -212,13 +193,10 @@ class Profile(object):
     def deleteAccount(self, token=None, **params):
         if type(token)==list:
             token=token[0]
-        #print("TOKEN CIPHERED ------------------------> ",token)
         token = decryptData(token)  # decryptToken
-        #print("TOKEN DECIPHERED ------------------------> ",token)
         if (validToken(token)):
             # Apagar a conta, ou seja, apagar todos os dados do utilizador na DB (incluindo os seus produtos no carrinho e produtos comprados(OrderHistory))
             # Apagar dados na OrderHistory, depois os do UserProducts e por fim a sua conta no Users (isto tudo atraves do userID)
-
             db = sql.connect("database.db")
             cursor = db.cursor()
             userID = cursor.execute("SELECT Id FROM Users WHERE token = ?;", (token,)).fetchall()[0][0]

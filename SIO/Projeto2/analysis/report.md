@@ -19,7 +19,7 @@
 ---
 
 ## 1. Introduction
-FAZER ISTO
+This report details the security enhancements implemented to strengthen our previously designed website, aligning with the Application Security Verification Standard (ASVS). Following a thorough assessment, numerous vulnerabilities were identified, necessitating strategic interventions to bolster the website's defenses. However, in accordance to the project's goal, we prioritized the resolution of 10 key issues, requiring careful consideration in our selection process. This document emphasizes the specific ASVS-related concerns addressed and the comprehensive measures taken to mitigate these vulnerabilities. 
 
 ## 2. Overview
 To implement this website we used python with cherrypy and SQLite3 for the backend; HTML, CSS and Boostrap with a template for the frontend.
@@ -181,46 +181,6 @@ New secure version of login function with MFA:
 #### On Google Authenticator App 
 ![GoogleAuthenticator](gifs/totp.gif)
 
-### Issue 5.1.1 with CWE 235
-
-This type of vulnerabiltiy might let attackers change the original values of the parameters passed in the URL, or get information about the server if the errors aren't handled correctly.
-
-We choose to fix this issue because an attacker might change the values that a user inputs (like a password in the worst case scenario), and the user wouldn't even notice it! This would leave the user without access to it's account. 
-
-#### Improvements
-
-To prevent attackers from abusing the addition of new parameters, we have implemented a system that only uses the first parameter of the same name provided and we ignore parameters that are not used:
-
-```python
-@cherrypy.expose
-    def change_username(self, token=None, newUsername="", **params):   # by adding "**params" to the function parameters, we can handle the extra parameters that attackers might add 
-        if type(token)==list:
-            token=token[0]
-        if token == None:
-            raise cherrypy.HTTPRedirect("/collections", status=301)
-        
-        
-
-        if newUsername == "":
-            return json.dumps("Por favor insira um username.")
-        elif type(newUsername)==list:   # if the attacker tries to use "HTTP parameter pollution" 
-            newUsername=newUsername[0]  # we will utilize the first "newUsername" provided in the URL
-
-        db = sql.connect("database.db")
-        db.execute("UPDATE Users SET name = ? WHERE token = ?;", (newUsername, token))
-        db.commit()
-        db.close()
-        return json.dumps("Username alterado com sucesso.")
-```
-
-The original version of the web app lacked protection against this vulnerability. It would indiscriminately accept all parameters, treating the 'newUsername' parameter as a list, even if there were multiple instances. Consequently, if an attacker injected additional parameters that the function did not request, it would trigger a Cherrypy-powered error.
-
-#### Demonstration
-Demonstration:
-![Ciphered](gifs/ciphered.gif)
-
-
-
 ### Encrypted database storage: requiring that critical data is cyphered on the Web application (V6.2, V8.3);
 
 #### Explanation
@@ -327,6 +287,128 @@ Addressing critical concerns, we've implemented a mandatory acceptance feature f
 ![TCCheckout](gifs/TermCondCheckout.png)
 
 ### Now we will be addressing the security issues we fixed.
+
+### Issue 3.2.2 with CWE 331
+Insufficient entropy refers to situations where the randomness or unpredictability of generated values is not adequate. In cryptographic contexts, such as key generation or in our case session token generation, having sufficient entropy is crucial to ensuring the security of the system. If the entropy is insufficient, it becomes easier for attackers to predict or guess the generated values, potentially leading to vulnerabilities and security risks.
+
+#### Improvements 
+After some calculations we discovered that the original formula used to generate new randow session tokens had insufficient entropy.
+#### This has the orginal formula:
+```python
+    result["token"] = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(10))
+```
+The session tokens where composed of 10 characters, each character being either a lower or upper case letter from the english alphabet [a-z] [A-Z] or a number [0-9].
+
+Using the following formula designed by Claude Shannon to calculate the entropy of randomly generated strings:
+#### 
+![EntropyFormula](gifs/entropy.png)
+#### We developed the following python script to calculate the entropy of our token generator
+```python
+import math
+import random
+import string
+
+hashv = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(10))
+print(hashv)
+    
+fb = 26*2+10                       # b [a-z]26 [A-Z]26 [0-9]10
+fbl = math.pow(fb, len( hashv ))   # b^l
+fH = math.log2(fbl)                # log2(b^l)
+
+print(fH)
+```
+Unfortunately we got a result of 59, meaning our generated tokens where to similar to each other, not having the minimum 64 bits of entropy established. 
+#### To resolved this we incremented the lenght of our tokens from 10 to 12
+```python
+    result["token"] = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(12))
+```
+Now our session tokens have a entropy of 71 bits.
+
+### Issue 3.7.1 with CWE 778
+This type of vulnerability might allow an attacker to perform some action on a users accout after they login, specially if he has physical access to the divice used to login. We already had implemennted secondary verification in attempts of account modification by requiring the user to reinsert the password, but our website being a online shop it should also require secondary verification before performing any sort of transaction, all in a effort to prevent the attackeres of performing unwanted purchases or getting access to sensite data like credit card informations. 
+
+#### Improvements
+In this new implementation the website will require the user to reinsert is password before entering the checkout page. Here is the code used to accomplish that:
+```js
+function check(){
+    const input = document.getElementById("pass");
+    const encryptedToken = window.encryptData(getCookie("token"));
+    $.post({
+        url:"/users/reverification", 
+        data:{"password": input.value, "token": encryptedToken}
+    }).done(function( data ) {
+        info = JSON.parse(data)
+        if (info.DONE === "NO") {
+            alert("Password incorreta");
+        } else {
+            const modal = document.getElementById("modal2");
+            if(modal == null) return;
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+            redirectToCheckout();
+        }
+    })
+}
+```
+```python
+def reverification(self,token=None,password=None,**params):
+        if token == None or password == None:
+            raise cherrypy.HTTPRedirect("/collections", status=301)
+        else:
+            if verify_pass(password,token):
+                return json.dumps({"DONE":"YES"})
+            else:
+                return json.dumps({"DONE":"NO"})
+
+def verify_pass(password, token):
+    db = sql.connect("database.db")
+    token = decryptData(token)  # decryptToken
+    current_password = db.execute("SELECT password FROM Users WHERE token=?;", (token,)).fetchall()
+    if len(current_password) == 0:
+        return False
+    password = hashlib.sha256(password.encode()).hexdigest()
+    if password != current_password[0][0]:
+        db.close()
+        return False
+    return True
+```
+#### Demonstration
+![Reinsert](gifs/require.gif)
+
+### Issue 5.1.1 with CWE 235
+
+This type of vulnerabiltiy might let attackers change the original values of the parameters passed in the URL, or get information about the server if the errors aren't handled correctly.
+
+We choose to fix this issue because an attacker might change the values that a user inputs (like a password in the worst case scenario), and the user wouldn't even notice it! This would leave the user without access to it's account. 
+
+#### Improvements
+
+To prevent attackers from abusing the addition of new parameters, we have implemented a system that only uses the first parameter of the same name provided and we ignore parameters that are not used:
+
+```python
+@cherrypy.expose
+    def change_username(self, token=None, newUsername="", **params):   # by adding "**params" to the function parameters, we can handle the extra parameters that attackers might add 
+        if type(token)==list:
+            token=token[0]
+        if token == None:
+            raise cherrypy.HTTPRedirect("/collections", status=301)
+        if newUsername == "":
+            return json.dumps("Por favor insira um username.")
+        elif type(newUsername)==list:   # if the attacker tries to use "HTTP parameter pollution" 
+            newUsername=newUsername[0]  # we will utilize the first "newUsername" provided in the URL
+
+        db = sql.connect("database.db")
+        db.execute("UPDATE Users SET name = ? WHERE token = ?;", (newUsername, token))
+        db.commit()
+        db.close()
+        return json.dumps("Username alterado com sucesso.")
+```
+
+The original version of the web app lacked protection against this vulnerability. It would indiscriminately accept all parameters, treating the 'newUsername' parameter as a list, even if there were multiple instances. Consequently, if an attacker injected additional parameters that the function did not request, it would trigger a Cherrypy-powered error.
+
+#### Demonstration
+
+![Ciphered](gifs/ciphered.gif)
 
 ### Issue 12.1.1 with CWE 400
 
@@ -436,7 +518,6 @@ def upload_avatar(self, newAvatar, **params):
 Originally, the web app did not have any type of protection against this, it would just take the image without making any checks.
 
 #### Demonstration
-Demonstration:
 ![File_Size](gifs/file_size.gif)
 
 
@@ -486,7 +567,8 @@ def decryptData(data):
     # Return a success response to the client
     return decrypted_data
 ```
-And an example of the two functions being used, this is how we change the password in our system
+
+And an example of the two functions being used. This is how we change the password in our system
 ```js
 function change_password() {
     let current_password = document.getElementById("CURRENT_PASSWORD").value;
@@ -496,8 +578,8 @@ function change_password() {
         alert("As palavras-passe não são iguas.");
         return;
     }
-    // Encrypt the new password before sending it
-
+    
+    // Encrypt the parameters before sending them
     const encryptedToken = window.encryptData(getCookie("token"));
     const encryptedCurrentPassword = window.encryptData(current_password);
     const encryptedNewPassword = window.encryptData(new_password);
@@ -528,16 +610,13 @@ function change_password() {
 ```python
 @cherrypy.expose
     def change_password(self, password="", newPassword="", token=None,**params): # by adding "**params" to the function parameters, we can handle the extra parameters that attackers might add
-        # we need at least the token or the username to be valid
         if type(token)==list:    # if the attacker tries to use "HTTP parameter pollution" 
             token=token[0]      # we will utilize the first "password" provided in the URL
         token = decryptData(token)  # decryptToken
         if token == None:
             raise cherrypy.HTTPRedirect("/collections", status=301)
         
-
         result = {"DONE": "NO", "ERROR": ""}
-
 
         # check password
         if type(password)==list:  # if the attacker tries to use "HTTP parameter pollution" 
@@ -596,6 +675,5 @@ function change_password() {
 The original version of the app didn't cipher any data, making it visible to any attacker within the same network, private information like session tokens or passwords by using something simple like wireshark!
 
 #### Demonstration
-Demonstration:
 ![HPP](gifs/HPP.gif)
 
