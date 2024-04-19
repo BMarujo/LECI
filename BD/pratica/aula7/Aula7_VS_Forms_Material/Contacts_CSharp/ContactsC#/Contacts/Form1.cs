@@ -29,7 +29,7 @@ namespace Contacts
 
         private SqlConnection getSGBDConnection() 
         {
-            return new SqlConnection("data source= CCWIN8\\SQL2012EXPRESS;integrated security=true;initial catalog=Northwind");
+            return new SqlConnection("data source= BERNARDOMARUJO\\SQLEXPRESS;integrated security=true;initial catalog=Northwind");
         }
 
         private bool verifySGBDConnection() 
