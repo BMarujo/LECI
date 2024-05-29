@@ -1,7 +1,6 @@
 #include <detpic32.h>
 
 volatile int count;
-
 void putc(char byte2send){
     while (U2STAbits.UTXBF == 1);
     U2TXREG = byte2send;
@@ -38,24 +37,21 @@ int main(void){
     
     return 0;
 }
-
 //Guiao 11 mas nos exercicios, nao vai ser fornecido no teste
 void _int_(32) isr_uart2(void){ //VECTOR_UART2 = 32
-    if(IFS1bits.U2RXIF == 1){
-        char byte = U2RXREG;
-        if(byte == 'U'){
-            count++;
-            if(count==16){
-                count = 0;
-            }
+    char byte = U2RXREG;
+    if(byte == 'U'){
+        count++;
+        if(count==16){
+            count = 0;
         }
-        if(byte=='R'){
-            count=0;
-            putStr("RESET\n");
-        }
-        LATE = (LATE & 0xFFE1) | (count << 1);
-        IFS1bits.U2RXIF = 0;  // reset flag
     }
+    if(byte=='R'){
+        count=0;
+        putStr("RESET\n");
+    }
+    LATE = (LATE & 0xFFE1) | (count << 1);
+    IFS1bits.U2RXIF = 0;  // reset flag
 }
 
 // 0000 0001 0010 0011 0100 0101 0110 0111 1000 1001 1010 1011 1100 1101 1110 1111

@@ -22,7 +22,7 @@ int main(void){
     OC2CONbits.OCM = 6;
     OC2CONbits.OCTSEL = 0;
     setDutyCycle(25); //aqui a constante vao ser os 25% do duty cycle
-    OC1CONbits.ON = 1;
+    OC2CONbits.ON = 1;
 
     while(1){
         if(PORTBbits.RB0 == 1 && PORTBbits.RB3 == 0){
