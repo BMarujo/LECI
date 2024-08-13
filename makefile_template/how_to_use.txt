@@ -1,7 +1,0 @@
-make #same as "make all"
-
-make clean #executes clean label
-
-make ex3 #executes ex3 label
-
-etc..

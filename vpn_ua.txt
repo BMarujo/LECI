@@ -1,4 +1,0 @@
-para conectar:
-snx -s go.ua.pt -u bernardomarujo@ua.pt
-para desconectar:
-snx -d
