@@ -1,1 +1,0 @@
-sudo mount -t vboxsf Debian_SIO /home/marujo/windows/
